@@ -1,158 +1,426 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NEXORIA</title>
-  <link rel="icon" type="image/png" href="./img/BIG_LOGO.png"/>
-  <link rel="stylesheet" href="./css/home.css">
-</head>
-<body>
-  <nav class="top-nav">
-    <div class="nav-logo">
-      <img src="./img/NEXORIA_WHITE_LOGO.png" alt="NEXORIA logo">
-    </div>
-    <div class="nav-center">
-      <a href="./setting.html">SETTINGS</a>
-      <a href="https://discord.gg/QvTuj2sH" target="_blank">COMMUNITY</a>
-    </div>
-  </nav>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+}
 
-  <div class="content">
-    <div class="brand">
-      <img src="./img/NEXORIA_WHITE_LOGO.png" alt="NEXORIA logo" class="fade-slide-up">
-      <h1 class="fade-slide-up">NEXORIA</h1>
-    </div>
-    <h3 class="fade-slide-up">An open-world game focused on boss battles, combat, and item looting from other players.</h3>
+a,
+button,
+input,
+label {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
 
-    <a href="./setting.html" class="custom-button fade-slide-up">
-      <span class="label">SETTINGS</span>
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.666" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon">
-        <path d="M5 12h14"></path>
-        <path d="m12 5 7 7-7 7"></path>
-      </svg>
-    </a>
-  </div>
+body {
+    background-color: #111;
+    color: #eee;
+    padding-top: 325px;
+}
 
-  <div class="content-2">
-    <div class="divider fade-slide-up"></div>
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    z-index: 1000;
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid #222;
+}
 
-    <h1 class="fade-slide-up">Got Questions ?</h1>
-    <h3 class="fade-slide-up">Answering anything you might ask</h3>
+.nav-left,
+.nav-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
 
-    <div>
-      <div class="under-container fade-slide-up">
-        <div class="under-frame-left">
+.nav-logo img {
+    height: 50px;
+    object-fit: contain;
+    margin-left: -1rem;
+    margin-top: 5px;
+    pointer-events: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+}
 
-          <div class="under-frame" onclick="toggleUnder(this)">
-            <div class="under-header">
-              <span class="under-label">TEST</span>
-              <svg class="w-4 h-4 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-            </div>
-            <div class="under-title">TESTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT</div>
-          </div>
+.nav-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    flex: 0 1 auto;
+}
 
-          <div class="under-frame" onclick="toggleUnder(this)">
-            <div class="under-header">
-              <span class="under-label">TEST</span>
-              <svg class="w-4 h-4 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-            </div>
-            <div class="under-title">TESTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT</div>
-          </div>
+.nav-center a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: #aaa;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
 
-          <div class="under-frame" onclick="toggleUnder(this)">
-            <div class="under-header">
-              <span class="under-label">TEST</span>
-              <svg class="w-4 h-4 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-            </div>
-            <div class="under-title">TESTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT</div>
-          </div>
+.nav-center a:hover,
+.nav-center a.active {
+    color: #fff;
+}
 
-        </div>
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 0;
+}
 
-        <div class="divider-center fade-slide-up"></div>
-      
-        <div class="under-frame-right">
+.content-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20rem 0;
+}
 
-          <div class="under-frame" onclick="toggleUnder(this)">
-            <div class="under-header">
-              <span class="under-label">TEST</span>
-              <svg class="w-4 h-4 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-            </div>
-            <div class="under-title">TESTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT</div>
-          </div>
+.brand {
+    display: flex;
+    align-items: center;
+    margin-bottom: -2rem;
+    margin-left: -1.5rem;
+}
 
-        </div>
-      </div>
-    </div>
-  </div>
+.brand img {
+    height: 125px;
+    object-fit: contain;
+    margin-bottom: 18px;
+    pointer-events: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+
+.custom-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s ease, gap 0.3s ease;
+}
+
+.custom-button:hover {
+    background-color: #2a2a2a;
+    gap: 2rem;
+}
+
+.arrow-icon {
+    position: relative;
+}
+
+.under-frame {
+    flex: 1 1 45%;
+    max-width: 500px;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.under-title {
+    max-height: 0;
+    overflow: hidden;
+    color: #ccc;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    word-wrap: break-word;
+    text-align: left;
+    width: 100%;
+    white-space: normal;
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    box-sizing: content-box;
+    transition: max-height 0.5s ease, opacity 0.4s, padding 0.4s;
+}
+
+.under-frame.open .under-title {
+    opacity: 1;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.under-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.under-header svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
   
-  <footer class="footer fade-slide-up">
-    <div class="footer-container">
-      <div class="footer-column">
-        <h3>About Us</h3>
-        <p>NEXORIA is an open-world game focused on boss battles and looting, with community-powered updates and ongoing development.</p>
-      </div>
+.under-frame.open .under-header svg {
+    transform: rotate(180deg);
+}
 
-      <div class="footer-column">
-        <h3>Social</h3>
-        <ul>
-          <li><a href="https://tiktok.com/@phoomphat_phe" target="_blank">Tiktok</a></li>
-          <li><a href="https://discord.gg/QvTuj2sH" target="_blank">Discord</a></li>
-          <li><a href="https://www.youtube.com/@Ph00mphAt_n" target="_blank">YouTube</a></li>
-        </ul>
-      </div>
+.under-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    position: relative;
+}
 
-      <div class="footer-bottom">
-        <img src="./img/NEXORIA_GOLD_LOGO.png" alt="NEXORIA Logo">
-        <p>© 2025 NEXORIA. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-</body>
-<script>
-  document.addEventListener("keydown", function (e) {
-    if (
-      e.key === "F12" || 
-      (e.ctrlKey && e.shiftKey && e.key === "I") || 
-      (e.ctrlKey && e.key === "U")
-    ) {
-      e.preventDefault();
-      return false;
+.under-frame-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.under-frame-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.under-label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #eee;
+    line-height: 24px;
+}
+
+.divider {
+    height: 1px;
+    width: 100%;
+    background-color: #222;
+    margin: 4rem 0 10rem 0;
+    opacity: 0.5;
+}
+
+.divider-center {
+    width: 1px;
+    background-color: #444;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.5;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.content-2 h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+h2 {
+    font-size: 1rem;
+    margin-bottom: 0.1rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+h3 {
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: #aaa;
+}
+
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
     }
-  });
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+  
+.fade-slide-up {
+    animation: fadeSlideUp 1s ease-out forwards;
+}
 
-  document.addEventListener("contextmenu", function (e) {
-    e.preventDefault();
-  });
+@keyframes fadeSlideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-  function toggleUnder(element) {
-      const allFrames = document.querySelectorAll('.under-frame');
-      allFrames.forEach(frame => {
-          if (frame !== element && frame.classList.contains('open')) {
-              const otherTitle = frame.querySelector('.under-title');
-              otherTitle.style.maxHeight = "0";
-              otherTitle.style.opacity = 0;
-              otherTitle.style.paddingTop = 0;
-              otherTitle.style.paddingBottom = 0;
-              frame.classList.remove('open');
-          }
-      });
+.footer {
+    background-color: #111;
+    padding: 4rem 2rem 2.5rem;
+    color: #aaa;
+    font-size: 0.9rem;
+    margin-top: 4rem;
+    border-top: 1px solid #222;
+}
+  
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    gap: 2rem;
+}
+  
+.footer-column {
+    flex: 1 1 200px;
+}
+  
+.footer-column h3 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+  
+.footer-column p,
+.footer-column li {
+    color: #aaa;
+    line-height: 1.5;
+}
+  
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+  
+.footer-column a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+  
+.footer-column a:hover {
+    color: #fff;
+}
+  
+.footer-bottom img {
+    height: 40px;
+    margin-bottom: 0.5rem;
+    pointer-events: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+  
+.footer-bottom p {
+    color: #9e9e9e;
+    font-size: 0.8rem;
+}
 
-      const title = element.querySelector('.under-title');
-      if (element.classList.contains('open')) {
-          title.style.maxHeight = "0";
-          title.style.opacity = 0;
-          title.style.paddingTop = 0;
-          title.style.paddingBottom = 0;
-          element.classList.remove('open');
-      } else {
-          title.style.maxHeight = title.scrollHeight + "px";
-          title.style.opacity = 1;
-          title.style.paddingTop = "0.5rem";
-          title.style.paddingBottom = "0.25rem";
-          element.classList.add('open');
-      }
-  }
-</script>
-</html>
+.fade-slide-down {
+    animation: fadeSlideDown 1s ease-out forwards;
+}
+
+::-webkit-scrollbar {
+    width: 3.5px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #00000000;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #aaa, #aaa, #aaa);
+    transition: background-color 0.3s;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        padding-top: 250px;
+    }
+
+    .under-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .under-frame-left,
+    .under-frame-right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .under-frame {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .content-2 {
+        padding: 12rem 1rem;
+    }
+
+    .divider {
+        margin: 4rem 0 10rem 0;
+    }
+
+    .divider-center {
+        display: none;
+    }
+
+    .content-2 h1 {
+        font-size: 1.5rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .footer-column {
+        flex: 1 1 100%;
+    }
+}
