@@ -1,0 +1,6 @@
+{
+    "rewrites": [
+        { "source": "/setting", "destination": "/setting.html" },
+        { "source": "/home", "destination": "/index.html" }
+    ]
+}  
