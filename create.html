@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>NEXORIA</title>
+  <title>CREATE CHARACTER</title>
   <link rel="icon" type="image/png" href="./img/BIG_LOGO.png"/>
   <link rel="stylesheet" href="./css/create.css">
 </head>
@@ -31,7 +31,7 @@
       <h1 class="fade-slide-up">CREATE</h1>
     </div>
     <h3 class="fade-slide-up">You can create your account here.</h3>
-    <h2 class="red_text fade-slide-up">! This cannot be changed later !<br><br>! Coming soon !</h2>
+    <h2 class="red_text fade-slide-up">! This cannot be changed later !</h2>
 
     <div class="dropdown-container fade-slide-up">
       <div class="dropdown-left">
@@ -131,6 +131,14 @@
       
       </div>
     </div>
+  </div>
+
+  <div class="key-container fade-slide-up" style="margin-top: 2rem; text-align: center;">
+    <a href="javascript:void(0)" onclick="generateKey()" class="custom-button fade-slide-up">
+      <span class="label">CREATE CHARACTER</span>
+    </a>
+    <p id="generatedKey" style="margin-top: 1.5rem; color: #0f0; font-weight: bold; word-break: break-word;"></p>
+    <p id="warningMessage"></p>
   </div>
 
   <footer class="footer fade-slide-up">
@@ -258,6 +266,35 @@
       menu.style.padding = "4.5rem 0";
       hamburger.classList.add("active");
     }
+  }
+
+  function generateKey() {
+    const headers = document.querySelectorAll('.custom-dropdown .dropdown-header');
+    let values = [];
+
+    headers.forEach(header => {
+      values.push(header.textContent.trim());
+    });
+
+    const missing = values.some(v => [
+      "Gender", "Role", "Element", "Style", "Difficulty",
+      "Spawn Location", "World Knowledge", "Passive Skill", "Personality Trait", "Starting Bonus"
+    ].includes(v));
+
+    const warning = document.getElementById("warningMessage");
+
+    if (missing) {
+      warning.textContent = "Please select all fields before generating a key.";
+      warning.classList.add("show");
+      
+      setTimeout(() => {
+        warning.classList.remove("show");
+      }, 3000);
+      return;
+    }
+
+    const key = `NEXORIA-${values.join("-").toUpperCase()}`;
+    window.location.href = `/key?key=${encodeURIComponent(key)}`;
   }
 </script>
 </html>
