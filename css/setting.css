@@ -101,7 +101,6 @@ body {
 .brand {
     display: flex;
     align-items: center;
-    margin-bottom: -2rem;
     margin-left: -1.5rem;
 }
 
