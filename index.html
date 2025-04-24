@@ -12,7 +12,14 @@
     <div class="nav-logo">
       <img src="./img/NEXORIA_WHITE_LOGO.png" alt="NEXORIA logo">
     </div>
-    <div class="nav-center">
+  
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  
+    <div class="nav-center" id="mobileMenu">
       <a href="./setting.html">SETTINGS</a>
       <a href="https://discord.gg/QvTuj2sH" target="_blank">COMMUNITY</a>
     </div>
@@ -127,32 +134,50 @@
   });
 
   function toggleUnder(element) {
-      const allFrames = document.querySelectorAll('.under-frame');
-      allFrames.forEach(frame => {
-          if (frame !== element && frame.classList.contains('open')) {
-              const otherTitle = frame.querySelector('.under-title');
-              otherTitle.style.maxHeight = "0";
-              otherTitle.style.opacity = 0;
-              otherTitle.style.paddingTop = 0;
-              otherTitle.style.paddingBottom = 0;
-              frame.classList.remove('open');
-          }
-      });
+    const allFrames = document.querySelectorAll('.under-frame');
+    allFrames.forEach(frame => {
+        if (frame !== element && frame.classList.contains('open')) {
+            const otherTitle = frame.querySelector('.under-title');
+            otherTitle.style.maxHeight = "0";
+            otherTitle.style.opacity = 0;
+            otherTitle.style.paddingTop = 0;
+            otherTitle.style.paddingBottom = 0;
+            frame.classList.remove('open');
+        }
+    });
 
-      const title = element.querySelector('.under-title');
-      if (element.classList.contains('open')) {
-          title.style.maxHeight = "0";
-          title.style.opacity = 0;
-          title.style.paddingTop = 0;
-          title.style.paddingBottom = 0;
-          element.classList.remove('open');
-      } else {
-          title.style.maxHeight = title.scrollHeight + "px";
-          title.style.opacity = 1;
-          title.style.paddingTop = "0.5rem";
-          title.style.paddingBottom = "0.25rem";
-          element.classList.add('open');
-      }
+    const title = element.querySelector('.under-title');
+    if (element.classList.contains('open')) {
+        title.style.maxHeight = "0";
+        title.style.opacity = 0;
+        title.style.paddingTop = 0;
+        title.style.paddingBottom = 0;
+        element.classList.remove('open');
+    } else {
+        title.style.maxHeight = title.scrollHeight + "px";
+        title.style.opacity = 1;
+        title.style.paddingTop = "0.5rem";
+        title.style.paddingBottom = "0.25rem";
+        element.classList.add('open');
+    }
+  }
+
+  function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    const hamburger = document.querySelector(".hamburger");
+    const isOpen = menu.classList.contains("show");
+
+    if (isOpen) {
+      menu.style.maxHeight = "0px";
+      menu.style.padding = "0";
+      menu.classList.remove("show");
+      hamburger.classList.remove("active");
+    } else {
+      menu.classList.add("show");
+      menu.style.maxHeight = menu.scrollHeight + "px";
+      menu.style.padding = "3.5rem 0";
+      hamburger.classList.add("active");
+    }
   }
 </script>
 </html>
