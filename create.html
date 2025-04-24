@@ -194,14 +194,19 @@
     const dropdown = element.closest(".custom-dropdown");
     const header = dropdown.querySelector(".dropdown-header");
 
-    header.textContent = element.textContent;
-    header.style.color = "#fff";
-
-    dropdown.querySelectorAll(".dropdown-options li").forEach(li => {
+    if (element.classList.contains("selected")) {
+      header.textContent = "Dropdown";
+      header.style.color = "#444"; 
+      element.classList.remove("selected");
+    } else {
+      dropdown.querySelectorAll(".dropdown-options li").forEach(li => {
         li.classList.remove("selected");
-    });
+      });
+      element.classList.add("selected");
+      header.textContent = element.textContent;
+      header.style.color = "#fff";
+    }
 
-    element.classList.add("selected");
     dropdown.classList.remove("open");
   }
 
