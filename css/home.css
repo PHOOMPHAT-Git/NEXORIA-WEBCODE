@@ -101,7 +101,6 @@ body {
 .brand {
     display: flex;
     align-items: center;
-    margin-bottom: -2rem;
     margin-left: -1.5rem;
 }
 
@@ -411,11 +410,7 @@ h3 {
 
 @media only screen and (max-width: 768px) {
     body {
-        padding-top: 250px;
-    }
-
-    .brand {
-        margin-bottom: -1rem;
+        padding-top: 200px;
     }
 
     .under-container {
