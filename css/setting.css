@@ -434,6 +434,10 @@ h3 {
         padding-top: 10px;
     }
 
+    h1 {
+        margin-bottom: 1.5rem;
+    }
+
     .divider {
         display: none;
     }
