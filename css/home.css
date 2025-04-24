@@ -413,6 +413,10 @@ h3 {
         padding-top: 200px;
     }
 
+    h1 {
+        margin-bottom: 1.5rem;
+    }
+
     .under-container {
         flex-direction: column;
         align-items: center;
