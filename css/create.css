@@ -394,6 +394,30 @@ h3 {
     justify-content: center;
 }
 
+.key-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#warningMessage {
+    color: rgb(254, 255, 182);
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    margin-top: 0;
+    transition: opacity 0.5s ease, max-height 0.5s ease 0.5s, margin-top 0.5s ease 0.5s;
+}
+  
+#warningMessage.show {
+    opacity: 1;
+    max-height: 100px;
+    margin-top: 1rem;
+    transition: max-height 0.5s ease, opacity 0.5s ease, margin-top 0.5s ease;
+}
+
 ::-webkit-scrollbar {
     width: 3.5px;
 }
