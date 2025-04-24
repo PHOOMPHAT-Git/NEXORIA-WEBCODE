@@ -2,6 +2,7 @@
     "rewrites": [
       { "source": "/game-setting", "destination": "/setting.html" },
       { "source": "/create-character", "destination": "/create.html" },
-      { "source": "/", "destination": "/index.html" }
+      { "source": "/", "destination": "/index.html" },
+      { "source": "/key", "destination": "/key.html" }
     ]
 }
