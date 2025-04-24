@@ -414,6 +414,10 @@ h3 {
         padding-top: 250px;
     }
 
+    .brand {
+        margin-bottom: -1rem;
+    }
+
     .under-container {
         flex-direction: column;
         align-items: center;
