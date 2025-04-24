@@ -20,7 +20,6 @@
     </div>
   
     <div class="nav-center" id="mobileMenu">
-      <a href="/game-setting">SETTINGS</a>
       <a href="https://discord.gg/QvTuj2sH" target="_blank">COMMUNITY</a>
     </div>
   </nav>
@@ -79,10 +78,18 @@
             <div class="under-title">TESTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT</div>
           </div>
 
+          <div class="under-frame" onclick="toggleUnder(this)">
+            <div class="under-header">
+              <span class="under-label">TEST</span>
+              <svg class="w-4 h-4 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+            <div class="under-title">TESTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT</div>
+          </div>
+
         </div>
 
         <div class="divider-center fade-slide-up"></div>
-      
+
         <div class="under-frame-right">
 
           <div class="under-frame" onclick="toggleUnder(this)">
@@ -97,7 +104,7 @@
       </div>
     </div>
   </div>
-  
+
   <footer class="footer fade-slide-up">
     <div class="footer-container">
       <div class="footer-column">
@@ -136,6 +143,47 @@
   document.addEventListener("contextmenu", function (e) {
     e.preventDefault();
   });
+
+  function toggleCustomDropdown(clickedHeader) {
+    const dropdown = clickedHeader.closest(".custom-dropdown");
+    const isOpen = dropdown.classList.contains("open");
+
+    document.querySelectorAll(".custom-dropdown").forEach(d => {
+        if (d !== dropdown) d.classList.remove("open");
+    });
+
+    if (!isOpen) {
+        dropdown.classList.add("open");
+    } else {
+        dropdown.classList.remove("open");
+    }
+  }
+
+  function selectOption(element) {
+    const dropdown = element.closest(".custom-dropdown");
+    const header = dropdown.querySelector(".dropdown-header");
+
+    if (!dropdown.dataset.defaultText) {
+      dropdown.dataset.defaultText = header.textContent;
+    }
+
+    const defaultText = dropdown.dataset.defaultText;
+
+    if (element.classList.contains("selected")) {
+      header.textContent = defaultText;
+      header.style.color = "#444";
+      element.classList.remove("selected");
+    } else {
+      dropdown.querySelectorAll(".dropdown-options li").forEach(li => {
+        li.classList.remove("selected");
+      });
+      element.classList.add("selected");
+      header.textContent = element.textContent;
+      header.style.color = "#fff";
+    }
+
+    dropdown.classList.remove("open");
+  }
 
   function toggleUnder(element) {
     const allFrames = document.querySelectorAll('.under-frame');
