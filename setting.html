@@ -28,9 +28,9 @@
   <div class="content">
     <div class="brand">
       <img src="./img/NEXORIA_WHITE_LOGO.png" alt="NEXORIA logo" class="fade-slide-up">
-      <h1 class="fade-slide-up">SETTINGS</h1>
+      <h1 class="fade-slide-up" data-en="SETTINGS" data-th="ตั้งค่า">SETTINGS</h1>
     </div>
-    <h3 class="fade-slide-up">You can manage your game settings here.</h3>
+    <h3 class="fade-slide-up" data-en="You can manage website here." data-th="คุณสามารถตั้งค่าเว็ปไซต์ได้ที่นี่">You can manage website here.</h3>
 
     <div>
 
@@ -39,115 +39,33 @@
 
           <div class="setting-frame" onclick="toggleSetting(this)">
             <div class="setting-header">
-              <span class="setting-label">TEST SETTING</span>
+              <span class="setting-label">Thai language / ภาษาไทย</span>
               <label class="switch">
-                <input type="checkbox">
+                <input id="langToggle" type="checkbox">
                 <span class="slider"></span>
               </label>
             </div>
-            <div class="setting-title">TESTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT</div>
-          </div>
-
-          <div class="setting-frame" onclick="toggleSetting(this)">
-            <div class="setting-header">
-              <span class="setting-label">TEST SETTING</span>
-              <label class="switch">
-                <input type="checkbox">
-                <span class="slider"></span>
-              </label>
-            </div>
-            <div class="setting-title">TESTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT</div>
-          </div>
-
-          <div class="setting-frame" onclick="toggleSetting(this)">
-            <div class="setting-header">
-              <span class="setting-label">TEST SETTING</span>
-              <label class="switch">
-                <input type="checkbox">
-                <span class="slider"></span>
-              </label>
-            </div>
-            <div class="setting-title">TESTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT</div>
-          </div>
-
-          <div class="setting-frame" onclick="toggleSetting(this)">
-            <div class="setting-header">
-              <span class="setting-label">TEST SETTING</span>
-              <label class="switch">
-                <input type="checkbox">
-                <span class="slider"></span>
-              </label>
-            </div>
-            <div class="setting-title">TESTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT</div>
-          </div>
-
-          <div class="setting-frame" onclick="toggleSetting(this)">
-            <div class="setting-header">
-              <span class="setting-label">TEST SETTING</span>
-              <label class="switch">
-                <input type="checkbox">
-                <span class="slider"></span>
-              </label>
-            </div>
-            <div class="setting-title">TESTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT</div>
-          </div>
-
-        </div>
-      
-        <div class="divider fade-slide-up"></div>
-      
-        <div class="setting-frame-right">
-
-          <div class="setting-frame" onclick="toggleSetting(this)">
-            <div class="setting-header">
-              <span class="setting-label">TEST SETTING</span>
-              <label class="switch">
-                <input type="checkbox">
-                <span class="slider"></span>
-              </label>
-            </div>
-            <div class="setting-title">TESTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT</div>
-          </div>
-
-          <div class="setting-frame" onclick="toggleSetting(this)">
-            <div class="setting-header">
-              <span class="setting-label">TEST SETTING</span>
-              <label class="switch">
-                <input type="checkbox">
-                <span class="slider"></span>
-              </label>
-            </div>
-            <div class="setting-title">TESTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT</div>
+            <div class="setting-title">Once activated, the entire interface will switch to Thai.<br><br>เมื่อเปิดแล้ว ภาษาจะถูกเปลี่ยนเป็นภาษาไทยทั้งหมด</div>
           </div>
 
         </div>
       </div>
     </div>
   </div>
-
-  <div class="content-2">
-    <div class="divider-center fade-slide-up"></div>
-
-    <div class="frame fade-slide-up">
-      <h1>COMING SOON</h1>
-      <h3>NEXORIA</h3>
-    </div>    
-
-    <div>
-      <div class="under-container fade-slide-up">
-      </div>
-    </div>
-  </div>
-
+  
   <footer class="footer fade-slide-up">
     <div class="footer-container">
       <div class="footer-column">
-        <h3>About Us</h3>
-        <p>NEXORIA is an open-world game focused on boss battles and looting, with community-powered updates and ongoing development.</p>
+        <h3 data-en="About Us" data-th="เกี่ยวกับเรา">About Us</h3>
+        <p 
+          data-en="NEXORIA is an open-world game focused on boss battles and looting, with community-powered updates and ongoing development."
+          data-th="NEXORIA เป็นเกมโลกเปิดที่เน้นการต่อสู้กับบอสและการเก็บไอเท็ม พร้อมการอัปเดตโดยชุมชนและการพัฒนาที่ต่อเนื่อง">
+          NEXORIA is an open-world game focused on boss battles and looting, with community-powered updates and ongoing development.
+        </p>
       </div>
 
       <div class="footer-column">
-        <h3>Social</h3>
+        <h3 data-en="Social" data-th="โซเซียล">Social</h3>
         <ul>
           <li><a href="https://tiktok.com/@phoomphat_phe" target="_blank">Tiktok</a></li>
           <li><a href="https://discord.gg/QvTuj2sH" target="_blank">Discord</a></li>
@@ -225,4 +143,5 @@
     }
   }
 </script>
+<script src="/js/settings.js"></script>
 </html>
