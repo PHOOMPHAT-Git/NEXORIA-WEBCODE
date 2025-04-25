@@ -286,9 +286,12 @@
       }
     });
 
+    const language = localStorage.getItem("lang") || "en";
     const warning = document.getElementById("warningMessage");
     if (values.includes(null)) {
-      warning.textContent = "Please select all fields before generating a key.";
+      warning.textContent = language === "th"
+        ? "กรุณาเลือกทุกตัวเลือกก่อนสร้างคีย์"
+        : "Please select all fields before generating a key.";
       warning.classList.add("show");
       setTimeout(() => {
         warning.classList.remove("show");
