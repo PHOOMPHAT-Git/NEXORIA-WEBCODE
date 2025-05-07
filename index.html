@@ -21,7 +21,7 @@
   
     <div class="nav-center" id="mobileMenu">
       <a href="/web-setting">SETTINGS</a>
-      <a href="https://discord.gg/ykst8qxt3h" target="_blank">COMMUNITY</a>
+      <a href="discordLinkTop" target="_blank">COMMUNITY</a>
     </div>
   </nav>
 
@@ -97,7 +97,7 @@
         <h3 data-en="Social" data-th="โซเซียล">Social</h3>
         <ul>
           <li><a href="https://tiktok.com/@phoomphat_phe" target="_blank">Tiktok</a></li>
-          <li><a href="https://discord.gg/QvTuj2sH" target="_blank">Discord</a></li>
+          <li><a id="discordLinkFooter" href="#" target="_blank">Discord</a></li>
           <li><a href="https://www.youtube.com/@Ph00mphAt_n" target="_blank">YouTube</a></li>
         </ul>
       </div>
@@ -124,6 +124,19 @@
   document.addEventListener("contextmenu", function (e) {
     e.preventDefault();
   });
+
+  fetch('/config.json')
+    .then(response => response.json())
+    .then(config => {
+      if (config.discord) {
+        const discordTop = document.getElementById("discordLinkTop");
+        const discordFooter = document.getElementById("discordLinkFooter");
+
+        if (discordTop) discordTop.href = config.discord;
+        if (discordFooter) discordFooter.href = config.discord;
+      }
+    })
+  .catch(err => console.error("Failed to load config.json:", err));
 
   function toggleCustomDropdown(clickedHeader) {
     const dropdown = clickedHeader.closest(".custom-dropdown");
