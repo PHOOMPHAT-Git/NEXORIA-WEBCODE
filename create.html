@@ -21,7 +21,7 @@
   
     <div class="nav-center" id="mobileMenu">
       <a href="/">HOME</a>
-      <a href="https://discord.gg/ykst8qxt3h" target="_blank">COMMUNITY</a>
+      <a id="discordLinkTop" href="#" target="_blank">COMMUNITY</a>
     </div>
   </nav>
 
@@ -31,7 +31,7 @@
       <h1 class="fade-slide-up" data-en="CREATE" data-th="สร้างตัวละคร">CREATE</h1>
     </div>
     <h3 class="fade-slide-up" data-en="You can create your account here." data-th="คุณสามารถสร้างบัญชีของคุณที่นี่">You can create your account here.</h3>
-    <h2 class="red_text fade-slide-up" data-en="! This cannot be changed later !" data-th="! ไม่สามารถเปลี่ยนแปลงได้ในภายหลัง !">! This cannot be changed later !</h2>
+    <h2 class="gold_text fade-slide-up" data-en="! This cannot be changed later !" data-th="! ไม่สามารถเปลี่ยนแปลงได้ในภายหลัง !">! This cannot be changed later !</h2>
 
     <div class="dropdown-container fade-slide-up">
       <div class="dropdown-left">
@@ -48,7 +48,7 @@
           <div class="dropdown-header" onclick="toggleCustomDropdown(this)" data-en="Role" data-th="บทบาท">Role</div>
           <ul class="dropdown-options">
             <li onclick="selectOption(this)" data-en="Warrior" data-th="นักรบ">Warrior</li>
-            <li onclick="selectOption(this)" data-en="Healer" data-th="ผู้รักษา">Healer</li>
+            <li onclick="selectOption(this)" data-en="Medic" data-th="แพทย์">Medic</li>
             <li onclick="selectOption(this)" data-en="Mage" data-th="นักเวท">Mage</li>
           </ul>
         </div>
@@ -123,9 +123,9 @@
         <div class="custom-dropdown">
           <div class="dropdown-header" onclick="toggleCustomDropdown(this)" data-en="Starting Bonus" data-th="โบนัสเริ่มต้น">Starting Bonus</div>
           <ul class="dropdown-options">
-            <li onclick="selectOption(this)" data-en="Healing Kit" data-th="ชุดรักษา">Healing Kit</li>
-            <li onclick="selectOption(this)" data-en="100 G$" data-th="เงินเริ่มต้น 100 G$">100 G$</li>
-            <li onclick="selectOption(this)" data-en="Minor Rune" data-th="รูนระดับต่ำ">Minor Rune</li>
+            <li onclick="selectOption(this)" data-en="Bandage" data-th="ผ้าพันแผล">Bandage</li>
+            <li onclick="selectOption(this)" data-en="50 G$" data-th="50 G$">50 G$</li>
+            <li onclick="selectOption(this)" data-en="Glider" data-th="เครื่องร่อน">Glider</li>
           </ul>
         </div>
       
@@ -139,6 +139,221 @@
     </a>
     <p id="generatedKey" style="margin-top: 1.5rem; color: #0f0; font-weight: bold; word-break: break-word;"></p>
     <p id="warningMessage"></p>
+  </div>
+
+  <div class="content-2">
+    <div class="divider fade-slide-up"></div>
+
+    <h1 class="fade-slide-up" data-en="information" data-th="ข้อมูลเพิ่มเติม">information</h1>
+    <h3 class="fade-slide-up" data-en="Full details" data-th="รายละเอียดทั้งหมด">Full details</h3>
+
+    <div>
+      <div class="under-container fade-slide-up">
+        <div class="under-frame-left">
+
+          <div class="under-frame" onclick="toggleUnder(this)">
+            <div class="under-header">
+              <span class="under-label" data-en="Gender" data-th="เพศ">Gender</span>
+              <svg class="w-4 h-4 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+            <div class="under-title">
+              <div class="text-en">
+                Used to select gender in the game. <span class="gold_text">This choice also affects in-game items</span>
+              </div>
+              <div class="lang-divider"></div>
+              <div class="text-th">
+                ใช้ในการเลือกเพศในเกม <span class="gold_text">ส่งผลต่อสิ่งของภายในเกมด้วย</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="under-frame" onclick="toggleUnder(this)">
+            <div class="under-header">
+              <span class="under-label" data-en="Element" data-th="ธาตุ">Element</span>
+              <svg class="w-4 h-4 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+            <div class="under-title">
+              <div class="text-en">
+                <span class="gold_text">Fire</span> - Increases damage by coating the weapon in flames<br>
+                <span class="gold_text">Water</span> - Summons water around the user to stun other players<br>
+                <span class="gold_text">Wind</span> - Harnesses wind to cushion falls from high places, reducing injury
+              </div>
+              <div class="lang-divider"></div>
+              <div class="text-th">
+                <span class="gold_text">ไฟ</span> - เพิ่มดาเมจได้โดยการเอาไฟมาเคลือบอาวุธ<br>
+                <span class="gold_text">น้ำ</span> - เรียกน้ำรอบๆตัวมาทำให้ผู้เล่นคนอื่นสตันได้<br>
+                <span class="gold_text">ลม</span> - เมื่อตกจากที่สูง ลมสามารถช่วยพยุงตัว เพื่อที่จะเจ็บน้อยที่สุด
+              </div>
+            </div>
+          </div>
+
+          <div class="under-frame" onclick="toggleUnder(this)">
+            <div class="under-header">
+              <span class="under-label" data-en="Difficulty" data-th="ความยาก">Difficulty</span>
+              <svg class="w-4 h-4 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+            <div class="under-title">
+              <div class="text-en">
+                <span class="gold_text">Normal</span> - Can die 4 times, items will drop only 50%<br>
+                <span class="gold_text">Hard</span> - Can die 2 times, items will drop 80%<br>
+                <span class="gold_text">Nightmare</span> - Can die only once, all items will drop<br>
+                <span class="marked_text">✦</span> Upon reaching your death limit, you will be reborn in a new world [ The World of the Dead ]
+              </div>
+              <div class="lang-divider"></div>
+              <div class="text-th">
+                <span class="gold_text">ปกติ</span> - ตายได้ 4 รอบ ไอเทมจะตกแค่ 50%<br>
+                <span class="gold_text">ยาก</span> - ตายได้ 2 รอบ ไอเทมจะตกแค่ 80%<br>
+                <span class="gold_text">ฝันร้าย</span> - ตายได้แค่ 1 รอบ ไอเทมตกทั้งหมด<br>
+                <span class="marked_text">✦</span> เมื่อตายครบจำนวนจะได้สร้างตัวละครใหม่ในโลกใหม่ทันที [ โลกแห่งความตาย ]
+              </div>
+            </div>
+          </div>
+
+          <div class="under-frame" onclick="toggleUnder(this)">
+            <div class="under-header">
+              <span class="under-label" data-en="World Knowledge" data-th="ความรู้เกี่ยวกับโลก">World Knowledge</span>
+              <svg class="w-4 h-4 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+            <div class="under-title">
+              <div class="text-en">
+                <span class="gold_text">Historian</span> - Can reveal secrets on the map and translate ancient languages or scripts<br>
+                <span class="gold_text">Artifact Seeker</span> - Ancient items will be highlighted when approached, making them easier to spot
+              </div>
+              <div class="lang-divider"></div>
+              <div class="text-th">
+                <span class="gold_text">นักประวัติศาสตร์</span> - สามารถเปิดเผยความลับในแผนที่และแปลภาษาหรืออักษรโบราณได้<br>
+                <span class="gold_text">ผู้ตามหาโบราณวัตถุ</span> - เมื่อเข้าใกล้สิ่งของโบราณจะถูกไฮไลท์ให้มองเห็นสิ่งของเหล่านั้น
+              </div>
+            </div>
+          </div>
+
+          <div class="under-frame" onclick="toggleUnder(this)">
+            <div class="under-header">
+              <span class="under-label" data-en="Starting Bonus" data-th="โบนัสเริ่มต้น">Starting Bonus</span>
+              <svg class="w-4 h-4 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+            <div class="under-title">
+              <div class="text-en">
+                <span class="gold_text">Bandage</span> - Used to stop bleeding, but if applied incorrectly, bleeding may continue<br>
+                <span class="gold_text">50 G$</span> - Start with 50 G$<br>
+                <span class="gold_text">Glider</span> - Allows gliding from high places, but can be shot down as well.
+              </div>
+              <div class="lang-divider"></div>
+              <div class="text-th">
+                <span class="gold_text">ผ้าพันแผล</span> - ใช้ห้ามเลือด แต่ถ้าหากพันไม่ถูกจุด เลือดก็ยังคงไหลต่อ<br>
+                <span class="gold_text">50 G$</span> - ได้เงินเริ่มต้น 50 G$<br>
+                <span class="gold_text">เครื่องร่อน</span> - ร่อนลงจากที่สูงได้ และสามารถโดนยิงตกได้เช่นกัน
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="divider-center fade-slide-up"></div>
+
+        <div class="under-frame-right">
+
+          <div class="under-frame" onclick="toggleUnder(this)">
+            <div class="under-header">
+              <span class="under-label" data-en="Role" data-th="บทบาท">Role</span>
+              <svg class="w-4 h-4 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+            <div class="under-title">
+              <div class="text-en">
+                <span class="gold_text">Warrior</span> - Starts with 1.5% more power than other players<br>
+                <span class="gold_text">Medic</span> - Can revive or heal other players.<br>
+                <span class="gold_text">Mage</span> - A random magic type is assigned when entering the game: [ Fire, Ice, Lightning ]
+              </div>
+              <div class="lang-divider"></div>
+              <div class="text-th">
+                <span class="gold_text">นักรบ</span> - มีค่าพลังเริ่มต้นที่มากกว่าคนอื่น 1.5%<br>
+                <span class="gold_text">แพทย์</span> - จะสามารถชุบชีวิตหรือฮิลเลือดให้ผู้เล่นคนอื่นได้<br>
+                <span class="gold_text">นักเวท</span> - เมื่อเข้าเกมไปจะสุ่มเวท ได้แก่ [ ไฟ, น้ำแข็ง, สายฟ้า ]
+              </div>
+            </div>
+          </div>
+
+          <div class="under-frame" onclick="toggleUnder(this)">
+            <div class="under-header">
+              <span class="under-label" data-en="Style" data-th="สไตล์">Style</span>
+              <svg class="w-4 h-4 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+            <div class="under-title">
+              <div class="text-en">
+                <span class="gold_text">Assassin</span> - Can turn invisible for a short time, and deals 2.5% more damage while attacking<br>
+                <span class="gold_text">Tank</span> - Has 5% more defense than regular players.<br>
+                <span class="gold_text">Ranged</span> - Bullets and arrows deal 1% more damage
+              </div>
+              <div class="lang-divider"></div>
+              <div class="text-th">
+                <span class="gold_text">นักลอบสังหาร</span> - ล่องหนได้ชั่วขณะและเมื่อโจมตีดาเมจจะถูกเพิ่ม 2.5%<br>
+                <span class="gold_text">แทงค์</span> - มีค่าป้องกันมากกว่าผู้เล่นปกติ 5%<br>
+                <span class="gold_text">ระยะไกล</span> - กระสุนปืนหรือลูกธนูจะถูกเพิ่มดาเมจ 1%
+              </div>
+            </div>
+          </div>
+
+          <div class="under-frame" onclick="toggleUnder(this)">
+            <div class="under-header">
+              <span class="under-label" data-en="Spawn Location" data-th="จุดเริ่มต้น">Spawn Location</span>
+              <svg class="w-4 h-4 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+            <div class="under-title">
+              <div class="text-en">
+                <span class="gold_text">Arkendale</span> - A peaceful rural town renowned for its herbs and alchemists<br>
+                <span class="gold_text">Draventhorn</span> - An ancient fortress city nestled in the mountains, with every alley echoing the spirit of warriors<br>
+                <span class="gold_text">Myrrhollow</span> - A town deep within dense forests, surrounded by legends of spirit animals
+              </div>
+              <div class="lang-divider"></div>
+              <div class="text-th">
+                <span class="gold_text">อาร์คเกนเดล</span> - เมืองชนบทเงียบสงบ มีชื่อเสียงเรื่องสมุนไพรและนักปรุงยา<br>
+                <span class="gold_text">ดราเวนธอร์น</span> - เมืองป้อมปราการเก่าแก่กลางหุบเขา ทุกซอกซอยยังคงกลิ่นอายของนักรบ<br>
+                <span class="gold_text">เมอร์โฮลโลว์</span> - เมืองกลางป่าทึบ มีตำนานเกี่ยวกับสัตว์วิญญาณ
+              </div>
+            </div>
+          </div>
+
+          <div class="under-frame" onclick="toggleUnder(this)">
+            <div class="under-header">
+              <span class="under-label" data-en="Passive Skill" data-th="สกิลติดตัว">Passive Skill</span>
+              <svg class="w-4 h-4 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+            <div class="under-title">
+              <div class="text-en">
+                <span class="gold_text">Fast Learner</span> - Earns 0.5x more EXP<br>
+                <span class="gold_text">Berserker Rage</span> - Deals more damage when HP is low
+              </div>
+              <div class="lang-divider"></div>
+              <div class="text-th">
+                <span class="gold_text">เรียนรู้ไว</span> - ได้รับ exp เพิ่มขึ้น 0.5 เท่า<br>
+                <span class="gold_text">ความคลั่งของนักรบ</span> - โจมตีแรงขึ้นเมื่อเลือดเหลือน้อย
+              </div>
+            </div>
+          </div>
+
+          <div class="under-frame" onclick="toggleUnder(this)">
+            <div class="under-header">
+              <span class="under-label" data-en="Personality Trait" data-th="บุคลิก">Personality Trait</span>
+              <svg class="w-4 h-4 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+            <div class="under-title">
+              <div class="text-en">
+                <span class="gold_text">Deceptive</span> - Can see paths or objects that can be used to deceive players or bosses<br>
+                <span class="gold_text">Lone Wolf</span> - Cannot join other teams; gains 0.5x damage boost at night<br>
+                <span class="gold_text">Charming</span> - Can charm NPCs of the opposite sex using speech
+              </div>
+              <div class="lang-divider"></div>
+              <div class="text-th">
+                <span class="gold_text">เจ้าเล่ห์</span> - จะมองเห็นทางหรือสิ่งของที่สามารถหลอกล่อผู้เล่นและบอสได้<br>
+                <span class="gold_text">หมาป่าเดียวดาย</span> - ไม่สามารถเข้าทีมคนอื่นได้ เมื่อตกกลางคืนจะเพิ่มดาเมจ 0.5 เท่า<br>
+                <span class="gold_text">มีเสน่ห์</span> - ใช้คำพูดเพื่อหลอกล่อ npc ที่เป็นเพสตรงข้ามได้
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
   </div>
 
   <footer class="footer fade-slide-up">
@@ -156,7 +371,7 @@
         <h3 data-en="Social" data-th="โซเซียล">Social</h3>
         <ul>
           <li><a href="https://tiktok.com/@phoomphat_phe" target="_blank">Tiktok</a></li>
-          <li><a href="https://discord.gg/QvTuj2sH" target="_blank">Discord</a></li>
+          <li><a id="discordLinkFooter" href="#" target="_blank">Discord</a></li>
           <li><a href="https://www.youtube.com/@Ph00mphAt_n" target="_blank">YouTube</a></li>
         </ul>
       </div>
@@ -183,6 +398,19 @@
   document.addEventListener("contextmenu", function (e) {
     e.preventDefault();
   });
+
+  fetch('/config.json')
+    .then(response => response.json())
+    .then(config => {
+      if (config.discord) {
+        const discordTop = document.getElementById("discordLinkTop");
+        const discordFooter = document.getElementById("discordLinkFooter");
+
+        if (discordTop) discordTop.href = config.discord;
+        if (discordFooter) discordFooter.href = config.discord;
+      }
+    })
+  .catch(err => console.error("Failed to load config.json:", err));
 
   function toggleCustomDropdown(clickedHeader) {
     const dropdown = clickedHeader.closest(".custom-dropdown");
