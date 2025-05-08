@@ -26,6 +26,16 @@ body {
     padding-top: 250px;
 }
 
+.gold_text {
+    color: rgb(254, 255, 182);
+}
+
+.lang-divider {
+    border-top: 1px solid #8a8a8a;
+    margin: 0.8rem 0;
+    opacity: 0.5;
+}
+
 .top-nav {
     position: fixed;
     top: 0;
