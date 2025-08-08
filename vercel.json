@@ -1,8 +1,6 @@
 {
     "rewrites": [
-      { "source": "/web-setting", "destination": "/setting.html" },
-      { "source": "/create-character", "destination": "/create.html" },
-      { "source": "/", "destination": "/index.html" },
-      { "source": "/key", "destination": "/key.html" }
+      { "source": "/setting", "destination": "/setting.html" },
+      { "source": "/", "destination": "/index.html" }
     ]
 }
