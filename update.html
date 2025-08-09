@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>NEXORIA</title>
+  <link rel="icon" type="image/png" href="./img/BIG_LOGO.png"/>
+  <link rel="stylesheet" href="./css/update.css">
+</head>
+<body>
+  <nav class="top-nav">
+    <div class="nav-logo">
+      <img src="./img/NEXORIA_WHITE_LOGO.png" alt="NEXORIA logo">
+    </div>
+  
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  
+    <div class="nav-center" id="mobileMenu">
+      <a href="/">HOME</a>
+      <a id="discordLinkTop" href="#" target="_blank">COMMUNITY</a>
+    </div>
+  </nav>
+
+  <div class="content">
+    <div class="brand">
+      <img src="./img/NEXORIA_WHITE_LOGO.png" alt="NEXORIA logo" class="fade-slide-up">
+      <h1 class="fade-slide-up">UPDATE</h1>
+    </div>
+    <h3 class="fade-slide-up"
+      data-en="Welcome to our update page."
+      data-th="ยินดีต้อนรับสู่หน้าการอัปเดตของเรา">
+      Welcome to our update page.
+    </h3>
+
+  </div>
+
+  <div class="content-2">
+    <div class="divider fade-slide-up"></div>
+
+    <h1 class="fade-slide-up" data-en="Log" data-th="บันทึก">Log</h1>
+    <h3 class="fade-slide-up" data-en="Display all the updated items for that update." data-th="แสดงรายการที่ถูกอัพเดททั้งหมดของอัพเดทนั้นๆ">Display all the updated items for that update.</h3>
+
+    <div>
+      <div class="under-container fade-slide-up">
+        <div class="under-frame-left">
+
+        </div>
+
+        <div class="divider-center fade-slide-up"></div>
+
+        <div class="under-frame-right">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer fade-slide-up">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3 data-en="About Us" data-th="เกี่ยวกับเรา">About Us</h3>
+        <p 
+          data-en="NEXORIA is an MMORPG that focuses on realism with a touch of fantasy. You can freely roam across the map without quests restricting your travel area."
+          data-th="NEXORIA คือเกมแนว MMORPG ที่เน้นสมจริงและแฟนตาซีเล็กน้อย คุณสามารถโลดแล่นไปทั่วแผนที่ได้โดยไม่มีเควสที่จำกัดพื้นที่ในการเดินทางของคุณ">
+          NEXORIA is an MMORPG that focuses on realism with a touch of fantasy. You can freely roam across the map without quests restricting your travel area.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-en="Social" data-th="โซเซียล">Social</h3>
+        <ul>
+          <li><a href="https://tiktok.com/@nexoria.phe" target="_blank">Tiktok</a></li>
+          <li><a id="discordLinkFooter" href="#" target="_blank">Discord</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <img src="./img/NEXORIA_GOLD_LOGO.png" alt="NEXORIA Logo">
+        <p>© 2025 NEXORIA. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+<script>
+  document.addEventListener("keydown", function (e) {
+    if (
+      e.key === "F12" || 
+      (e.ctrlKey && e.shiftKey && e.key === "I") || 
+      (e.ctrlKey && e.key === "U")
+    ) {
+      e.preventDefault();
+      return false;
+    }
+  });
+
+  document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+  });
+
+  fetch('/config.json')
+    .then(response => response.json())
+    .then(config => {
+      if (config.discord) {
+        const discordTop = document.getElementById("discordLinkTop");
+        const discordFooter = document.getElementById("discordLinkFooter");
+
+        if (discordTop) discordTop.href = config.discord;
+        if (discordFooter) discordFooter.href = config.discord;
+      }
+    })
+  .catch(err => console.error("Failed to load config.json:", err));
+
+  function toggleCustomDropdown(clickedHeader) {
+    const dropdown = clickedHeader.closest(".custom-dropdown");
+    const isOpen = dropdown.classList.contains("open");
+
+    document.querySelectorAll(".custom-dropdown").forEach(d => {
+        if (d !== dropdown) d.classList.remove("open");
+    });
+
+    if (!isOpen) {
+        dropdown.classList.add("open");
+    } else {
+        dropdown.classList.remove("open");
+    }
+  }
+
+  function selectOption(element) {
+    const dropdown = element.closest(".custom-dropdown");
+    const header = dropdown.querySelector(".dropdown-header");
+
+    if (!dropdown.dataset.defaultText) {
+      dropdown.dataset.defaultText = header.textContent;
+    }
+
+    const defaultText = dropdown.dataset.defaultText;
+
+    if (element.classList.contains("selected")) {
+      header.textContent = defaultText;
+      header.style.color = "#444";
+      element.classList.remove("selected");
+    } else {
+      dropdown.querySelectorAll(".dropdown-options li").forEach(li => {
+        li.classList.remove("selected");
+      });
+      element.classList.add("selected");
+      header.textContent = element.textContent;
+      header.style.color = "#fff";
+    }
+
+    dropdown.classList.remove("open");
+  }
+
+  function toggleUnder(element) {
+    const allFrames = document.querySelectorAll('.under-frame');
+    allFrames.forEach(frame => {
+        if (frame !== element && frame.classList.contains('open')) {
+            const otherTitle = frame.querySelector('.under-title');
+            otherTitle.style.maxHeight = "0";
+            otherTitle.style.opacity = 0;
+            otherTitle.style.paddingTop = 0;
+            otherTitle.style.paddingBottom = 0;
+            frame.classList.remove('open');
+        }
+    });
+
+    const title = element.querySelector('.under-title');
+    if (element.classList.contains('open')) {
+        title.style.maxHeight = "0";
+        title.style.opacity = 0;
+        title.style.paddingTop = 0;
+        title.style.paddingBottom = 0;
+        element.classList.remove('open');
+    } else {
+        title.style.maxHeight = title.scrollHeight + "px";
+        title.style.opacity = 1;
+        title.style.paddingTop = "0.5rem";
+        title.style.paddingBottom = "0.25rem";
+        element.classList.add('open');
+    }
+  }
+
+  function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    const hamburger = document.querySelector(".hamburger");
+    const isOpen = menu.classList.contains("show");
+
+    if (isOpen) {
+      menu.style.maxHeight = "0px";
+      menu.style.padding = "0";
+      menu.classList.remove("show");
+      hamburger.classList.remove("active");
+    } else {
+      menu.classList.add("show");
+      menu.style.maxHeight = menu.scrollHeight + "px";
+      menu.style.padding = "3.5rem 0";
+      hamburger.classList.add("active");
+    }
+  }
+
+  async function updateExchangeRate() {
+    try {
+      const response = await fetch("https://open.er-api.com/v6/latest/USD");
+      const data = await response.json();
+
+      console.log("Exchange Rate Data:", data);
+
+      if (data && data.result === "success" && data.rates && data.rates.THB) {
+        const rate = data.rates.THB;
+        const baht = (1 * rate).toFixed(2);
+        document.getElementById("baht-amount").textContent = `${baht} บาท`;
+      } else {
+        document.getElementById("baht-amount").textContent = "N/A";
+        console.error("Invalid rate data format:", data);
+      }
+    } catch (error) {
+      document.getElementById("baht-amount").textContent = "Error fetching rate";
+      console.error("Exchange rate fetch error:", error);
+    }
+  }
+
+  updateExchangeRate();
+  async function loadUpdates() {
+    try {
+      const res = await fetch('/update.json', { cache: 'no-store' });
+      const data = await res.json();
+      const files = (data.files || []).slice().sort((a, b) => parseFloat(b.version) - parseFloat(a.version));
+
+      const left = document.querySelector('.under-frame-left');
+      const right = document.querySelector('.under-frame-right');
+      if (!left || !right) return;
+
+      left.innerHTML = '';
+      right.innerHTML = '';
+
+      files.forEach((item, i) => {
+        const frame = document.createElement('div');
+        frame.className = 'under-frame';
+        frame.setAttribute('onclick', 'toggleUnder(this)');
+
+        const header = document.createElement('div');
+        header.className = 'under-header';
+
+        const label = document.createElement('span');
+        label.className = 'under-label';
+        label.dataset.en = `${item.en}`;
+        label.dataset.th = `${item.th}`;
+        label.textContent = `${item.en}`;
+
+        const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        svg.setAttribute('class', 'w-4 h-4 text-zinc-400');
+        svg.setAttribute('fill', 'none');
+        svg.setAttribute('stroke', 'currentColor');
+        svg.setAttribute('viewBox', '0 0 24 24');
+        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        path.setAttribute('stroke-linecap', 'round');
+        path.setAttribute('stroke-linejoin', 'round');
+        path.setAttribute('stroke-width', '2');
+        path.setAttribute('d', 'M19 9l-7 7-7-7');
+        svg.appendChild(path);
+
+        header.appendChild(label);
+        header.appendChild(svg);
+
+        const title = document.createElement('div');
+        title.className = 'under-title';
+
+        const textEn = document.createElement('div');
+        textEn.className = 'text-en';
+        textEn.textContent = item.en;
+
+        const divider = document.createElement('div');
+        divider.className = 'lang-divider';
+
+        const textTh = document.createElement('div');
+        textTh.className = 'text-th';
+        textTh.textContent = item.th;
+
+        title.appendChild(textEn);
+        title.appendChild(divider);
+        title.appendChild(textTh);
+
+        frame.appendChild(header);
+        frame.appendChild(title);
+
+        (i % 2 === 0 ? left : right).appendChild(frame);
+      });
+    } catch (e) {
+      console.error('Failed to load update.json:', e);
+    }
+  }
+  loadUpdates();
+</script>
+<script src="/js/settings.js"></script>
+</html>
