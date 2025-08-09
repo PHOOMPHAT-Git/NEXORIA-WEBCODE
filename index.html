@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>NEXORIA</title>
   <link rel="icon" type="image/png" href="./img/BIG_LOGO.png"/>
-  <link rel="stylesheet" href="./css/update.css">
+  <link rel="stylesheet" href="./css/home.css">
 </head>
 <body>
   <nav class="top-nav">
@@ -20,7 +20,7 @@
     </div>
   
     <div class="nav-center" id="mobileMenu">
-      <a href="/">HOME</a>
+      <a href="/setting">SETTINGS</a>
       <a id="discordLinkTop" href="#" target="_blank">COMMUNITY</a>
     </div>
   </nav>
@@ -28,31 +28,71 @@
   <div class="content">
     <div class="brand">
       <img src="./img/NEXORIA_WHITE_LOGO.png" alt="NEXORIA logo" class="fade-slide-up">
-      <h1 class="fade-slide-up">UPDATE</h1>
+      <h1 class="fade-slide-up">NEXORIA</h1>
     </div>
     <h3 class="fade-slide-up"
-      data-en="Welcome to our update page."
-      data-th="ยินดีต้อนรับสู่หน้าการอัปเดตของเรา">
-      Welcome to our update page.
+      data-en="Welcome to our website."
+      data-th="ยินดีต้อนรับสู่เว็บไซต์ของเรา">
+      Welcome to our website.
     </h3>
+
+    <a href="/update" class="custom-button fade-slide-up">
+      <span class="label">UPDATE LOG</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.666" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon">
+        <path d="M5 12h14"></path>
+        <path d="m12 5 7 7-7 7"></path>
+      </svg>
+    </a>
 
   </div>
 
   <div class="content-2">
     <div class="divider fade-slide-up"></div>
 
-    <h1 class="fade-slide-up" data-en="Log" data-th="บันทึก">Log</h1>
-    <h3 class="fade-slide-up" data-en="Display all the updated items for that update." data-th="แสดงรายการที่ถูกอัพเดททั้งหมดของอัพเดทนั้นๆ">Display all the updated items for that update.</h3>
+    <h1 class="fade-slide-up" data-en="Got Questions ?" data-th="อยากรู้อะไรเพิ่มเติม ?">Got Questions ?</h1>
+    <h3 class="fade-slide-up" data-en="Answering anything you might ask" data-th="ตอบทุกอย่างที่คุณถามมา">Answering anything you might ask</h3>
 
     <div>
       <div class="under-container fade-slide-up">
         <div class="under-frame-left">
+
+          <div class="under-frame" onclick="toggleUnder(this)">
+            <div class="under-header">
+              <span class="under-label" data-en="Report player - where?" data-th="รีพอร์ตผู้เล่น - ที่ไหน?">Report player - where?</span>
+              <svg class="w-4 h-4 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+            <div class="under-title">
+              <div class="text-en">
+                Players can be reported through the in-game report system or by submitting a report on our official Discord server
+              </div>
+              <div class="lang-divider"></div>
+              <div class="text-th">
+                สามารถรีพอร์ตผู้เล่นได้ทั้งใน Discord หรือในเกมโดยตรง
+              </div>
+            </div>
+          </div>
 
         </div>
 
         <div class="divider-center fade-slide-up"></div>
 
         <div class="under-frame-right">
+
+          <div class="under-frame" onclick="toggleUnder(this)">
+            <div class="under-header">
+              <span class="under-label" data-en="How many times can you die before your items are reset?" data-th="สามารถตายได้กี่รอบก่อนที่ไอเทมจะถูกรีเซ็ท">How many times can you die before your items are reset?</span>
+              <svg class="w-4 h-4 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+            <div class="under-title">
+              <div class="text-en">
+                You can die twice, and on the third time, your data will be deleted immediately.
+              </div>
+              <div class="lang-divider"></div>
+              <div class="text-en">
+                คุณสามารถตายได้ 2 ครั้ง และครั้งที่ 3 คุณจะถูกลบ Data ทันที
+              </div>
+            </div>
+          </div>
 
         </div>
       </div>
@@ -224,76 +264,6 @@
   }
 
   updateExchangeRate();
-  async function loadUpdates() {
-    try {
-      const res = await fetch('/update.json', { cache: 'no-store' });
-      const data = await res.json();
-      const files = (data.files || []).slice().sort((a, b) => parseFloat(b.version) - parseFloat(a.version));
-
-      const left = document.querySelector('.under-frame-left');
-      const right = document.querySelector('.under-frame-right');
-      if (!left || !right) return;
-
-      left.innerHTML = '';
-      right.innerHTML = '';
-
-      files.forEach((item, i) => {
-        const frame = document.createElement('div');
-        frame.className = 'under-frame';
-        frame.setAttribute('onclick', 'toggleUnder(this)');
-
-        const header = document.createElement('div');
-        header.className = 'under-header';
-
-        const label = document.createElement('span');
-        label.className = 'under-label';
-        label.dataset.en = `${item.en}`;
-        label.dataset.th = `${item.th}`;
-        label.textContent = `${item.en}`;
-
-        const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-        svg.setAttribute('class', 'w-4 h-4 text-zinc-400');
-        svg.setAttribute('fill', 'none');
-        svg.setAttribute('stroke', 'currentColor');
-        svg.setAttribute('viewBox', '0 0 24 24');
-        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-        path.setAttribute('stroke-linecap', 'round');
-        path.setAttribute('stroke-linejoin', 'round');
-        path.setAttribute('stroke-width', '2');
-        path.setAttribute('d', 'M19 9l-7 7-7-7');
-        svg.appendChild(path);
-
-        header.appendChild(label);
-        header.appendChild(svg);
-
-        const title = document.createElement('div');
-        title.className = 'under-title';
-
-        const textEn = document.createElement('div');
-        textEn.className = 'text-en';
-        textEn.textContent = item.en;
-
-        const divider = document.createElement('div');
-        divider.className = 'lang-divider';
-
-        const textTh = document.createElement('div');
-        textTh.className = 'text-th';
-        textTh.textContent = item.th;
-
-        title.appendChild(textEn);
-        title.appendChild(divider);
-        title.appendChild(textTh);
-
-        frame.appendChild(header);
-        frame.appendChild(title);
-
-        (i % 2 === 0 ? left : right).appendChild(frame);
-      });
-    } catch (e) {
-      console.error('Failed to load update.json:', e);
-    }
-  }
-  loadUpdates();
 </script>
 <script src="/js/settings.js"></script>
 </html>
