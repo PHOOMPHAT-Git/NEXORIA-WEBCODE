@@ -21,16 +21,16 @@
   
     <div class="nav-center" id="mobileMenu">
       <a href="/">HOME</a>
-      <a href="discordLinkTop" target="_blank">COMMUNITY</a>
     </div>
   </nav>
 
   <div class="content">
-    <div class="brand">
-      <img src="./img/NEXORIA_WHITE_LOGO.png" alt="NEXORIA logo" class="fade-slide-up">
-      <h1 class="fade-slide-up" data-en="SETTINGS" data-th="ตั้งค่า">SETTINGS</h1>
-    </div>
-    <h3 class="fade-slide-up" data-en="You can manage website here." data-th="คุณสามารถตั้งค่าเว็ปไซต์ได้ที่นี่">You can manage website here.</h3>
+    <h1 class="fade-slide-up">SETTINGS</h1>
+    <h3 class="fade-slide-up"
+      data-en="You can manage website here."
+      data-th="คุณสามารถตั้งค่าเว็ปไซต์ได้ที่นี่">
+      You can manage website here.
+    </h3>
 
     <div>
 
@@ -67,8 +67,7 @@
       <div class="footer-column">
         <h3 data-en="Social" data-th="โซเซียล">Social</h3>
         <ul>
-          <li><a href="https://tiktok.com/@nexoria.phe" target="_blank">Tiktok</a></li>
-          <li><a id="discordLinkFooter" href="#" target="_blank">Discord</a></li>
+          <li><a href="https://tiktok.com/@phoomphat_phe" target="_blank">Tiktok</a></li>
         </ul>
       </div>
 
@@ -154,6 +153,61 @@
       hamburger.classList.add("active");
     }
   }
+
+  (() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    function burst(x,y){
+      const count=10;
+      for(let i=0;i<count;i++){
+        const s=document.createElement('i');
+        s.className='nx-shard';
+        const ang=(i/count)*Math.PI*2+(Math.random()*0.5-0.25);
+        const dist=50+Math.random()*80;
+        const sz=4+Math.random()*3;
+        const rot=(Math.random()*360-180)+'deg';
+        const dur=(360+Math.random()*240)+'ms';
+        s.style.setProperty('--x', x+'px');
+        s.style.setProperty('--y', y+'px');
+        s.style.setProperty('--dx', Math.cos(ang)*dist+'px');
+        s.style.setProperty('--dy', Math.sin(ang)*dist+'px');
+        s.style.setProperty('--sz', sz+'px');
+        s.style.setProperty('--rot', rot);
+        s.style.setProperty('--dur', dur);
+        document.body.appendChild(s);
+        s.addEventListener('animationend', ()=>s.remove(), {once:true});
+      }
+    }
+
+    function isPrimaryTrigger(e){
+      if('pointerType' in e){
+        if(e.pointerType==='mouse') return e.button===0;
+        return e.isPrimary!==false;
+      }
+      if(e.type==='mousedown') return e.button===0;
+      if(e.type==='touchstart') return true;
+      return true;
+    }
+
+    function getXY(e){
+      if(e.touches && e.touches[0]) return {x:e.touches[0].clientX, y:e.touches[0].clientY};
+      return {x:e.clientX, y:e.clientY};
+    }
+
+    function trigger(e){
+      if(!isPrimaryTrigger(e)) return;
+      const p=getXY(e);
+      if(!p) return;
+      burst(p.x,p.y);
+    }
+
+    if('onpointerdown' in window){
+      window.addEventListener('pointerdown', trigger, {capture:true, passive:true});
+    }else{
+      window.addEventListener('mousedown', trigger, {capture:true, passive:true});
+      window.addEventListener('touchstart', trigger, {capture:true, passive:true});
+    }
+  })();
 </script>
 <script src="/js/settings.js"></script>
 </html>
