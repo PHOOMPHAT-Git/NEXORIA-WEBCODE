@@ -103,7 +103,7 @@
         <p class="nx-mini-banner__subtitle"
           data-en="Sneak peek of the new weapon"
           data-th="แอบส่องอาวุธใหม่">Sneak peek of the new weapon</p>
-        <a href="/devlog" target="_blank" class="nx-btn">Read</a>
+        <a href="/devlog" class="nx-btn nx-btn--ghost">Read</a>
       </div>
     </article>
 
@@ -143,6 +143,7 @@
       </div>
     </div>
   </footer>
+  <div class="nx-toast-area" id="nx-toast-area" aria-live="polite" aria-atomic="true"></div>
 </body>
 <script>
   document.addEventListener("keydown", function (e) {
@@ -489,9 +490,42 @@
     }
   })();
 
+  (function(){
+    function showToast(message, timeout){
+      const area = document.getElementById('nx-toast-area');
+      if(!area) return;
+      const toast = document.createElement('div');
+      toast.className = 'nx-toast';
+      toast.setAttribute('role','alert');
+      const bar = document.createElement('span');
+      bar.className = 'nx-toast__bar';
+      const text = document.createElement('div');
+      text.className = 'nx-toast__text';
+      text.textContent = message || 'ปุ่มถูกล็อก';
+      toast.appendChild(bar);
+      toast.appendChild(text);
+      area.appendChild(toast);
+
+      let hideTimer = setTimeout(close, timeout ?? 2400);
+      toast.addEventListener('mouseenter', () => { clearTimeout(hideTimer); });
+      toast.addEventListener('mouseleave', () => { hideTimer = setTimeout(close, 900); });
+      toast.addEventListener('click', close);
+
+      function close(){
+        toast.classList.add('nx-toast--closing');
+        toast.addEventListener('animationend', () => toast.remove(), {once:true});
+      }
+    }
+
+    document.addEventListener('click', function(e){
+      const btn = e.target.closest('.nx-btn--ghost');
+      if(!btn) return;
+      e.preventDefault();
+      showToast('This button is locked');
+    }, {passive:false});
+  })();
+
   updateExchangeRate();
 </script>
 <script src="/js/settings.js"></script>
 </html>
-
-
