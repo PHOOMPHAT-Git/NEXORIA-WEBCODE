@@ -37,11 +37,11 @@
       <div class="setting-container fade-slide-up">
         <div class="setting-frame-left">
 
-          <div class="setting-frame" onclick="toggleSetting(this)">
+          <div class="setting-frame" onclick="toggleSetting(this, event)">
             <div class="setting-header">
               <span class="setting-label">Thai language / ภาษาไทย</span>
-              <label class="switch">
-                <input id="langToggle" type="checkbox">
+              <label class="switch" onclick="event.stopPropagation()">
+                <input id="langToggle" type="checkbox" onclick="event.stopPropagation()">
                 <span class="slider"></span>
               </label>
             </div>
@@ -77,6 +77,7 @@
       </div>
     </div>
   </footer>
+  <div class="nx-toast-area" id="nx-toast-area" aria-live="polite" aria-atomic="true"></div>
 </body>
 <script>
   document.addEventListener("keydown", function (e) {
@@ -107,34 +108,60 @@
     })
   .catch(err => console.error("Failed to load config.json:", err));
 
-  function toggleSetting(element) {
+  function toggleSetting(element, ev) {
+    if (ev) ev.stopPropagation();
+
     const allFrames = document.querySelectorAll('.setting-frame');
     allFrames.forEach(frame => {
-        if (frame !== element && frame.classList.contains('open')) {
-            const otherTitle = frame.querySelector('.setting-title');
-            otherTitle.style.maxHeight = "0";
-            otherTitle.style.opacity = 0;
-            otherTitle.style.paddingTop = 0;
-            otherTitle.style.paddingBottom = 0;
-            frame.classList.remove('open');
-        }
+      if (frame !== element && frame.classList.contains('open')) {
+        const otherTitle = frame.querySelector('.setting-title');
+        otherTitle.style.maxHeight = "0";
+        otherTitle.style.opacity = 0;
+        otherTitle.style.paddingTop = 0;
+        otherTitle.style.paddingBottom = 0;
+        frame.classList.remove('open');
+      }
     });
 
     const title = element.querySelector('.setting-title');
+    const name = (element.querySelector('.setting-label')?.textContent || 'Setting').trim();
+
     if (element.classList.contains('open')) {
-        title.style.maxHeight = "0";
-        title.style.opacity = 0;
-        title.style.paddingTop = 0;
-        title.style.paddingBottom = 0;
-        element.classList.remove('open');
+      title.style.maxHeight = "0";
+      title.style.opacity = 0;
+      title.style.paddingTop = 0;
+      title.style.paddingBottom = 0;
+      element.classList.remove('open');
     } else {
-        title.style.maxHeight = title.scrollHeight + "px";
-        title.style.opacity = 1;
-        title.style.paddingTop = "0.5rem";
-        title.style.paddingBottom = "0.25rem";
-        element.classList.add('open');
+      title.style.maxHeight = title.scrollHeight + "px";
+      title.style.opacity = 1;
+      title.style.paddingTop = "0.5rem";
+      title.style.paddingBottom = "0.25rem";
+      element.classList.add('open');
     }
   }
+
+  (function(){
+    const lang = document.getElementById('langToggle');
+    if (!lang) return;
+
+    function toast(msg){
+      if (window.nxToast) window.nxToast(msg);
+    }
+    function getLabel(el){
+      return (el.closest('.setting-frame')?.querySelector('.setting-label')?.textContent || 'Setting').trim();
+    }
+
+    lang.addEventListener('change', (e)=>{
+      const name = getLabel(e.target);
+      toast(e.target.checked ? `ON : ${name}` 
+                            : `OFF : ${name}`);
+    });
+
+    lang.addEventListener('click', ev => ev.stopPropagation());
+    const wrapper = lang.closest('.switch');
+    if (wrapper) wrapper.addEventListener('click', ev => ev.stopPropagation());
+  })();
 
   function toggleMenu() {
     const menu = document.getElementById("mobileMenu");
@@ -207,6 +234,47 @@
       window.addEventListener('mousedown', trigger, {capture:true, passive:true});
       window.addEventListener('touchstart', trigger, {capture:true, passive:true});
     }
+  })();
+
+  (function () {
+    function showToast(message, timeout) {
+      const area = document.getElementById('nx-toast-area');
+      if (!area) return;
+
+      const toast = document.createElement('div');
+      toast.className = 'nx-toast';
+      toast.setAttribute('role', 'alert');
+
+      const bar = document.createElement('span');
+      bar.className = 'nx-toast__bar';
+
+      const text = document.createElement('div');
+      text.className = 'nx-toast__text';
+      text.textContent = message;
+
+      toast.appendChild(bar);
+      toast.appendChild(text);
+      area.appendChild(toast);
+
+      let hideTimer = setTimeout(close, timeout ?? 2400);
+      toast.addEventListener('mouseenter', () => { clearTimeout(hideTimer); });
+      toast.addEventListener('mouseleave', () => { hideTimer = setTimeout(close, 900); });
+      toast.addEventListener('click', close);
+
+      function close() {
+        toast.classList.add('nx-toast--closing');
+        toast.addEventListener('animationend', () => toast.remove(), { once: true });
+      }
+    }
+
+    window.nxToast = showToast;
+
+    document.addEventListener('click', function (e) {
+      const btn = e.target.closest('.nx-btn--ghost');
+      if (!btn) return;
+      e.preventDefault();
+      showToast('This button is locked');
+    }, { passive: false });
   })();
 </script>
 <script src="/js/settings.js"></script>
