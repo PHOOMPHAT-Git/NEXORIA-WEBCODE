@@ -60,9 +60,9 @@
           Release
         </h2>
         <p class="nx-banner__subtitle"
-           data-en="28 December 2025"
-           data-th="28 ธันวาคม 2568">
-          28 December 2025
+           data-en="XX XXXXXXXX XXXX"
+           data-th="XX XXXXXXXX XXXX">
+          XX XXXXXXXX XXXX
         </p>
 
         <div class="nx-banner__actions">
@@ -284,7 +284,7 @@
     }
   }
 
-  const COUNTDOWN_THAI = "28/12/2025 19:00";
+  const COUNTDOWN_THAI = "";
 
   function parseThaiToUTC(dateTimeTH) {
     const m = dateTimeTH.trim().match(/^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})\s+(\d{1,2}):(\d{2})$/);
@@ -346,7 +346,7 @@
     if(target){ startCountdown(target); }
     else{
       const meta = document.getElementById('cd-meta');
-      if(meta) meta.textContent = 'Invalid Thai date-time. Use "DD/MM/YYYY HH:MM".';
+      if(meta) meta.textContent = 'Invalid date-time.';
     }
   })();
 
