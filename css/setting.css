@@ -98,21 +98,6 @@ body {
     padding: 15rem 0;
 }
 
-.brand {
-    display: flex;
-    align-items: center;
-    margin-left: -1.5rem;
-}
-
-.brand img {
-    height: 125px;
-    object-fit: contain;
-    margin-bottom: 18px;
-    pointer-events: none;
-    -webkit-user-drag: none;
-    user-drag: none;
-}
-
 .setting-frame {
     display: flex;
     justify-content: space-between;
@@ -389,6 +374,36 @@ h3 {
 
 .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(6px, -6px);
+}
+
+html{background:#111; min-height:100%}
+body{background:#111; overflow-x:hidden}
+
+nav, .nx-partners, .content, .nx-banner, .nx-banner-row, footer{
+    will-change: transform;
+}
+
+.nx-shard{
+    position:fixed;
+    left:0; top:0;
+    width:var(--sz);
+    height:var(--sz);
+    pointer-events:none;
+    z-index:2147483647;
+    background:linear-gradient(135deg,#f5d76e 0%, #d4af37 40%, #fff5a8 70%, #b88900 100%);
+    border-radius:2px;
+    box-shadow:0 0 10px rgba(255,220,120,.75), 0 0 24px rgba(255,200,80,.35) inset;
+    mix-blend-mode:screen;
+    opacity:.98;
+    transform:translate(var(--x), var(--y)) scale(.85) rotate(var(--rot));
+    animation:nx-shard-fly var(--dur) cubic-bezier(.22,.61,.36,1) forwards;
+}
+@keyframes nx-shard-fly{
+    60%{opacity:.92}
+    100%{
+        transform:translate(calc(var(--x) + var(--dx)), calc(var(--y) + var(--dy))) scale(.9) rotate(var(--rot));
+        opacity:0;
+    }
 }
 
 ::-webkit-scrollbar {
