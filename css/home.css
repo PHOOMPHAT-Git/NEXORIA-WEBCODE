@@ -734,6 +734,9 @@ nav, .nx-partners, .content, .nx-banner, .nx-banner-row, footer{
         margin-inline: 0;
     }
 
+    .nx-banner-row{ padding-inline: 1rem; }
+    .nx-mini-banner{ padding: 1rem 1rem; } 
+
     .nx-banner{
         margin: 4rem 1rem;
         padding: 2.25rem 1.25rem;
@@ -746,9 +749,12 @@ nav, .nx-partners, .content, .nx-banner, .nx-banner-row, footer{
     .nx-banner__subtitle{ font-size: .85rem; }
     .nx-banner__art{ display:none; }
 
-    .nx-countdown{ gap:.5rem; }
-    .nx-countdown__item{ min-width:64px; padding:.55rem .75rem; }
-    .nx-countdown__num{ font-size:1.4rem; }
+    .nx-countdown{ gap:.4rem; }
+    .nx-countdown__item{ min-width:56px; padding:.5rem .65rem; }
+    .nx-countdown__num{ font-size:1.2rem; }
+    .nx-countdown__label{ font-size:.6rem; }
+    .nx-countdown__sep{ font-size:1rem; }
+    .nx-countdown__meta{ font-size:.75rem; }
 
     .nx-banner-row{ grid-template-columns:1fr; }
     .nx-mini-banner{ min-height:140px; }
