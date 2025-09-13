@@ -21,84 +21,104 @@
   
     <div class="nav-center" id="mobileMenu">
       <a href="/setting">SETTINGS</a>
-      <a id="discordLinkTop" href="#" target="_blank">COMMUNITY</a>
     </div>
   </nav>
 
-  <div class="content">
-    <div class="brand">
-      <img src="./img/NEXORIA_WHITE_LOGO.png" alt="NEXORIA logo" class="fade-slide-up">
-      <h1 class="fade-slide-up">NEXORIA</h1>
+  <section class="nx-partners fade-slide-up" aria-label="Sponsors & Partners">
+    <div class="nx-partners__edge nx-partners__edge--left"></div>
+    <div class="nx-partners__edge nx-partners__edge--right"></div>
+    <div class="nx-partners__scroller" id="partnersScroller">
+      <div class="nx-partners__track" id="partnersTrack">
+        <div class="nx-partners__group">
+          <a class="nx-partner" href="" target="_blank" rel="noopener">Empty</a>
+        </div>
+      </div>
     </div>
+  </section>
+
+  <div class="content">
+    <h1 class="fade-slide-up">NEXORIA</h1>
     <h3 class="fade-slide-up"
       data-en="Welcome to our website."
       data-th="ยินดีต้อนรับสู่เว็บไซต์ของเรา">
       Welcome to our website.
     </h3>
 
-    <a href="/update" class="custom-button fade-slide-up">
-      <span class="label">UPDATE LOG</span>
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.666" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon">
-        <path d="M5 12h14"></path>
-        <path d="m12 5 7 7-7 7"></path>
-      </svg>
-    </a>
-
   </div>
 
-  <div class="content-2">
-    <div class="divider fade-slide-up"></div>
+  <section class="nx-banner fade-slide-up" style="--bg:url('./img/banner_big.jpg')">
+    <div class="nx-banner__bg"></div>
+    <div class="nx-banner__glow nx-banner__glow--left"></div>
+    <div class="nx-banner__glow nx-banner__glow--right"></div>
 
-    <h1 class="fade-slide-up" data-en="Got Questions ?" data-th="อยากรู้อะไรเพิ่มเติม ?">Got Questions ?</h1>
-    <h3 class="fade-slide-up" data-en="Answering anything you might ask" data-th="ตอบทุกอย่างที่คุณถามมา">Answering anything you might ask</h3>
+    <div class="nx-banner__inner">
+      <div class="nx-banner__text">
+        <div class="nx-banner__eyebrow" data-en="ANNOUNCEMENT" data-th="ประกาศ">ANNOUNCEMENT</div>
+        <h2 class="nx-banner__title"
+            data-en="Release"
+            data-th="เปิดเกม">
+          Release
+        </h2>
+        <p class="nx-banner__subtitle"
+           data-en="28 December 2025"
+           data-th="28 ธันวาคม 2568">
+          28 December 2025
+        </p>
 
-    <div>
-      <div class="under-container fade-slide-up">
-        <div class="under-frame-left">
-
-          <div class="under-frame" onclick="toggleUnder(this)">
-            <div class="under-header">
-              <span class="under-label" data-en="Report player - where?" data-th="รีพอร์ตผู้เล่น - ที่ไหน?">Report player - where?</span>
-              <svg class="w-4 h-4 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+        <div class="nx-banner__actions">
+          <div class="nx-countdown" id="nx-countdown" role="timer" aria-live="polite">
+            <div class="nx-countdown__item">
+              <span class="nx-countdown__num" id="cd-days">00</span>
+              <span class="nx-countdown__label">DAYS</span>
             </div>
-            <div class="under-title">
-              <div class="text-en">
-                Players can be reported through the in-game report system or by submitting a report on our official Discord server
-              </div>
-              <div class="lang-divider"></div>
-              <div class="text-th">
-                สามารถรีพอร์ตผู้เล่นได้ทั้งใน Discord หรือในเกมโดยตรง
-              </div>
+            <div class="nx-countdown__sep">:</div>
+            <div class="nx-countdown__item">
+              <span class="nx-countdown__num" id="cd-hours">00</span>
+              <span class="nx-countdown__label">HRS</span>
             </div>
-          </div>
-
-        </div>
-
-        <div class="divider-center fade-slide-up"></div>
-
-        <div class="under-frame-right">
-
-          <div class="under-frame" onclick="toggleUnder(this)">
-            <div class="under-header">
-              <span class="under-label" data-en="How many times can you die before your items are reset?" data-th="สามารถตายได้กี่รอบก่อนที่ไอเทมจะถูกรีเซ็ท">How many times can you die before your items are reset?</span>
-              <svg class="w-4 h-4 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            <div class="nx-countdown__sep">:</div>
+            <div class="nx-countdown__item">
+              <span class="nx-countdown__num" id="cd-mins">00</span>
+              <span class="nx-countdown__label">MIN</span>
             </div>
-            <div class="under-title">
-              <div class="text-en">
-                You can die twice, and on the third time, your data will be deleted immediately.
-              </div>
-              <div class="lang-divider"></div>
-              <div class="text-en">
-                คุณสามารถตายได้ 2 ครั้ง และครั้งที่ 3 คุณจะถูกลบ Data ทันที
-              </div>
+            <div class="nx-countdown__sep">:</div>
+            <div class="nx-countdown__item">
+              <span class="nx-countdown__num" id="cd-secs">00</span>
+              <span class="nx-countdown__label">SEC</span>
             </div>
           </div>
-
+          <div class="nx-countdown__meta" id="cd-meta"></div>
         </div>
       </div>
-    </div>
-  </div>
 
+      <img src="./img/NEXORIA_GOLD_LOGO.png" alt="NEXORIA emblem" class="nx-banner__art" />
+    </div>
+  </section>
+
+  <section class="nx-banner-row fade-slide-up">
+    <article class="nx-mini-banner nx-mini-banner--stretch" style="--bg:url('./img/banner_mini_left.jpg')">
+      <div class="nx-mini-banner__inner">
+        <div class="nx-mini-banner__eyebrow" data-en="DEVLOG" data-th="บันทึกพัฒนา">DEVLOG</div>
+        <h3 class="nx-mini-banner__title" data-en="New Weapon Showcase" data-th="โชว์อาวุธใหม่">New Weapon Showcase</h3>
+        <p class="nx-mini-banner__subtitle"
+          data-en="Sneak peek of the new weapon"
+          data-th="แอบส่องอาวุธใหม่">Sneak peek of the new weapon</p>
+        <a href="/devlog" class="nx-btn nx-btn--ghost">Read</a>
+      </div>
+    </article>
+
+    <article class="nx-mini-banner nx-mini-banner--stretch" style="--bg:url('./img/banner_mini_right.jpg')">
+      <div class="nx-mini-banner__inner">
+        <div class="nx-mini-banner__eyebrow" data-en="COMMUNITY" data-th="ชุมชน">COMMUNITY</div>
+        <h3 class="nx-mini-banner__title" data-en="Join Our Discord Server" data-th="เข้าร่วมดิสคอร์ดเซิร์ฟเวอร์">Join Our Discord Server</h3>
+        <p class="nx-mini-banner__subtitle"
+          data-en="Chat with players, get updates"
+          data-th="พูดคุยกับผู้เล่น รับอัปเดต">Chat with players, get updates</p>
+        <a id="discordLinkBanner" href="#" target="_blank" class="nx-btn">Join</a>
+      </div>
+    </article>
+  </section>
+  
   <footer class="footer fade-slide-up">
     <div class="footer-container">
       <div class="footer-column">
@@ -113,8 +133,7 @@
       <div class="footer-column">
         <h3 data-en="Social" data-th="โซเซียล">Social</h3>
         <ul>
-          <li><a href="https://tiktok.com/@nexoria.phe" target="_blank">Tiktok</a></li>
-          <li><a id="discordLinkFooter" href="#" target="_blank">Discord</a></li>
+          <li><a href="https://tiktok.com/@phoomphat_phe" target="_blank">Tiktok</a></li>
         </ul>
       </div>
 
@@ -147,9 +166,11 @@
       if (config.discord) {
         const discordTop = document.getElementById("discordLinkTop");
         const discordFooter = document.getElementById("discordLinkFooter");
+        const discordBanner = document.getElementById("discordLinkBanner");
 
         if (discordTop) discordTop.href = config.discord;
         if (discordFooter) discordFooter.href = config.discord;
+        if (discordBanner) discordBanner.href = config.discord;
       }
     })
   .catch(err => console.error("Failed to load config.json:", err));
@@ -262,6 +283,211 @@
       console.error("Exchange rate fetch error:", error);
     }
   }
+
+  const COUNTDOWN_THAI = "28/12/2025 19:00";
+
+  function parseThaiToUTC(dateTimeTH) {
+    const m = dateTimeTH.trim().match(/^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})\s+(\d{1,2}):(\d{2})$/);
+    if(!m) return null;
+    const dd = parseInt(m[1],10);
+    const mm = parseInt(m[2],10);
+    const yyyy = parseInt(m[3],10);
+    const HH = parseInt(m[4],10);
+    const MI = parseInt(m[5],10);
+    const TH_OFFSET = 7;
+    return Date.UTC(yyyy, mm-1, dd, HH - TH_OFFSET, MI, 0, 0);
+  }
+
+  function two(n){ return String(n).padStart(2,'0'); }
+
+  function startCountdown(targetUTCms){
+    const elD = document.getElementById('cd-days');
+    const elH = document.getElementById('cd-hours');
+    const elM = document.getElementById('cd-mins');
+    const elS = document.getElementById('cd-secs');
+    const meta = document.getElementById('cd-meta');
+
+    const targetDateUTC = new Date(targetUTCms);
+    const thaiStr = targetDateUTC.toLocaleString('th-TH',{
+      timeZone:'Asia/Bangkok', year:'numeric', month:'2-digit', day:'2-digit',
+      hour:'2-digit', minute:'2-digit', hour12:false, timeZoneName:'short'
+    });
+    const localStr = targetDateUTC.toLocaleString(undefined,{
+      year:'numeric', month:'2-digit', day:'2-digit',
+      hour:'2-digit', minute:'2-digit', hour12:false, timeZoneName:'short'
+    });
+    meta.textContent = `Bangkok : ${thaiStr} - Your time : ${localStr}`;
+
+    function tick(){
+      const diff = targetUTCms - Date.now();
+      if (diff <= 0){
+        elD.textContent = '00'; elH.textContent = '00';
+        elM.textContent = '00'; elS.textContent = '00';
+        meta.textContent = 'Release now!';
+        clearInterval(_timer);
+        return;
+      }
+      const total = Math.floor(diff/1000);
+      const d = Math.floor(total/86400);
+      const h = Math.floor((total%86400)/3600);
+      const m = Math.floor((total%3600)/60);
+      const s = total%60;
+      elD.textContent = two(d);
+      elH.textContent = two(h);
+      elM.textContent = two(m);
+      elS.textContent = two(s);
+    }
+    tick();
+    const _timer = setInterval(tick,1000);
+  }
+
+  (function initCountdown(){
+    const target = parseThaiToUTC(COUNTDOWN_THAI);
+    if(target){ startCountdown(target); }
+    else{
+      const meta = document.getElementById('cd-meta');
+      if(meta) meta.textContent = 'Invalid Thai date-time. Use "DD/MM/YYYY HH:MM".';
+    }
+  })();
+
+  (function(){
+    const scroller=document.getElementById('partnersScroller');
+    const track=document.getElementById('partnersTrack');
+    if(!scroller||!track)return;
+
+    const originals=Array.from(track.querySelector('.nx-partners__group')?track.querySelector('.nx-partners__group').children:track.children);
+    function makeGroup(){
+      const g=document.createElement('div');
+      g.className='nx-partners__group';
+      originals.forEach(n=>g.appendChild(n.cloneNode(true)));
+      return g;
+    }
+    function build(){
+      track.innerHTML='';
+      const g1=makeGroup();
+      track.appendChild(g1);
+      const singleW=g1.getBoundingClientRect().width;
+      let need=scroller.clientWidth+singleW*2;
+      let total=singleW;
+      while(total<need){const g=makeGroup();track.appendChild(g);total+=singleW}
+      return {singleW,ref:g1};
+    }
+
+    let {singleW}=build();
+    let x=0,run=true,v=70,last=performance.now();
+    function step(t){
+      const dt=(t-last)/1000;last=t;
+      if(run){x+=v*dt;while(x>=singleW)x-=singleW}
+      track.style.transform=`translate3d(${-x}px,0,0)`;
+      requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+
+    let dragging=false, moved=false, prev=0;
+
+    scroller.addEventListener('pointerdown',e=>{
+      if(e.button!==0) return;
+      if(e.target.closest('a')) return;
+      dragging=true; run=false; moved=false;
+      prev=e.clientX;
+      scroller.setPointerCapture(e.pointerId);
+    });
+
+    scroller.addEventListener('pointermove',e=>{
+      if(!dragging) return;
+      const dx=e.clientX-prev; prev=e.clientX;
+      if(Math.abs(dx)>3) moved=true;
+      x-=dx; while(x<0)x+=singleW; while(x>=singleW)x-=singleW;
+      track.style.transform=`translate3d(${-x}px,0,0)`;
+    });
+
+    function end(e){
+      if(!dragging) return;
+      dragging=false;
+      if(moved){ scroller.addEventListener('click', blockOnce, {capture:true, once:true}); }
+      moved=false; run=true;
+      if(e && e.pointerId!=null) try{ scroller.releasePointerCapture(e.pointerId); }catch{}
+    }
+    function blockOnce(ev){
+      if(ev.target.closest('a')){ ev.preventDefault(); ev.stopPropagation(); }
+    }
+
+    scroller.addEventListener('pointerup',end);
+    scroller.addEventListener('pointercancel',end);
+    scroller.addEventListener('pointerleave',end);
+
+    let wt=null;
+    scroller.addEventListener('wheel',e=>{
+      e.preventDefault();
+      const d=Math.abs(e.deltaX)>Math.abs(e.deltaY)?e.deltaX:e.deltaY;
+      x+=d; while(x<0)x+=singleW; while(x>=singleW)x-=singleW;
+      track.style.transform=`translate3d(${-x}px,0,0)`;
+      run=false; clearTimeout(wt); wt=setTimeout(()=>run=true,800);
+    },{passive:false});
+
+    let rt;
+    window.addEventListener('resize',()=>{
+      clearTimeout(rt);
+      rt=setTimeout(()=>{singleW=build().singleW;x%=singleW},120);
+    });
+
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){v=0}
+  })();
+
+  (() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    function burst(x,y){
+      const count=10;
+      for(let i=0;i<count;i++){
+        const s=document.createElement('i');
+        s.className='nx-shard';
+        const ang=(i/count)*Math.PI*2+(Math.random()*0.5-0.25);
+        const dist=50+Math.random()*80;
+        const sz=4+Math.random()*3;
+        const rot=(Math.random()*360-180)+'deg';
+        const dur=(360+Math.random()*240)+'ms';
+        s.style.setProperty('--x', x+'px');
+        s.style.setProperty('--y', y+'px');
+        s.style.setProperty('--dx', Math.cos(ang)*dist+'px');
+        s.style.setProperty('--dy', Math.sin(ang)*dist+'px');
+        s.style.setProperty('--sz', sz+'px');
+        s.style.setProperty('--rot', rot);
+        s.style.setProperty('--dur', dur);
+        document.body.appendChild(s);
+        s.addEventListener('animationend', ()=>s.remove(), {once:true});
+      }
+    }
+
+    function isPrimaryTrigger(e){
+      if('pointerType' in e){
+        if(e.pointerType==='mouse') return e.button===0;
+        return e.isPrimary!==false;
+      }
+      if(e.type==='mousedown') return e.button===0;
+      if(e.type==='touchstart') return true;
+      return true;
+    }
+
+    function getXY(e){
+      if(e.touches && e.touches[0]) return {x:e.touches[0].clientX, y:e.touches[0].clientY};
+      return {x:e.clientX, y:e.clientY};
+    }
+
+    function trigger(e){
+      if(!isPrimaryTrigger(e)) return;
+      const p=getXY(e);
+      if(!p) return;
+      burst(p.x,p.y);
+    }
+
+    if('onpointerdown' in window){
+      window.addEventListener('pointerdown', trigger, {capture:true, passive:true});
+    }else{
+      window.addEventListener('mousedown', trigger, {capture:true, passive:true});
+      window.addEventListener('touchstart', trigger, {capture:true, passive:true});
+    }
+  })();
 
   updateExchangeRate();
 </script>
