@@ -55,6 +55,12 @@ body {
     pointer-events:none;
 }
 
+.nx-banner[style*="--bg"] .nx-banner__bg{
+    background: var(--bg) center/cover no-repeat;
+    background-size: 35% auto;
+    background-position: 75% 15%;
+}
+
 .nx-banner__glow{
     position:absolute;
     width: 420px;
@@ -184,14 +190,29 @@ body {
 }
 .nx-mini-banner::before{
     content:""; position:absolute; inset:0;
-    background: var(--bg, url('./img/banner.jpg')) center/cover no-repeat;
+    background: var(--bg, url('/img/banner.jpg')) center/cover no-repeat;
     opacity:.2; filter: contrast(1.05) saturate(.9);
     pointer-events:none;
 }
 .nx-mini-banner::after{
-    content:""; position:absolute; inset:0;
-    background: #1a1a1a;
+    content:"";
+    position:absolute;
+    inset:0;
+    background:#1a1a1a;
     pointer-events:none;
+}
+
+.nx-mini-banner[style*="PHEYA_hands_on_hips.png"]::after{
+    z-index: 1
+}
+.nx-mini-banner[style*="PHEYA_hands_on_hips.png"]::before{
+    z-index: 2;
+    background-size: 75% auto;
+    background-position: 80% 25%;
+}
+.nx-mini-banner[style*="PHEYA_hands_on_hips.png"] .nx-mini-banner__inner{
+    position: relative;
+    z-index: 3;
 }
 
 .nx-mini-banner__inner{ position:relative; z-index:1; }
@@ -772,12 +793,21 @@ nav, .nx-partners, .content, .nx-banner, .nx-banner-row, footer{
     to{opacity:0; transform:translateX(24px) translateY(8px);}
 }
 
-@media (max-width:768px){
+@media only screen and (max-width: 768px) {
+    .nx-banner[style*="--bg"] .nx-banner__bg{
+        background: var(--bg) center/cover no-repeat;
+        background-size: 80% auto;
+        background-position: 150% 0%;
+    }
+
+    .nx-mini-banner[style*="PHEYA_hands_on_hips.png"]::before{
+        background-size: 75% auto;
+        background-position: 150% 10%;
+    }
+
     .nx-toast{min-width:200px; max-width:280px; padding:.7rem .85rem;}
     .nx-toast__text{font-size:.85rem;}
-}
 
-@media only screen and (max-width: 768px) {
     body {
         padding-top: 175px;
     }
