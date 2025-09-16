@@ -46,7 +46,7 @@
 
   </div>
 
-  <section class="nx-banner fade-slide-up" style="--bg:url('./img/banner_big.jpg')">
+  <section class="nx-banner fade-slide-up" style="--bg:url('/img/PHEYA_sit_staring_fixedly.png')">
     <div class="nx-banner__bg"></div>
     <div class="nx-banner__glow nx-banner__glow--left"></div>
     <div class="nx-banner__glow nx-banner__glow--right"></div>
@@ -96,7 +96,7 @@
   </section>
 
   <section class="nx-banner-row fade-slide-up">
-    <article class="nx-mini-banner nx-mini-banner--stretch" style="--bg:url('./img/banner_mini_left.jpg')">
+    <article class="nx-mini-banner nx-mini-banner--stretch">
       <div class="nx-mini-banner__inner">
         <div class="nx-mini-banner__eyebrow" data-en="DEVLOG" data-th="บันทึกพัฒนา">DEVLOG</div>
         <h3 class="nx-mini-banner__title" data-en="New Weapon Showcase" data-th="โชว์อาวุธใหม่">New Weapon Showcase</h3>
@@ -107,7 +107,7 @@
       </div>
     </article>
 
-    <article class="nx-mini-banner nx-mini-banner--stretch" style="--bg:url('./img/banner_mini_right.jpg')">
+    <article class="nx-mini-banner nx-mini-banner--stretch" style="--bg:url('/img/PHEYA_hands_on_hips.png')">
       <div class="nx-mini-banner__inner">
         <div class="nx-mini-banner__eyebrow" data-en="COMMUNITY" data-th="ชุมชน">COMMUNITY</div>
         <h3 class="nx-mini-banner__title" data-en="Join Our Discord Server" data-th="เข้าร่วมดิสคอร์ดเซิร์ฟเวอร์">Join Our Discord Server</h3>
@@ -166,7 +166,7 @@
     .then(config => {
       if (config.discord) {
         const discordTop = document.getElementById("discordLinkTop");
-        const discordFooter = document.getElementById("discordLinkFooter");
+        const discordFooter = document.getElementById("discordLinkaFooter");
         const discordBanner = document.getElementById("discordLinkBanner");
 
         if (discordTop) discordTop.href = config.discord;
@@ -285,7 +285,7 @@
     }
   }
 
-  const COUNTDOWN_THAI = "";
+  const COUNTDOWN_THAI = "28/12/2025 19:00";
 
   function parseThaiToUTC(dateTimeTH) {
     const m = dateTimeTH.trim().match(/^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})\s+(\d{1,2}):(\d{2})$/);
