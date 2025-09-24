@@ -202,6 +202,11 @@ body {
     pointer-events:none;
 }
 
+.nx-banner[style*="PHEYA_sulk.png"] .nx-banner__bg{
+    background-size: 40% auto;
+    background-position: 80% 15%;
+}
+
 .nx-mini-banner[style*="PHEYA_hands_on_hips.png"]::after{
     z-index: 1
 }
@@ -213,6 +218,25 @@ body {
 .nx-mini-banner[style*="PHEYA_hands_on_hips.png"] .nx-mini-banner__inner{
     position: relative;
     z-index: 3;
+}
+
+.nx-mini-banner[style*="PHEYA_afraid.png"]::after{
+    z-index: 1
+}
+.nx-mini-banner[style*="PHEYA_afraid.png"]::before{
+    z-index: 2;
+    background-size: 75% auto;
+    background-position: 80% 25%;
+}
+.nx-mini-banner[style*="PHEYA_afraid.png"] .nx-mini-banner__inner{
+    position: relative;
+    z-index: 3;
+}
+
+.nx-banner__inner + .nx-banner__inner{
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #2a2a2a;
 }
 
 .nx-mini-banner__inner{ position:relative; z-index:1; }
@@ -794,6 +818,11 @@ nav, .nx-partners, .content, .nx-banner, .nx-banner-row, footer{
 }
 
 @media only screen and (max-width: 768px) {
+    .nx-banner[style*="PHEYA_sulk.png"] .nx-banner__bg{
+        background-size: 65% auto;
+        background-position: 130% 8%;
+    }
+
     .nx-banner[style*="--bg"] .nx-banner__bg{
         background: var(--bg) center/cover no-repeat;
         background-size: 80% auto;
@@ -801,6 +830,11 @@ nav, .nx-partners, .content, .nx-banner, .nx-banner-row, footer{
     }
 
     .nx-mini-banner[style*="PHEYA_hands_on_hips.png"]::before{
+        background-size: 75% auto;
+        background-position: 150% 10%;
+    }
+
+    .nx-mini-banner[style*="PHEYA_afraid.png"]::before{
         background-size: 75% auto;
         background-position: 150% 10%;
     }
@@ -839,7 +873,7 @@ nav, .nx-partners, .content, .nx-banner, .nx-banner-row, footer{
     .nx-mini-banner{ padding: 1rem 1rem; } 
 
     .nx-banner{
-        margin: 4rem 1rem;
+        margin: 1rem 1rem;
         padding: 2.25rem 1.25rem;
     }
     .nx-banner__inner{
