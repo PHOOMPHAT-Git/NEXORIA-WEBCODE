@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>NEXORIA</title>
-  <link rel="icon" type="image/png" href="./img/BIG_LOGO.png"/>
+  <link rel="icon" type="image/png" href="./img/NEXORIA_GOLD_LOGO.png"/>
   <link rel="stylesheet" href="./css/home.css">
 </head>
 <body>
@@ -52,42 +52,24 @@
     <div class="nx-banner__glow nx-banner__glow--right"></div>
 
     <div class="nx-banner__inner">
-      <div class="nx-banner__text">
-        <div class="nx-banner__eyebrow" data-en="ANNOUNCEMENT" data-th="ประกาศ">ANNOUNCEMENT</div>
-        <h2 class="nx-banner__title"
-            data-en="Release"
-            data-th="เปิดเกม">
-          Release
-        </h2>
-        <p class="nx-banner__subtitle"
-           data-en="XX XXXXXXXX XXXX"
-           data-th="XX XXXXXXXX XXXX">
-          XX XXXXXXXX XXXX
-        </p>
+      <div class="nx-banner__inner">
+        <div class="nx-banner__text">
+          <div class="nx-banner__eyebrow" data-en="ANNOUNCEMENT" data-th="ประกาศ">ANNOUNCEMENT</div>
+          <h2 class="nx-banner__title" data-en="Release" data-th="เปิดเกม">Release</h2>
+          <p class="nx-banner__subtitle" data-en="XX XXXXXXXX XXXX" data-th="XX XXXXXXXX XXXX">XX XXXXXXXX XXXX</p>
 
-        <div class="nx-banner__actions">
-          <div class="nx-countdown" id="nx-countdown" role="timer" aria-live="polite">
-            <div class="nx-countdown__item">
-              <span class="nx-countdown__num" id="cd-days">00</span>
-              <span class="nx-countdown__label">DAYS</span>
+          <div class="nx-banner__actions">
+            <div class="nx-countdown" role="timer" aria-live="polite" data-when-th="">
+              <div class="nx-countdown__item"><span class="nx-countdown__num" data-part="d">00</span><span class="nx-countdown__label">DAYS</span></div>
+              <div class="nx-countdown__sep">:</div>
+              <div class="nx-countdown__item"><span class="nx-countdown__num" data-part="h">00</span><span class="nx-countdown__label">HRS</span></div>
+              <div class="nx-countdown__sep">:</div>
+              <div class="nx-countdown__item"><span class="nx-countdown__num" data-part="m">00</span><span class="nx-countdown__label">MIN</span></div>
+              <div class="nx-countdown__sep">:</div>
+              <div class="nx-countdown__item"><span class="nx-countdown__num" data-part="s">00</span><span class="nx-countdown__label">SEC</span></div>
             </div>
-            <div class="nx-countdown__sep">:</div>
-            <div class="nx-countdown__item">
-              <span class="nx-countdown__num" id="cd-hours">00</span>
-              <span class="nx-countdown__label">HRS</span>
-            </div>
-            <div class="nx-countdown__sep">:</div>
-            <div class="nx-countdown__item">
-              <span class="nx-countdown__num" id="cd-mins">00</span>
-              <span class="nx-countdown__label">MIN</span>
-            </div>
-            <div class="nx-countdown__sep">:</div>
-            <div class="nx-countdown__item">
-              <span class="nx-countdown__num" id="cd-secs">00</span>
-              <span class="nx-countdown__label">SEC</span>
-            </div>
+            <div class="nx-countdown__meta" id="release-cd-meta"></div>
           </div>
-          <div class="nx-countdown__meta" id="cd-meta"></div>
         </div>
       </div>
 
@@ -95,8 +77,35 @@
     </div>
   </section>
 
+  <section class="nx-banner fade-slide-up" style="--bg:url('/img/PHEYA_sulk.png')">
+    <div class="nx-banner__bg"></div>
+    <div class="nx-banner__glow nx-banner__glow--left"></div>
+    <div class="nx-banner__glow nx-banner__glow--right"></div>
+
+    <div class="nx-banner__inner">
+      <div class="nx-banner__text">
+        <div class="nx-banner__eyebrow" data-en="Events" data-th="อีเว้นท์">Events</div>
+        <h2 class="nx-banner__title" data-en="Anoter world" data-th="อีกโลกหนึ่ง">Anoter world</h2>
+        <p class="nx-banner__subtitle" data-en="XX XXXXXXXX XXXX" data-th="XX XXXXXXXX XXXX">XX XXXXXXXX XXXX</p>
+
+        <div class="nx-banner__actions">
+          <div class="nx-countdown" role="timer" aria-live="polite" data-when-th="">
+            <div class="nx-countdown__item"><span class="nx-countdown__num" data-part="d">00</span><span class="nx-countdown__label">DAYS</span></div>
+            <div class="nx-countdown__sep">:</div>
+            <div class="nx-countdown__item"><span class="nx-countdown__num" data-part="h">00</span><span class="nx-countdown__label">HRS</span></div>
+            <div class="nx-countdown__sep">:</div>
+            <div class="nx-countdown__item"><span class="nx-countdown__num" data-part="m">00</span><span class="nx-countdown__label">MIN</span></div>
+            <div class="nx-countdown__sep">:</div>
+            <div class="nx-countdown__item"><span class="nx-countdown__num" data-part="s">00</span><span class="nx-countdown__label">SEC</span></div>
+          </div>
+          <div class="nx-countdown__meta" id="events-cd-meta"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="nx-banner-row fade-slide-up">
-    <article class="nx-mini-banner nx-mini-banner--stretch">
+    <article class="nx-mini-banner nx-mini-banner--stretch"  style="--bg:url('/img/PHEYA_afraid.png')">
       <div class="nx-mini-banner__inner">
         <div class="nx-mini-banner__eyebrow" data-en="DEVLOG" data-th="บันทึกพัฒนา">DEVLOG</div>
         <h3 class="nx-mini-banner__title" data-en="New Weapon Showcase" data-th="โชว์อาวุธใหม่">New Weapon Showcase</h3>
@@ -114,7 +123,7 @@
         <p class="nx-mini-banner__subtitle"
           data-en="Chat with players, get updates"
           data-th="พูดคุยกับผู้เล่น รับอัปเดต">Chat with players, get updates</p>
-        <a id="discordLinkBanner" href="#" target="_blank" class="nx-btn">Join</a>
+        <a id="discordLinkBanner" href="#" target="_blank" class="nx-btn nx-btn--ghost">Join</a>
       </div>
     </article>
   </section>
@@ -285,70 +294,107 @@
     }
   }
 
-  const COUNTDOWN_THAI = "";
+  (function () {
+    function parseThaiToUTC(dateTimeTH) {
+      const m = String(dateTimeTH || '').trim()
+        .match(/^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})\s+(\d{1,2}):(\d{2})$/);
+      if (!m) return null;
+      const dd = +m[1], mm = +m[2], yyyy = +m[3], HH = +m[4], MI = +m[5];
+      const TH_OFFSET = 7;
+      return Date.UTC(yyyy, mm - 1, dd, HH - TH_OFFSET, MI, 0, 0);
+    }
 
-  function parseThaiToUTC(dateTimeTH) {
-    const m = dateTimeTH.trim().match(/^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})\s+(\d{1,2}):(\d{2})$/);
-    if(!m) return null;
-    const dd = parseInt(m[1],10);
-    const mm = parseInt(m[2],10);
-    const yyyy = parseInt(m[3],10);
-    const HH = parseInt(m[4],10);
-    const MI = parseInt(m[5],10);
-    const TH_OFFSET = 7;
-    return Date.UTC(yyyy, mm-1, dd, HH - TH_OFFSET, MI, 0, 0);
-  }
+    function two(n) { return String(n).padStart(2, '0'); }
 
-  function two(n){ return String(n).padStart(2,'0'); }
+    function findMetaEl(countdownEl) {
+      const n = countdownEl.nextElementSibling;
+      return n && n.classList && n.classList.contains('nx-countdown__meta') ? n : null;
+    }
 
-  function startCountdown(targetUTCms){
-    const elD = document.getElementById('cd-days');
-    const elH = document.getElementById('cd-hours');
-    const elM = document.getElementById('cd-mins');
-    const elS = document.getElementById('cd-secs');
-    const meta = document.getElementById('cd-meta');
+    function getTargetUTCms(el) {
+      const th = el.getAttribute('data-when-th');
+      const iso = el.getAttribute('data-when-iso');
+      const any = el.getAttribute('data-when');
 
-    const targetDateUTC = new Date(targetUTCms);
-    const thaiStr = targetDateUTC.toLocaleString('th-TH',{
-      timeZone:'Asia/Bangkok', year:'numeric', month:'2-digit', day:'2-digit',
-      hour:'2-digit', minute:'2-digit', hour12:false, timeZoneName:'short'
-    });
-    const localStr = targetDateUTC.toLocaleString(undefined,{
-      year:'numeric', month:'2-digit', day:'2-digit',
-      hour:'2-digit', minute:'2-digit', hour12:false, timeZoneName:'short'
-    });
-    meta.textContent = `Bangkok : ${thaiStr} - Your time : ${localStr}`;
-
-    function tick(){
-      const diff = targetUTCms - Date.now();
-      if (diff <= 0){
-        elD.textContent = '00'; elH.textContent = '00';
-        elM.textContent = '00'; elS.textContent = '00';
-        meta.textContent = 'Release now!';
-        clearInterval(_timer);
-        return;
+      if (th) {
+        const t = parseThaiToUTC(th);
+        if (t) return t;
       }
-      const total = Math.floor(diff/1000);
-      const d = Math.floor(total/86400);
-      const h = Math.floor((total%86400)/3600);
-      const m = Math.floor((total%3600)/60);
-      const s = total%60;
-      elD.textContent = two(d);
-      elH.textContent = two(h);
-      elM.textContent = two(m);
-      elS.textContent = two(s);
+      if (iso) {
+        const d = new Date(iso);
+        if (!isNaN(d)) return d.getTime() - (7 * 3600 * 1000);
+      }
+      if (any) {
+        const d = new Date(any);
+        if (!isNaN(d)) return d.getTime();
+      }
+      return null;
     }
-    tick();
-    const _timer = setInterval(tick,1000);
-  }
 
-  (function initCountdown(){
-    const target = parseThaiToUTC(COUNTDOWN_THAI);
-    if(target){ startCountdown(target); }
-    else{
-      const meta = document.getElementById('cd-meta');
-      if(meta) meta.textContent = 'Invalid date-time.';
+    function startOneCountdown(containerEl, targetUTCms) {
+      const dEl = containerEl.querySelector('[data-part="d"]');
+      const hEl = containerEl.querySelector('[data-part="h"]');
+      const mEl = containerEl.querySelector('[data-part="m"]');
+      const sEl = containerEl.querySelector('[data-part="s"]');
+      const meta = findMetaEl(containerEl);
+
+      if (meta) {
+        const targetDateUTC = new Date(targetUTCms);
+        const thaiStr = targetDateUTC.toLocaleString('th-TH', {
+          timeZone: 'Asia/Bangkok', year: 'numeric', month: '2-digit', day: '2-digit',
+          hour: '2-digit', minute: '2-digit', hour12: false, timeZoneName: 'short'
+        });
+        const localStr = targetDateUTC.toLocaleString(undefined, {
+          year: 'numeric', month: '2-digit', day: '2-digit',
+          hour: '2-digit', minute: '2-digit', hour12: false, timeZoneName: 'short'
+        });
+        meta.textContent = `Bangkok : ${thaiStr} -- Your time : ${localStr}`;
+      }
+
+      function render(diffMs) {
+        if (diffMs <= 0) {
+          if (dEl) dEl.textContent = '00';
+          if (hEl) hEl.textContent = '00';
+          if (mEl) mEl.textContent = '00';
+          if (sEl) sEl.textContent = '00';
+          return false;
+        }
+        const total = Math.floor(diffMs / 1000);
+        const d = Math.floor(total / 86400);
+        const h = Math.floor((total % 86400) / 3600);
+        const m = Math.floor((total % 3600) / 60);
+        const s = total % 60;
+        if (dEl) dEl.textContent = two(d);
+        if (hEl) hEl.textContent = two(h);
+        if (mEl) mEl.textContent = two(m);
+        if (sEl) sEl.textContent = two(s);
+        return true;
+      }
+
+      const tick = () => {
+        const ok = render(targetUTCms - Date.now());
+        if (!ok) clearInterval(timer);
+      };
+      tick();
+      const timer = setInterval(tick, 1000);
     }
+
+    function initAllCountdowns() {
+      const list = document.querySelectorAll('.nx-countdown');
+      if (!list.length) return;
+
+      list.forEach(el => {
+        const target = getTargetUTCms(el);
+        const meta = findMetaEl(el);
+        if (target != null) {
+          startOneCountdown(el, target);
+        } else if (meta) {
+          meta.textContent = 'Invalid date-time.';
+        }
+      });
+    }
+
+    initAllCountdowns();
   })();
 
   (function(){
@@ -491,17 +537,46 @@
   })();
 
   (function(){
-    function showToast(message, timeout){
+    const NX_I18N = {
+      toast_locked: { en: 'This button is locked', th: 'ปุ่มถูกล็อก' }
+    };
+
+    function nxGetLang(){
+      let lang =
+        (window.NX_SETTINGS && window.NX_SETTINGS.lang) ||
+        document.documentElement.getAttribute('lang') ||
+        localStorage.getItem('nx_lang') ||
+        localStorage.getItem('lang') || 'en';
+      lang = String(lang).toLowerCase();
+      return lang.startsWith('th') ? 'th' : 'en';
+    }
+
+    function nxT(key, fallback){
+      const table = NX_I18N[key];
+      if (table) return table[nxGetLang()] || table.en || fallback || key;
+      return fallback || key;
+    }
+
+    function showToast(messageKeyOrText, timeout){
       const area = document.getElementById('nx-toast-area');
       if(!area) return;
+
       const toast = document.createElement('div');
       toast.className = 'nx-toast';
       toast.setAttribute('role','alert');
+
       const bar = document.createElement('span');
       bar.className = 'nx-toast__bar';
+
       const text = document.createElement('div');
       text.className = 'nx-toast__text';
-      text.textContent = message || 'ปุ่มถูกล็อก';
+
+      const resolved = typeof messageKeyOrText === 'string'
+        ? nxT(messageKeyOrText, messageKeyOrText)
+        : nxT('toast_locked', 'This button is locked');
+
+      text.textContent = resolved;
+
       toast.appendChild(bar);
       toast.appendChild(text);
       area.appendChild(toast);
@@ -521,7 +596,7 @@
       const btn = e.target.closest('.nx-btn--ghost');
       if(!btn) return;
       e.preventDefault();
-      showToast('This button is locked');
+      showToast('toast_locked');
     }, {passive:false});
   })();
 
