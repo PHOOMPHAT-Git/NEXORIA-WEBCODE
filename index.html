@@ -103,10 +103,10 @@
       </div>
     </div>
 
-    <div class="nx-banner__inner" data-bg="/img/PHEYA_eats_bread.png">
+    <div class="nx-banner__inner" data-bg="/img/PHEYA_hungry.png">
       <div class="nx-banner__text">
         <div class="nx-banner__eyebrow" data-en="Events" data-th="อีเว้นท์">Events</div>
-        <h2 class="nx-banner__title" data-en="Capture Pheya's heart" data-th="เอาชนะใจเฟญ่า">Capture Pheya's heart</h2>
+        <h2 class="nx-banner__title" data-en="Duo Championship" data-th="ดูโอ แชมเปียนชิพ">Duo Championship</h2>
         <p class="nx-banner__subtitle" data-en="XX XXXXXXXX XXXX" data-th="XX XXXXXXXX XXXX">XX XXXXXXXX XXXX</p>
 
         <div class="nx-banner__actions">
@@ -124,10 +124,10 @@
       </div>
     </div>
 
-    <div class="nx-banner__inner" data-bg="/img/PHEYA_hungry.png">
+    <div class="nx-banner__inner" data-bg="/img/PHEYA_eats_bread.png">
       <div class="nx-banner__text">
         <div class="nx-banner__eyebrow" data-en="Events" data-th="อีเว้นท์">Events</div>
-        <h2 class="nx-banner__title" data-en="Duo Championship" data-th="ดูโอ แชมเปียนชิพ">Duo Championship</h2>
+        <h2 class="nx-banner__title" data-en="Capture Pheya's heart" data-th="เอาชนะใจเฟญ่า">Capture Pheya's heart</h2>
         <p class="nx-banner__subtitle" data-en="XX XXXXXXXX XXXX" data-th="XX XXXXXXXX XXXX">XX XXXXXXXX XXXX</p>
 
         <div class="nx-banner__actions">
@@ -650,20 +650,14 @@
         .filter(el => el.classList && el.classList.contains('nx-banner__inner'));
       if(!slides.length) return;
 
-      const bgwrap  = document.createElement('div');
+      const bgwrap = document.createElement('div');
       bgwrap.className = 'nx-lotframe__bgwrap';
-      const bgtrack = document.createElement('div');
-      bgtrack.className = 'nx-lotframe__bgtrack';
-      bgwrap.appendChild(bgtrack);
+      const bgA = document.createElement('div');
+      const bgB = document.createElement('div');
+      bgA.className = 'nx-lotframe__bg is-front';
+      bgB.className = 'nx-lotframe__bg';
+      bgwrap.append(bgA, bgB);
       section.insertBefore(bgwrap, section.firstChild);
-
-      slides.forEach(sl=>{
-        const url = sl.getAttribute('data-bg');
-        const frame = document.createElement('div');
-        frame.className = 'nx-lotframe__bg';
-        if(url) frame.style.setProperty('--bg', `url('${url}')`);
-        bgtrack.appendChild(frame);
-      });
 
       const viewport = document.createElement('div');
       viewport.className = 'nx-lotframe__viewport';
@@ -678,10 +672,7 @@
       }
       viewport.appendChild(track);
 
-      slides.forEach(sl=>{
-        sl.classList.add('nx-lotframe__slide');
-        track.appendChild(sl);
-      });
+      slides.forEach(sl=>{ sl.classList.add('nx-lotframe__slide'); track.appendChild(sl); });
 
       const nav = document.createElement('div');
       nav.className='nx-banner-nav';
@@ -701,8 +692,9 @@
       section.appendChild(nav);
 
       function cssGapPx(){
-        const v = getComputedStyle(section).getPropertyValue('--lotframe-gap');
-        return parseFloat(v) || 0;
+        const cs = getComputedStyle(track);
+        const g = parseFloat(cs.columnGap || cs.gap);
+        return isNaN(g) ? 0 : g;
       }
 
       function lockHeight(){
@@ -710,16 +702,62 @@
         section.style.setProperty('--lotframe-minh', Math.max(120, Math.ceil(maxH))+'px');
       }
 
-      let index = 0, busy = false;
+      const STG_SELECTORS = [
+        '.nx-banner__eyebrow',
+        '.nx-banner__title',
+        '.nx-banner__subtitle',
+        '.nx-banner__actions'
+      ];
 
+      function stgPrep(sl){
+        sl.classList.add('nx-stg');
+        STG_SELECTORS.forEach(sel=>{
+          const el = sl.querySelector(sel);
+          if(!el) return;
+          el.setAttribute('data-st','');
+          el.classList.remove('is-in');
+          el.style.transitionDelay = '0ms';
+        });
+      }
+      function stgResetAll(){ slides.forEach(stgPrep); }
+
+      function stgPlay(sl){
+        let delay = 0;
+        const step = 110;
+        STG_SELECTORS.forEach(sel=>{
+          const el = sl.querySelector(sel);
+          if(!el) return;
+          el.style.transitionDelay = delay+'ms';
+          el.classList.add('is-in');
+          delay += step;
+        });
+      }
+
+      function stgRun(i){
+        stgResetAll();
+        const target = slides[i];
+        requestAnimationFrame(()=>requestAnimationFrame(()=>stgPlay(target)));
+      }
+
+      stgRun(0);
+
+      let useA = true;
+      function setBg(i){
+        const url = slides[i]?.getAttribute('data-bg') || '';
+        const front = useA ? bgA : bgB;
+        const back  = useA ? bgB : bgA;
+        back.style.setProperty('--bg', `url('${url}')`);
+        front.classList.remove('is-front');
+        back.classList.add('is-front');
+        useA = !useA;
+      }
+
+      let index = 0, busy = false;
       function applyTransform(){
-        const vw = Math.round(viewport.getBoundingClientRect().width);
-        const step = vw + Math.round(cssGapPx());
-        const px = -(step * index);
-        const snapped = Math.round(px);
-        const t = `translate3d(${snapped}px,0,0)`;
-        track.style.transform   = t;
-        bgtrack.style.transform = t;
+        const W = viewport.clientWidth;
+        const G = cssGapPx();
+        const x = -((W + G) * index);
+        track.style.transform = `translate3d(${Math.round(x)}px,0,0)`;
       }
 
       function go(to){
@@ -728,10 +766,13 @@
         index = (to+n)%n;
         busy = true;
         applyTransform();
+        setBg(index);
+        stgRun(index);
         setTimeout(()=>busy=false, 480);
       }
 
       lockHeight();
+      setBg(0);
       applyTransform();
 
       nav.addEventListener('click', e=>{
@@ -743,10 +784,7 @@
       let rt;
       window.addEventListener('resize', ()=>{
         clearTimeout(rt);
-        rt = setTimeout(()=>{
-          lockHeight();
-          applyTransform();
-        }, 120);
+        rt = setTimeout(()=>{ lockHeight(); applyTransform(); }, 120);
       });
     });
   })();
