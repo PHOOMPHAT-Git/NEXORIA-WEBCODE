@@ -1,4 +1,7 @@
 (() => {
+    const theme = getComputedStyle(document.documentElement).getPropertyValue("--theme").trim().replace(/^['"]|['"]$/g, "");
+    if (theme !== "NewYear") return;
+
     const settings = {
         dprCap: 5,
         gravity: 0.05,
