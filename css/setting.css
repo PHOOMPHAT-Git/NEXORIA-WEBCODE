@@ -1,561 +1,3707 @@
-* {
+:root {
+    --theme: "Normal";
+}
+
+:root[style*="--theme: 'Normal'"] *,
+:root[data-theme="Normal"] *,
+html[data-theme="Normal"] *,
+body[data-theme="Normal"] * {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-touch-callout: none;
-    -webkit-tap-highlight-color: transparent;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', sans-serif;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+        -webkit-tap-highlight-color: transparent;
 }
 
-a,
-button,
-input,
-label {
-  outline: none;
-  -webkit-tap-highlight-color: transparent;
+:root[style*="--theme: 'Normal'"] a,
+:root[data-theme="Normal"] a,
+html[data-theme="Normal"] a,
+body[data-theme="Normal"] a,
+:root[style*="--theme: 'Normal'"] button,
+:root[data-theme="Normal"] button,
+html[data-theme="Normal"] button,
+body[data-theme="Normal"] button,
+:root[style*="--theme: 'Normal'"] input,
+:root[data-theme="Normal"] input,
+html[data-theme="Normal"] input,
+body[data-theme="Normal"] input,
+:root[style*="--theme: 'Normal'"] label,
+:root[data-theme="Normal"] label,
+html[data-theme="Normal"] label,
+body[data-theme="Normal"] label {
+    outline: none;
+      -webkit-tap-highlight-color: transparent;
 }
 
-body {
+:root[style*="--theme: 'Normal'"],
+:root[data-theme="Normal"],
+html[data-theme="Normal"],
+body[data-theme="Normal"] {
     background-color: #111;
-    color: #eee;
-    padding-top: 64px;
+        color: #eee;
+        padding-top: 64px;
 }
 
-.top-nav {
+:root[style*="--theme: 'Normal'"] .top-nav,
+:root[data-theme="Normal"] .top-nav,
+html[data-theme="Normal"] .top-nav,
+body[data-theme="Normal"] .top-nav {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 64px;
-    background: #111;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 2rem;
-    z-index: 1000;
-    backdrop-filter: blur(6px);
-    border-bottom: 1px solid #222;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 64px;
+        background: #111;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 2rem;
+        z-index: 1000;
+        backdrop-filter: blur(6px);
+        border-bottom: 1px solid #222;
 }
 
-.nav-left,
-.nav-right {
+:root[style*="--theme: 'Normal'"] .nav-left,
+:root[data-theme="Normal"] .nav-left,
+html[data-theme="Normal"] .nav-left,
+body[data-theme="Normal"] .nav-left,
+:root[style*="--theme: 'Normal'"] .nav-right,
+:root[data-theme="Normal"] .nav-right,
+html[data-theme="Normal"] .nav-right,
+body[data-theme="Normal"] .nav-right {
     flex: 1;
-    display: flex;
-    align-items: center;
+        display: flex;
+        align-items: center;
 }
 
-.nav-logo img {
+:root[style*="--theme: 'Normal'"] .nav-logo img,
+:root[data-theme="Normal"] .nav-logo img,
+html[data-theme="Normal"] .nav-logo img,
+body[data-theme="Normal"] .nav-logo img {
     height: 50px;
-    object-fit: contain;
-    margin-left: -1rem;
-    margin-top: 5px;
-    pointer-events: none;
-    -webkit-user-drag: none;
-    user-drag: none;
+        object-fit: contain;
+        margin-left: -1rem;
+        margin-top: 5px;
+        pointer-events: none;
+        -webkit-user-drag: none;
+        user-drag: none;
 }
 
-.nav-center {
+:root[style*="--theme: 'Normal'"] .nav-center,
+:root[data-theme="Normal"] .nav-center,
+html[data-theme="Normal"] .nav-center,
+body[data-theme="Normal"] .nav-center {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
-    flex: 0 1 auto;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        flex: 0 1 auto;
 }
 
-.nav-center a {
+:root[style*="--theme: 'Normal'"] .nav-center a,
+:root[data-theme="Normal"] .nav-center a,
+html[data-theme="Normal"] .nav-center a,
+body[data-theme="Normal"] .nav-center a {
     text-decoration: none;
-    font-size: 0.9rem;
-    color: #aaa;
-    font-weight: 500;
-    transition: 0.3s ease;
+        font-size: 0.9rem;
+        color: #aaa;
+        font-weight: 500;
+        transition: 0.3s ease;
 }
 
-.nav-center a:hover,
-.nav-center a.active {
+:root[style*="--theme: 'Normal'"] .nav-center a:hover,
+:root[data-theme="Normal"] .nav-center a:hover,
+html[data-theme="Normal"] .nav-center a:hover,
+body[data-theme="Normal"] .nav-center a:hover,
+:root[style*="--theme: 'Normal'"] .nav-center a.active,
+:root[data-theme="Normal"] .nav-center a.active,
+html[data-theme="Normal"] .nav-center a.active,
+body[data-theme="Normal"] .nav-center a.active {
     color: #fff;
 }
 
-.content {
+:root[style*="--theme: 'Normal'"] .content,
+:root[data-theme="Normal"] .content,
+html[data-theme="Normal"] .content,
+body[data-theme="Normal"] .content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 15rem 1rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 15rem 1rem;
 }
 
-.content-2 {
+:root[style*="--theme: 'Normal'"] .content-2,
+:root[data-theme="Normal"] .content-2,
+html[data-theme="Normal"] .content-2,
+body[data-theme="Normal"] .content-2 {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 15rem 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 15rem 0;
 }
 
-.setting-frame {
+:root[style*="--theme: 'Normal'"] .setting-frame,
+:root[data-theme="Normal"] .setting-frame,
+html[data-theme="Normal"] .setting-frame,
+body[data-theme="Normal"] .setting-frame {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #1a1a1a;
-    border: 1px solid #333;
-    border-radius: 8px;
-    padding: 1rem 2rem;
-    width: 400px;
-    margin: 0.5rem auto;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.4s ease;
-    flex-direction: column;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        justify-content: space-between;
+        align-items: center;
+        background-color: #1a1a1a;
+        border: 1px solid #333;
+        border-radius: 8px;
+        padding: 1rem 2rem;
+        width: 400px;
+        margin: 0.5rem auto;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.4s ease;
+        flex-direction: column;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.setting-title {
+:root[style*="--theme: 'Normal'"] .setting-title,
+:root[data-theme="Normal"] .setting-title,
+html[data-theme="Normal"] .setting-title,
+body[data-theme="Normal"] .setting-title {
     max-height: 0;
-    overflow: hidden;
-    color: #ccc;
-    font-size: 0.9rem;
-    line-height: 1.6;
-    word-wrap: break-word;
-    text-align: left;
-    width: 100%;
-    white-space: normal;
-    opacity: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    box-sizing: content-box;
-    transition: max-height 0.5s ease, opacity 0.4s, padding 0.4s;
+        overflow: hidden;
+        color: #ccc;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        word-wrap: break-word;
+        text-align: left;
+        width: 100%;
+        white-space: normal;
+        opacity: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        box-sizing: content-box;
+        transition: max-height 0.5s ease, opacity 0.4s, padding 0.4s;
 }
 
-.setting-frame.open .setting-title {
+:root[style*="--theme: 'Normal'"] .setting-frame.open .setting-title,
+:root[data-theme="Normal"] .setting-frame.open .setting-title,
+html[data-theme="Normal"] .setting-frame.open .setting-title,
+body[data-theme="Normal"] .setting-frame.open .setting-title {
     opacity: 1;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
 }
 
-.setting-header {
+:root[style*="--theme: 'Normal'"] .setting-header,
+:root[data-theme="Normal"] .setting-header,
+html[data-theme="Normal"] .setting-header,
+body[data-theme="Normal"] .setting-header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
 }
 
-.setting-frame-left,
-.setting-frame-right {
+:root[style*="--theme: 'Normal'"] .setting-frame-left,
+:root[data-theme="Normal"] .setting-frame-left,
+html[data-theme="Normal"] .setting-frame-left,
+body[data-theme="Normal"] .setting-frame-left,
+:root[style*="--theme: 'Normal'"] .setting-frame-right,
+:root[data-theme="Normal"] .setting-frame-right,
+html[data-theme="Normal"] .setting-frame-right,
+body[data-theme="Normal"] .setting-frame-right {
     flex: 1;
-    min-width: 300px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+        min-width: 300px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
 }
 
-.setting-container {
+:root[style*="--theme: 'Normal'"] .setting-container,
+:root[data-theme="Normal"] .setting-container,
+html[data-theme="Normal"] .setting-container,
+body[data-theme="Normal"] .setting-container {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 2rem;
-    margin-top: 2rem;
-    flex-wrap: wrap;
-    position: relative;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2rem;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+        position: relative;
 }
 
-.divider {
+:root[style*="--theme: 'Normal'"] .divider,
+:root[data-theme="Normal"] .divider,
+html[data-theme="Normal"] .divider,
+body[data-theme="Normal"] .divider {
     width: 1px;
-    background-color: #444;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0.5;
+        background-color: #444;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.5;
 }
 
-.divider-center {
+:root[style*="--theme: 'Normal'"] .divider-center,
+:root[data-theme="Normal"] .divider-center,
+html[data-theme="Normal"] .divider-center,
+body[data-theme="Normal"] .divider-center {
     height: 1px;
-    width: 100%;
-    background-color: #222;
-    margin: 4rem 0 10rem 0;
-    opacity: 0.5;
+        width: 100%;
+        background-color: #222;
+        margin: 4rem 0 10rem 0;
+        opacity: 0.5;
 }
 
-.setting-label {
+:root[style*="--theme: 'Normal'"] .setting-label,
+:root[data-theme="Normal"] .setting-label,
+html[data-theme="Normal"] .setting-label,
+body[data-theme="Normal"] .setting-label {
     font-size: 1rem;
-    font-weight: 500;
-    color: #eee;
-    line-height: 24px;
+        font-weight: 500;
+        color: #eee;
+        line-height: 24px;
 }
 
-.switch {
+:root[style*="--theme: 'Normal'"] .switch,
+:root[data-theme="Normal"] .switch,
+html[data-theme="Normal"] .switch,
+body[data-theme="Normal"] .switch {
     position: relative;
-    display: inline-block;
-    width: 50px;
-    height: 24px;
-    vertical-align: middle;
+        display: inline-block;
+        width: 50px;
+        height: 24px;
+        vertical-align: middle;
 }
 
-.switch input {
+:root[style*="--theme: 'Normal'"] .switch input,
+:root[data-theme="Normal"] .switch input,
+html[data-theme="Normal"] .switch input,
+body[data-theme="Normal"] .switch input {
     opacity: 0;
-    width: 0;
-    height: 0;
+        width: 0;
+        height: 0;
 }
 
-.slider {
+:root[style*="--theme: 'Normal'"] .slider,
+:root[data-theme="Normal"] .slider,
+html[data-theme="Normal"] .slider,
+body[data-theme="Normal"] .slider {
     position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #555;
-    transition: 0.4s;
-    border-radius: 24px;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #555;
+        transition: 0.4s;
+        border-radius: 24px;
 }
 
-.slider:before {
+:root[style*="--theme: 'Normal'"] .slider:before,
+:root[data-theme="Normal"] .slider:before,
+html[data-theme="Normal"] .slider:before,
+body[data-theme="Normal"] .slider:before {
     position: absolute;
-    content: "";
-    height: 18px;
-    width: 18px;
-    left: 3px;
-    bottom: 3px;
-    background-color: white;
-    transition: 0.4s;
-    border-radius: 50%;
+        content: "";
+        height: 18px;
+        width: 18px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
 }
 
-input:checked + .slider {
+:root[style*="--theme: 'Normal'"] input:checked + .slider,
+:root[data-theme="Normal"] input:checked + .slider,
+html[data-theme="Normal"] input:checked + .slider,
+body[data-theme="Normal"] input:checked + .slider {
     background-color: #4CAF50;
 }
 
-input:checked + .slider:before {
+:root[style*="--theme: 'Normal'"] input:checked + .slider:before,
+:root[data-theme="Normal"] input:checked + .slider:before,
+html[data-theme="Normal"] input:checked + .slider:before,
+body[data-theme="Normal"] input:checked + .slider:before {
     transform: translateX(26px);
 }
 
-h1 {
+:root[style*="--theme: 'Normal'"] h1,
+:root[data-theme="Normal"] h1,
+html[data-theme="Normal"] h1,
+body[data-theme="Normal"] h1 {
     font-size: 3rem;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-    color: #fff;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        color: #fff;
 }
 
-h3 {
+:root[style*="--theme: 'Normal'"] h3,
+:root[data-theme="Normal"] h3,
+html[data-theme="Normal"] h3,
+body[data-theme="Normal"] h3 {
     font-size: 0.8rem;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-    color: #aaa;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        color: #aaa;
 }
 
 @keyframes fadeSlideUp {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+
+        0% {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
 }
-  
-.fade-slide-up {
+
+:root[style*="--theme: 'Normal'"] .fade-slide-up,
+:root[data-theme="Normal"] .fade-slide-up,
+html[data-theme="Normal"] .fade-slide-up,
+body[data-theme="Normal"] .fade-slide-up {
     animation: fadeSlideUp 1s ease-out forwards;
 }
 
 @keyframes fadeSlideDown {
-    0% {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+
+        0% {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
 }
 
-.fade-slide-down {
+:root[style*="--theme: 'Normal'"] .fade-slide-down,
+:root[data-theme="Normal"] .fade-slide-down,
+html[data-theme="Normal"] .fade-slide-down,
+body[data-theme="Normal"] .fade-slide-down {
     animation: fadeSlideDown 1s ease-out forwards;
 }
 
-.footer {
+:root[style*="--theme: 'Normal'"] .footer,
+:root[data-theme="Normal"] .footer,
+html[data-theme="Normal"] .footer,
+body[data-theme="Normal"] .footer {
     background-color: #111;
-    padding: 4rem 2rem 2.5rem;
-    color: #aaa;
-    font-size: 0.9rem;
-    margin-top: 4rem;
-    border-top: 1px solid #222;
+        padding: 4rem 2rem 2.5rem;
+        color: #aaa;
+        font-size: 0.9rem;
+        margin-top: 4rem;
+        border-top: 1px solid #222;
 }
-  
-.footer-container {
+
+:root[style*="--theme: 'Normal'"] .footer-container,
+:root[data-theme="Normal"] .footer-container,
+html[data-theme="Normal"] .footer-container,
+body[data-theme="Normal"] .footer-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: auto;
-    gap: 2rem;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: auto;
+        gap: 2rem;
 }
-  
-.footer-column {
+
+:root[style*="--theme: 'Normal'"] .footer-column,
+:root[data-theme="Normal"] .footer-column,
+html[data-theme="Normal"] .footer-column,
+body[data-theme="Normal"] .footer-column {
     flex: 1 1 200px;
 }
-  
-.footer-column h3 {
+
+:root[style*="--theme: 'Normal'"] .footer-column h3,
+:root[data-theme="Normal"] .footer-column h3,
+html[data-theme="Normal"] .footer-column h3,
+body[data-theme="Normal"] .footer-column h3 {
     color: white;
-    margin-bottom: 1rem;
-    font-size: 1rem;
+        margin-bottom: 1rem;
+        font-size: 1rem;
 }
-  
-.footer-column p,
-.footer-column li {
+
+:root[style*="--theme: 'Normal'"] .footer-column p,
+:root[data-theme="Normal"] .footer-column p,
+html[data-theme="Normal"] .footer-column p,
+body[data-theme="Normal"] .footer-column p,
+:root[style*="--theme: 'Normal'"] .footer-column li,
+:root[data-theme="Normal"] .footer-column li,
+html[data-theme="Normal"] .footer-column li,
+body[data-theme="Normal"] .footer-column li {
     color: #aaa;
-    line-height: 1.5;
+        line-height: 1.5;
 }
-  
-.footer-column ul {
+
+:root[style*="--theme: 'Normal'"] .footer-column ul,
+:root[data-theme="Normal"] .footer-column ul,
+html[data-theme="Normal"] .footer-column ul,
+body[data-theme="Normal"] .footer-column ul {
     list-style: none;
-    padding: 0;
+        padding: 0;
 }
-  
-.footer-column a {
+
+:root[style*="--theme: 'Normal'"] .footer-column a,
+:root[data-theme="Normal"] .footer-column a,
+html[data-theme="Normal"] .footer-column a,
+body[data-theme="Normal"] .footer-column a {
     color: #aaa;
-    text-decoration: none;
-    transition: color 0.3s;
+        text-decoration: none;
+        transition: color 0.3s;
 }
-  
-.footer-column a:hover {
+
+:root[style*="--theme: 'Normal'"] .footer-column a:hover,
+:root[data-theme="Normal"] .footer-column a:hover,
+html[data-theme="Normal"] .footer-column a:hover,
+body[data-theme="Normal"] .footer-column a:hover {
     color: #fff;
 }
-  
-.footer-bottom img {
+
+:root[style*="--theme: 'Normal'"] .footer-bottom img,
+:root[data-theme="Normal"] .footer-bottom img,
+html[data-theme="Normal"] .footer-bottom img,
+body[data-theme="Normal"] .footer-bottom img {
     height: 40px;
-    margin-bottom: 0.5rem;
-    pointer-events: none;
-    -webkit-user-drag: none;
-    user-drag: none;
+        margin-bottom: 0.5rem;
+        pointer-events: none;
+        -webkit-user-drag: none;
+        user-drag: none;
 }
-  
-.footer-bottom p {
+
+:root[style*="--theme: 'Normal'"] .footer-bottom p,
+:root[data-theme="Normal"] .footer-bottom p,
+html[data-theme="Normal"] .footer-bottom p,
+body[data-theme="Normal"] .footer-bottom p {
     color: #9e9e9e;
-    font-size: 0.8rem;
+        font-size: 0.8rem;
 }
 
-.hamburger {
+:root[style*="--theme: 'Normal'"] .hamburger,
+:root[data-theme="Normal"] .hamburger,
+html[data-theme="Normal"] .hamburger,
+body[data-theme="Normal"] .hamburger {
     display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    outline: none;
-    -webkit-tap-highlight-color: transparent;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
 }
 
-.hamburger:focus,
-.hamburger:active {
+:root[style*="--theme: 'Normal'"] .hamburger:focus,
+:root[data-theme="Normal"] .hamburger:focus,
+html[data-theme="Normal"] .hamburger:focus,
+body[data-theme="Normal"] .hamburger:focus,
+:root[style*="--theme: 'Normal'"] .hamburger:active,
+:root[data-theme="Normal"] .hamburger:active,
+html[data-theme="Normal"] .hamburger:active,
+body[data-theme="Normal"] .hamburger:active {
     outline: none;
 }
 
-.hamburger span {
+:root[style*="--theme: 'Normal'"] .hamburger span,
+:root[data-theme="Normal"] .hamburger span,
+html[data-theme="Normal"] .hamburger span,
+body[data-theme="Normal"] .hamburger span {
     width: 25px;
-    height: 3px;
-    background: #eee;
-    border-radius: 2px;
-    transition: all 0.3s ease;
+        height: 3px;
+        background: #eee;
+        border-radius: 2px;
+        transition: all 0.3s ease;
 }
 
-.hamburger.active span:nth-child(1) {
+:root[style*="--theme: 'Normal'"] .hamburger.active span:nth-child(1),
+:root[data-theme="Normal"] .hamburger.active span:nth-child(1),
+html[data-theme="Normal"] .hamburger.active span:nth-child(1),
+body[data-theme="Normal"] .hamburger.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
 
-.hamburger.active span:nth-child(2) {
+:root[style*="--theme: 'Normal'"] .hamburger.active span:nth-child(2),
+:root[data-theme="Normal"] .hamburger.active span:nth-child(2),
+html[data-theme="Normal"] .hamburger.active span:nth-child(2),
+body[data-theme="Normal"] .hamburger.active span:nth-child(2) {
     opacity: 0;
 }
 
-.hamburger.active span:nth-child(3) {
+:root[style*="--theme: 'Normal'"] .hamburger.active span:nth-child(3),
+:root[data-theme="Normal"] .hamburger.active span:nth-child(3),
+html[data-theme="Normal"] .hamburger.active span:nth-child(3),
+body[data-theme="Normal"] .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(6px, -6px);
 }
 
-html{background:#111; min-height:100%}
-body{background:#111; overflow-x:hidden}
+:root[style*="--theme: 'Normal'"],
+:root[data-theme="Normal"],
+html[data-theme="Normal"],
+body[data-theme="Normal"] {
+    background:#111; min-height:100%
+}
 
-nav, .nx-partners, .content, .nx-banner, .nx-banner-row, footer{
+:root[style*="--theme: 'Normal'"],
+:root[data-theme="Normal"],
+html[data-theme="Normal"],
+body[data-theme="Normal"] {
+    background:#111; overflow-x:hidden
+}
+
+:root[style*="--theme: 'Normal'"] nav,
+:root[data-theme="Normal"] nav,
+html[data-theme="Normal"] nav,
+body[data-theme="Normal"] nav,
+:root[style*="--theme: 'Normal'"] .nx-partners,
+:root[data-theme="Normal"] .nx-partners,
+html[data-theme="Normal"] .nx-partners,
+body[data-theme="Normal"] .nx-partners,
+:root[style*="--theme: 'Normal'"] .content,
+:root[data-theme="Normal"] .content,
+html[data-theme="Normal"] .content,
+body[data-theme="Normal"] .content,
+:root[style*="--theme: 'Normal'"] .nx-banner,
+:root[data-theme="Normal"] .nx-banner,
+html[data-theme="Normal"] .nx-banner,
+body[data-theme="Normal"] .nx-banner,
+:root[style*="--theme: 'Normal'"] .nx-banner-row,
+:root[data-theme="Normal"] .nx-banner-row,
+html[data-theme="Normal"] .nx-banner-row,
+body[data-theme="Normal"] .nx-banner-row,
+:root[style*="--theme: 'Normal'"] footer,
+:root[data-theme="Normal"] footer,
+html[data-theme="Normal"] footer,
+body[data-theme="Normal"] footer {
     will-change: transform;
 }
 
-.nx-shard{
+:root[style*="--theme: 'Normal'"] .nx-shard,
+:root[data-theme="Normal"] .nx-shard,
+html[data-theme="Normal"] .nx-shard,
+body[data-theme="Normal"] .nx-shard {
     position:fixed;
-    left:0; top:0;
-    width:var(--sz);
-    height:var(--sz);
-    pointer-events:none;
-    z-index:2147483647;
-    background:linear-gradient(135deg,#f5d76e 0%, #d4af37 40%, #fff5a8 70%, #b88900 100%);
-    border-radius:2px;
-    box-shadow:0 0 10px rgba(255,220,120,.75), 0 0 24px rgba(255,200,80,.35) inset;
-    mix-blend-mode:screen;
-    opacity:.98;
-    transform:translate(var(--x), var(--y)) scale(.85) rotate(var(--rot));
-    animation:nx-shard-fly var(--dur) cubic-bezier(.22,.61,.36,1) forwards;
-}
-@keyframes nx-shard-fly{
-    60%{opacity:.92}
-    100%{
-        transform:translate(calc(var(--x) + var(--dx)), calc(var(--y) + var(--dy))) scale(.9) rotate(var(--rot));
-        opacity:0;
-    }
+        left:0; top:0;
+        width:var(--sz);
+        height:var(--sz);
+        pointer-events:none;
+        z-index:2147483647;
+        background:linear-gradient(135deg,#f5d76e 0%, #d4af37 40%, #fff5a8 70%, #b88900 100%);
+        border-radius:2px;
+        box-shadow:0 0 10px rgba(255,220,120,.75), 0 0 24px rgba(255,200,80,.35) inset;
+        mix-blend-mode:screen;
+        opacity:.98;
+        transform:translate(var(--x), var(--y)) scale(.85) rotate(var(--rot));
+        animation:nx-shard-fly var(--dur) cubic-bezier(.22,.61,.36,1) forwards;
 }
 
-::-webkit-scrollbar {
+@keyframes nx-shard-fly {
+
+        60%{opacity:.92}
+        100%{
+            transform:translate(calc(var(--x) + var(--dx)), calc(var(--y) + var(--dy))) scale(.9) rotate(var(--rot));
+            opacity:0;
+        }
+}
+
+:root[style*="--theme: 'Normal'"] ::-webkit-scrollbar,
+:root[data-theme="Normal"] ::-webkit-scrollbar,
+html[data-theme="Normal"] ::-webkit-scrollbar,
+body[data-theme="Normal"] ::-webkit-scrollbar {
     width: 3.5px;
 }
-  
-::-webkit-scrollbar-track {
+
+:root[style*="--theme: 'Normal'"] ::-webkit-scrollbar-track,
+:root[data-theme="Normal"] ::-webkit-scrollbar-track,
+html[data-theme="Normal"] ::-webkit-scrollbar-track,
+body[data-theme="Normal"] ::-webkit-scrollbar-track {
     background: #00000000;
 }
-  
-::-webkit-scrollbar-thumb {
+
+:root[style*="--theme: 'Normal'"] ::-webkit-scrollbar-thumb,
+:root[data-theme="Normal"] ::-webkit-scrollbar-thumb,
+html[data-theme="Normal"] ::-webkit-scrollbar-thumb,
+body[data-theme="Normal"] ::-webkit-scrollbar-thumb {
     background: linear-gradient(to bottom, #aaa, #aaa, #aaa);
-    transition: background-color 0.3s;
+        transition: background-color 0.3s;
 }
 
-.nx-toast-area{
+:root[style*="--theme: 'Normal'"] .nx-toast-area,
+:root[data-theme="Normal"] .nx-toast-area,
+html[data-theme="Normal"] .nx-toast-area,
+body[data-theme="Normal"] .nx-toast-area {
     position:fixed;
-    left:max(12px, env(safe-area-inset-left));
-    bottom:max(12px, env(safe-area-inset-bottom));
-    display:flex;
-    flex-direction:column;
-    gap:8px;
-    z-index:3000;
-    pointer-events:none;
+        left:max(12px, env(safe-area-inset-left));
+        bottom:max(12px, env(safe-area-inset-bottom));
+        display:flex;
+        flex-direction:column;
+        gap:8px;
+        z-index:3000;
+        pointer-events:none;
 }
-.nx-toast{
+
+:root[style*="--theme: 'Normal'"] .nx-toast,
+:root[data-theme="Normal"] .nx-toast,
+html[data-theme="Normal"] .nx-toast,
+body[data-theme="Normal"] .nx-toast {
     pointer-events:auto;
-    display:flex;
-    align-items:center;
-    gap:.65rem;
-    min-width:220px;
-    max-width:320px;
-    padding:.75rem .9rem;
-    background:#181818;
-    color:#eee;
-    border:1px solid #333;
-    border-radius:10px;
-    box-shadow:0 6px 18px rgba(0,0,0,.35);
-    opacity:0;
-    transform:translateX(-18px) translateY(8px);
-    animation:nx-toast-in .35s cubic-bezier(.2,.7,.3,1) forwards;
+        display:flex;
+        align-items:center;
+        gap:.65rem;
+        min-width:220px;
+        max-width:320px;
+        padding:.75rem .9rem;
+        background:#181818;
+        color:#eee;
+        border:1px solid #333;
+        border-radius:10px;
+        box-shadow:0 6px 18px rgba(0,0,0,.35);
+        opacity:0;
+        transform:translateX(-18px) translateY(8px);
+        animation:nx-toast-in .35s cubic-bezier(.2,.7,.3,1) forwards;
 }
-.nx-toast__bar{
+
+:root[style*="--theme: 'Normal'"] .nx-toast__bar,
+:root[data-theme="Normal"] .nx-toast__bar,
+html[data-theme="Normal"] .nx-toast__bar,
+body[data-theme="Normal"] .nx-toast__bar {
     width:6px;
-    align-self:stretch;
-    border-radius:6px;
-    background:linear-gradient(180deg,#f5d76e 0%, #d4af37 60%, #fff1a8 100%);
-    opacity:.95;
+        align-self:stretch;
+        border-radius:6px;
+        background:linear-gradient(180deg,#f5d76e 0%, #d4af37 60%, #fff1a8 100%);
+        opacity:.95;
 }
-.nx-toast__text{
+
+:root[style*="--theme: 'Normal'"] .nx-toast__text,
+:root[data-theme="Normal"] .nx-toast__text,
+html[data-theme="Normal"] .nx-toast__text,
+body[data-theme="Normal"] .nx-toast__text {
     font-size:.9rem;
-    line-height:1.35;
-    color:#f3f3f3;
+        line-height:1.35;
+        color:#f3f3f3;
 }
 
-.nx-toast-area{
+:root[style*="--theme: 'Normal'"] .nx-toast-area,
+:root[data-theme="Normal"] .nx-toast-area,
+html[data-theme="Normal"] .nx-toast-area,
+body[data-theme="Normal"] .nx-toast-area {
     left: auto;
-    right: max(12px, env(safe-area-inset-right));
-    bottom: max(12px, env(safe-area-inset-bottom));
-    align-items: flex-end;
+        right: max(12px, env(safe-area-inset-right));
+        bottom: max(12px, env(safe-area-inset-bottom));
+        align-items: flex-end;
 }
 
-.nx-toast{
+:root[style*="--theme: 'Normal'"] .nx-toast,
+:root[data-theme="Normal"] .nx-toast,
+html[data-theme="Normal"] .nx-toast,
+body[data-theme="Normal"] .nx-toast {
     transform: translateX(18px) translateY(8px);
-    animation: nx-toast-in-right .35s cubic-bezier(.2,.7,.3,1) forwards;
+        animation: nx-toast-in-right .35s cubic-bezier(.2,.7,.3,1) forwards;
 }
 
-.nx-toast--closing{
+:root[style*="--theme: 'Normal'"] .nx-toast--closing,
+:root[data-theme="Normal"] .nx-toast--closing,
+html[data-theme="Normal"] .nx-toast--closing,
+body[data-theme="Normal"] .nx-toast--closing {
     animation: nx-toast-out-right .28s cubic-bezier(.2,.7,.3,1) forwards;
 }
 
-@keyframes nx-toast-in-right{
-    from{opacity:0; transform:translateX(18px) translateY(8px);}
-    to{opacity:1; transform:translateX(0) translateY(0);}
+@keyframes nx-toast-in-right {
+
+        from{opacity:0; transform:translateX(18px) translateY(8px);}
+        to{opacity:1; transform:translateX(0) translateY(0);}
 }
 
-@keyframes nx-toast-out-right{
-    from{opacity:1; transform:translateX(0) translateY(0);}
-    to{opacity:0; transform:translateX(24px) translateY(8px);}
+@keyframes nx-toast-out-right {
+
+        from{opacity:1; transform:translateX(0) translateY(0);}
+        to{opacity:0; transform:translateX(24px) translateY(8px);}
 }
 
-@media (max-width:768px){
-    .nx-toast{min-width:200px; max-width:280px; padding:.7rem .85rem;}
-    .nx-toast__text{font-size:.85rem;}
+@media (max-width:768px) {
+    :root[style*="--theme: 'Normal'"] .nx-toast,
+    :root[data-theme="Normal"] .nx-toast,
+    html[data-theme="Normal"] .nx-toast,
+    body[data-theme="Normal"] .nx-toast {
+        min-width:200px; max-width:280px; padding:.7rem .85rem;
+    }
+
+    :root[style*="--theme: 'Normal'"] .nx-toast__text,
+    :root[data-theme="Normal"] .nx-toast__text,
+    html[data-theme="Normal"] .nx-toast__text,
+    body[data-theme="Normal"] .nx-toast__text {
+        font-size:.85rem;
+    }
 }
 
 @media only screen and (max-width: 768px) {
-    body {
+    :root[style*="--theme: 'Normal'"],
+    :root[data-theme="Normal"],
+    html[data-theme="Normal"],
+    body[data-theme="Normal"] {
         padding-top: 10px;
     }
 
-    h1 {
+    :root[style*="--theme: 'Normal'"] h1,
+    :root[data-theme="Normal"] h1,
+    html[data-theme="Normal"] h1,
+    body[data-theme="Normal"] h1 {
         margin-bottom: 1.5rem;
     }
 
-    .divider {
+    :root[style*="--theme: 'Normal'"] .divider,
+    :root[data-theme="Normal"] .divider,
+    html[data-theme="Normal"] .divider,
+    body[data-theme="Normal"] .divider {
         display: none;
     }
 
-    .setting-frame {
+    :root[style*="--theme: 'Normal'"] .setting-frame,
+    :root[data-theme="Normal"] .setting-frame,
+    html[data-theme="Normal"] .setting-frame,
+    body[data-theme="Normal"] .setting-frame {
         padding: 1rem;
-        width: 300px;
-        margin: 0.5rem auto;
+                width: 300px;
+                margin: 0.5rem auto;
     }
 
-    .setting-container {
+    :root[style*="--theme: 'Normal'"] .setting-container,
+    :root[data-theme="Normal"] .setting-container,
+    html[data-theme="Normal"] .setting-container,
+    body[data-theme="Normal"] .setting-container {
         flex-direction: column;
-        gap: 0;
+                gap: 0;
     }
 
-    .content-2 {
+    :root[style*="--theme: 'Normal'"] .content-2,
+    :root[data-theme="Normal"] .content-2,
+    html[data-theme="Normal"] .content-2,
+    body[data-theme="Normal"] .content-2 {
         padding: 1rem 1rem;
     }
 
-    .content-2 h1 {
+    :root[style*="--theme: 'Normal'"] .content-2 h1,
+    :root[data-theme="Normal"] .content-2 h1,
+    html[data-theme="Normal"] .content-2 h1,
+    body[data-theme="Normal"] .content-2 h1 {
         font-size: 1.5rem;
     }
 
-    .footer-container {
+    :root[style*="--theme: 'Normal'"] .footer-container,
+    :root[data-theme="Normal"] .footer-container,
+    html[data-theme="Normal"] .footer-container,
+    body[data-theme="Normal"] .footer-container {
         flex-direction: column;
-        text-align: center;
-        gap: 2rem;
+                text-align: center;
+                gap: 2rem;
     }
-    
-    .footer-column {
+
+    :root[style*="--theme: 'Normal'"] .footer-column,
+    :root[data-theme="Normal"] .footer-column,
+    html[data-theme="Normal"] .footer-column,
+    body[data-theme="Normal"] .footer-column {
         flex: 1 1 100%;
     }
 
-    .hamburger {
+    :root[style*="--theme: 'Normal'"] .hamburger,
+    :root[data-theme="Normal"] .hamburger,
+    html[data-theme="Normal"] .hamburger,
+    body[data-theme="Normal"] .hamburger {
         display: flex;
     }
-    
-    .nav-center {
+
+    :root[style*="--theme: 'Normal'"] .nav-center,
+    :root[data-theme="Normal"] .nav-center,
+    html[data-theme="Normal"] .nav-center,
+    body[data-theme="Normal"] .nav-center {
         position: absolute;
-        top: 64px;
-        right: 0;
-        width: 100%;
-        background-color: #111;
+                top: 64px;
+                right: 0;
+                width: 100%;
+                background-color: #111;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+                padding: 0;
+                overflow: hidden;
+                max-height: 0;
+                transition: max-height 0.4s ease, padding 0.3s ease;
+                z-index: 999;
+                border-bottom: 1px solid #222;
+    }
+
+    :root[style*="--theme: 'Normal'"] .nav-center.show,
+    :root[data-theme="Normal"] .nav-center.show,
+    html[data-theme="Normal"] .nav-center.show,
+    body[data-theme="Normal"] .nav-center.show {
+        padding: 1rem 0;
+                max-height: 200px;
+    }
+}
+
+:root[style*="--theme: 'Christmas'"] *,
+:root[data-theme="Christmas"] *,
+html[data-theme="Christmas"] *,
+body[data-theme="Christmas"] * {
+    margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', sans-serif;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+        -webkit-tap-highlight-color: transparent;
+}
+
+:root[style*="--theme: 'Christmas'"],
+:root[data-theme="Christmas"],
+html[data-theme="Christmas"],
+body[data-theme="Christmas"] {
+    --xmas-green:#0c1711;
+        --xmas-green-2:#112019;
+        --xmas-green-3:#0a1510;
+        --xmas-red:#2a0f12;
+        --xmas-gold:#e5c872;
+        --xmas-white:#f6fbff;
+}
+
+:root[style*="--theme: 'Christmas'"] a,
+:root[data-theme="Christmas"] a,
+html[data-theme="Christmas"] a,
+body[data-theme="Christmas"] a,
+:root[style*="--theme: 'Christmas'"] button,
+:root[data-theme="Christmas"] button,
+html[data-theme="Christmas"] button,
+body[data-theme="Christmas"] button,
+:root[style*="--theme: 'Christmas'"] input,
+:root[data-theme="Christmas"] input,
+html[data-theme="Christmas"] input,
+body[data-theme="Christmas"] input,
+:root[style*="--theme: 'Christmas'"] label,
+:root[data-theme="Christmas"] label,
+html[data-theme="Christmas"] label,
+body[data-theme="Christmas"] label {
+    outline: none;
+      -webkit-tap-highlight-color: transparent;
+}
+
+:root[style*="--theme: 'Christmas'"],
+:root[data-theme="Christmas"],
+html[data-theme="Christmas"],
+body[data-theme="Christmas"] {
+    background:
+            radial-gradient(1200px 600px at 70% -10%, rgba(229,200,114,.08), rgba(0,0,0,0)),
+            linear-gradient(180deg, var(--xmas-green) 0%, #0b120d 60%, #08100c 100%);
+        color:#eef4ef;
+        padding-top:64px;
+}
+
+:root[style*="--theme: 'Christmas'"] body::after,
+:root[data-theme="Christmas"] body::after,
+html[data-theme="Christmas"] body::after,
+body[data-theme="Christmas"] body::after {
+    content:""; position:fixed; inset:-50px 0 0 0; pointer-events:none; z-index:2;
+        background-image:
+            radial-gradient(2px 2px at 20% 10%, rgba(255,255,255,.18) 50%, transparent 51%),
+            radial-gradient(2px 2px at 60% 30%, rgba(255,255,255,.15) 50%, transparent 51%),
+            radial-gradient(3px 3px at 80% 50%, rgba(255,255,255,.12) 50%, transparent 51%),
+            radial-gradient(1.5px 1.5px at 40% 80%, rgba(255,255,255,.18) 50%, transparent 51%);
+        background-size:320px 520px,360px 560px,420px 700px,300px 480px;
+        animation:nx-snow 32s linear infinite; mix-blend-mode:screen; opacity:.65;
+}
+
+@keyframes nx-snow {
+    0%{background-position:0 -200px,0 -260px,0 -320px,0 -180px}100%{background-position:0 600px,0 720px,0 880px,0 640px}
+}
+
+:root[style*="--theme: 'Christmas'"] .top-nav,
+:root[data-theme="Christmas"] .top-nav,
+html[data-theme="Christmas"] .top-nav,
+body[data-theme="Christmas"] .top-nav {
+    position: fixed;
+        top: 0; left: 0; width: 100%; height: 64px;
+        background: linear-gradient(180deg, var(--xmas-green-2), var(--xmas-green));
+        display: flex; align-items: center; justify-content: space-between;
+        padding: 0 2rem; z-index: 1000; backdrop-filter: blur(8px);
+        border-bottom: 1px solid rgba(229,200,114,.22);
+}
+
+:root[style*="--theme: 'Christmas'"] .nav-left,
+:root[data-theme="Christmas"] .nav-left,
+html[data-theme="Christmas"] .nav-left,
+body[data-theme="Christmas"] .nav-left,
+:root[style*="--theme: 'Christmas'"] .nav-right,
+:root[data-theme="Christmas"] .nav-right,
+html[data-theme="Christmas"] .nav-right,
+body[data-theme="Christmas"] .nav-right {
+    flex: 1;
+        display: flex;
+        align-items: center;
+}
+
+:root[style*="--theme: 'Christmas'"] .nav-logo img,
+:root[data-theme="Christmas"] .nav-logo img,
+html[data-theme="Christmas"] .nav-logo img,
+body[data-theme="Christmas"] .nav-logo img {
+    height: 50px;
+        object-fit: contain;
+        margin-left: -1rem;
+        margin-top: 5px;
+        pointer-events: none;
+        -webkit-user-drag: none;
+        user-drag: none;
+}
+
+:root[style*="--theme: 'Christmas'"] .nav-center,
+:root[data-theme="Christmas"] .nav-center,
+html[data-theme="Christmas"] .nav-center,
+body[data-theme="Christmas"] .nav-center {
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        flex: 0 1 auto;
+}
+
+:root[style*="--theme: 'Christmas'"] .nav-center a,
+:root[data-theme="Christmas"] .nav-center a,
+html[data-theme="Christmas"] .nav-center a,
+body[data-theme="Christmas"] .nav-center a {
+    text-decoration: none;
+        font-size: 0.9rem;
+        color: #cfe7d8;
+        font-weight: 500;
+        transition: 0.3s ease;
+}
+
+:root[style*="--theme: 'Christmas'"] .nav-center a:hover,
+:root[data-theme="Christmas"] .nav-center a:hover,
+html[data-theme="Christmas"] .nav-center a:hover,
+body[data-theme="Christmas"] .nav-center a:hover,
+:root[style*="--theme: 'Christmas'"] .nav-center a.active,
+:root[data-theme="Christmas"] .nav-center a.active,
+html[data-theme="Christmas"] .nav-center a.active,
+body[data-theme="Christmas"] .nav-center a.active {
+    color:#fff;
+        text-shadow:0 0 10px rgba(229,200,114,.25);
+}
+
+:root[style*="--theme: 'Christmas'"] .content,
+:root[data-theme="Christmas"] .content,
+html[data-theme="Christmas"] .content,
+body[data-theme="Christmas"] .content {
+    display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 1rem;
-        padding: 0;
+        text-align: center;
+        padding: 15rem 1rem;
+}
+
+:root[style*="--theme: 'Christmas'"] .content-2,
+:root[data-theme="Christmas"] .content-2,
+html[data-theme="Christmas"] .content-2,
+body[data-theme="Christmas"] .content-2 {
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 15rem 0;
+}
+
+:root[style*="--theme: 'Christmas'"] .setting-frame,
+:root[data-theme="Christmas"] .setting-frame,
+html[data-theme="Christmas"] .setting-frame,
+body[data-theme="Christmas"] .setting-frame {
+    display:flex; justify-content:space-between; align-items:center;
+        background: linear-gradient(180deg, #12261d, #0e1f18);
+        border:1px solid rgba(229,200,114,.24);
+        border-radius:8px; padding:1rem 2rem; width:400px; margin:0.5rem auto;
+        position:relative; overflow:hidden; transition:all .4s ease; flex-direction:column;
+        box-shadow:0 0 10px rgba(0,0,0,.5);
+}
+
+:root[style*="--theme: 'Christmas'"] .setting-title,
+:root[data-theme="Christmas"] .setting-title,
+html[data-theme="Christmas"] .setting-title,
+body[data-theme="Christmas"] .setting-title {
+    max-height: 0;
         overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.4s ease, padding 0.3s ease;
-        z-index: 999;
-        border-bottom: 1px solid #222;
+        color:#cfe3d6;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        word-wrap: break-word;
+        text-align: left;
+        width: 100%;
+        white-space: normal;
+        opacity: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        box-sizing: content-box;
+        transition: max-height 0.5s ease, opacity 0.4s, padding 0.4s;
+}
+
+:root[style*="--theme: 'Christmas'"] .setting-frame.open .setting-title,
+:root[data-theme="Christmas"] .setting-frame.open .setting-title,
+html[data-theme="Christmas"] .setting-frame.open .setting-title,
+body[data-theme="Christmas"] .setting-frame.open .setting-title {
+    opacity: 1;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+}
+
+:root[style*="--theme: 'Christmas'"] .setting-header,
+:root[data-theme="Christmas"] .setting-header,
+html[data-theme="Christmas"] .setting-header,
+body[data-theme="Christmas"] .setting-header {
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+}
+
+:root[style*="--theme: 'Christmas'"] .setting-frame-left,
+:root[data-theme="Christmas"] .setting-frame-left,
+html[data-theme="Christmas"] .setting-frame-left,
+body[data-theme="Christmas"] .setting-frame-left,
+:root[style*="--theme: 'Christmas'"] .setting-frame-right,
+:root[data-theme="Christmas"] .setting-frame-right,
+html[data-theme="Christmas"] .setting-frame-right,
+body[data-theme="Christmas"] .setting-frame-right {
+    flex: 1;
+        min-width: 300px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+}
+
+:root[style*="--theme: 'Christmas'"] .setting-container,
+:root[data-theme="Christmas"] .setting-container,
+html[data-theme="Christmas"] .setting-container,
+body[data-theme="Christmas"] .setting-container {
+    display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2rem;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+        position: relative;
+}
+
+:root[style*="--theme: 'Christmas'"] .divider,
+:root[data-theme="Christmas"] .divider,
+html[data-theme="Christmas"] .divider,
+body[data-theme="Christmas"] .divider {
+    width: 1px;
+        background-color: #444;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.5;
+}
+
+:root[style*="--theme: 'Christmas'"] .divider-center,
+:root[data-theme="Christmas"] .divider-center,
+html[data-theme="Christmas"] .divider-center,
+body[data-theme="Christmas"] .divider-center {
+    height: 1px;
+        width: 100%;
+        background-color: #222;
+        margin: 4rem 0 10rem 0;
+        opacity: 0.5;
+}
+
+:root[style*="--theme: 'Christmas'"] .setting-label,
+:root[data-theme="Christmas"] .setting-label,
+html[data-theme="Christmas"] .setting-label,
+body[data-theme="Christmas"] .setting-label {
+    font-size: 1rem;
+        font-weight: 500;
+        color:#eaf7ef;
+        line-height: 24px;
+}
+
+:root[style*="--theme: 'Christmas'"] .switch,
+:root[data-theme="Christmas"] .switch,
+html[data-theme="Christmas"] .switch,
+body[data-theme="Christmas"] .switch {
+    position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 24px;
+        vertical-align: middle;
+}
+
+:root[style*="--theme: 'Christmas'"] .switch input,
+:root[data-theme="Christmas"] .switch input,
+html[data-theme="Christmas"] .switch input,
+body[data-theme="Christmas"] .switch input {
+    opacity: 0;
+        width: 0;
+        height: 0;
+}
+
+:root[style*="--theme: 'Christmas'"] .slider,
+:root[data-theme="Christmas"] .slider,
+html[data-theme="Christmas"] .slider,
+body[data-theme="Christmas"] .slider {
+    position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color:#355e4b;
+        transition: 0.4s;
+        border-radius: 24px;
+}
+
+:root[style*="--theme: 'Christmas'"] .slider:before,
+:root[data-theme="Christmas"] .slider:before,
+html[data-theme="Christmas"] .slider:before,
+body[data-theme="Christmas"] .slider:before {
+    position: absolute;
+        content: "";
+        height: 18px;
+        width: 18px;
+        left: 3px;
+        bottom: 3px;
+        background-color:#fff7cf;
+        transition: 0.4s;
+        border-radius: 50%;
+}
+
+:root[style*="--theme: 'Christmas'"] input:checked + .slider,
+:root[data-theme="Christmas"] input:checked + .slider,
+html[data-theme="Christmas"] input:checked + .slider,
+body[data-theme="Christmas"] input:checked + .slider {
+    background-color:#2f8e5d;
+}
+
+:root[style*="--theme: 'Christmas'"] input:checked + .slider:before,
+:root[data-theme="Christmas"] input:checked + .slider:before,
+html[data-theme="Christmas"] input:checked + .slider:before,
+body[data-theme="Christmas"] input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+:root[style*="--theme: 'Christmas'"] h1,
+:root[data-theme="Christmas"] h1,
+html[data-theme="Christmas"] h1,
+body[data-theme="Christmas"] h1 {
+    font-size: 3rem;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        color: #fff;
+}
+
+:root[style*="--theme: 'Christmas'"] h3,
+:root[data-theme="Christmas"] h3,
+html[data-theme="Christmas"] h3,
+body[data-theme="Christmas"] h3 {
+    font-size: 0.8rem;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        color: #aaa;
+}
+
+:root[style*="--theme: 'Christmas'"] .fade-slide-up,
+:root[data-theme="Christmas"] .fade-slide-up,
+html[data-theme="Christmas"] .fade-slide-up,
+body[data-theme="Christmas"] .fade-slide-up {
+    animation: fadeSlideUp 1s ease-out forwards;
+}
+
+:root[style*="--theme: 'Christmas'"] .fade-slide-down,
+:root[data-theme="Christmas"] .fade-slide-down,
+html[data-theme="Christmas"] .fade-slide-down,
+body[data-theme="Christmas"] .fade-slide-down {
+    animation: fadeSlideDown 1s ease-out forwards;
+}
+
+:root[style*="--theme: 'Christmas'"] .footer,
+:root[data-theme="Christmas"] .footer,
+html[data-theme="Christmas"] .footer,
+body[data-theme="Christmas"] .footer {
+    background: linear-gradient(180deg, #0c1712, #0a1510);
+        padding: 4rem 2rem 2.5rem;
+        color: #aaa;
+        font-size: 0.9rem;
+        margin-top: 4rem;
+        border-top: 1px solid #222;
+}
+
+:root[style*="--theme: 'Christmas'"] .footer-container,
+:root[data-theme="Christmas"] .footer-container,
+html[data-theme="Christmas"] .footer-container,
+body[data-theme="Christmas"] .footer-container {
+    display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: auto;
+        gap: 2rem;
+}
+
+:root[style*="--theme: 'Christmas'"] .footer-column,
+:root[data-theme="Christmas"] .footer-column,
+html[data-theme="Christmas"] .footer-column,
+body[data-theme="Christmas"] .footer-column {
+    flex: 1 1 200px;
+}
+
+:root[style*="--theme: 'Christmas'"] .footer-column h3,
+:root[data-theme="Christmas"] .footer-column h3,
+html[data-theme="Christmas"] .footer-column h3,
+body[data-theme="Christmas"] .footer-column h3 {
+    color: white;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+}
+
+:root[style*="--theme: 'Christmas'"] .footer-column p,
+:root[data-theme="Christmas"] .footer-column p,
+html[data-theme="Christmas"] .footer-column p,
+body[data-theme="Christmas"] .footer-column p,
+:root[style*="--theme: 'Christmas'"] .footer-column li,
+:root[data-theme="Christmas"] .footer-column li,
+html[data-theme="Christmas"] .footer-column li,
+body[data-theme="Christmas"] .footer-column li {
+    color: #aaa;
+        line-height: 1.5;
+}
+
+:root[style*="--theme: 'Christmas'"] .footer-column ul,
+:root[data-theme="Christmas"] .footer-column ul,
+html[data-theme="Christmas"] .footer-column ul,
+body[data-theme="Christmas"] .footer-column ul {
+    list-style: none;
+        padding: 0;
+}
+
+:root[style*="--theme: 'Christmas'"] .footer-column a,
+:root[data-theme="Christmas"] .footer-column a,
+html[data-theme="Christmas"] .footer-column a,
+body[data-theme="Christmas"] .footer-column a {
+    color: #aaa;
+        text-decoration: none;
+        transition: color 0.3s;
+}
+
+:root[style*="--theme: 'Christmas'"] .footer-column a:hover,
+:root[data-theme="Christmas"] .footer-column a:hover,
+html[data-theme="Christmas"] .footer-column a:hover,
+body[data-theme="Christmas"] .footer-column a:hover {
+    color: #fff;
+}
+
+:root[style*="--theme: 'Christmas'"] .footer-bottom img,
+:root[data-theme="Christmas"] .footer-bottom img,
+html[data-theme="Christmas"] .footer-bottom img,
+body[data-theme="Christmas"] .footer-bottom img {
+    height: 40px;
+        margin-bottom: 0.5rem;
+        pointer-events: none;
+        -webkit-user-drag: none;
+        user-drag: none;
+}
+
+:root[style*="--theme: 'Christmas'"] .footer-bottom p,
+:root[data-theme="Christmas"] .footer-bottom p,
+html[data-theme="Christmas"] .footer-bottom p,
+body[data-theme="Christmas"] .footer-bottom p {
+    color: #9e9e9e;
+        font-size: 0.8rem;
+}
+
+:root[style*="--theme: 'Christmas'"] .hamburger,
+:root[data-theme="Christmas"] .hamburger,
+html[data-theme="Christmas"] .hamburger,
+body[data-theme="Christmas"] .hamburger {
+    display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+}
+
+:root[style*="--theme: 'Christmas'"] .hamburger:focus,
+:root[data-theme="Christmas"] .hamburger:focus,
+html[data-theme="Christmas"] .hamburger:focus,
+body[data-theme="Christmas"] .hamburger:focus,
+:root[style*="--theme: 'Christmas'"] .hamburger:active,
+:root[data-theme="Christmas"] .hamburger:active,
+html[data-theme="Christmas"] .hamburger:active,
+body[data-theme="Christmas"] .hamburger:active {
+    outline: none;
+}
+
+:root[style*="--theme: 'Christmas'"] .hamburger span,
+:root[data-theme="Christmas"] .hamburger span,
+html[data-theme="Christmas"] .hamburger span,
+body[data-theme="Christmas"] .hamburger span {
+    width: 25px; height: 3px; background: #f0f6f2; border-radius: 2px; transition: all 0.3s ease;
+}
+
+:root[style*="--theme: 'Christmas'"] .hamburger.active span:nth-child(1),
+:root[data-theme="Christmas"] .hamburger.active span:nth-child(1),
+html[data-theme="Christmas"] .hamburger.active span:nth-child(1),
+body[data-theme="Christmas"] .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+:root[style*="--theme: 'Christmas'"] .hamburger.active span:nth-child(2),
+:root[data-theme="Christmas"] .hamburger.active span:nth-child(2),
+html[data-theme="Christmas"] .hamburger.active span:nth-child(2),
+body[data-theme="Christmas"] .hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+:root[style*="--theme: 'Christmas'"] .hamburger.active span:nth-child(3),
+:root[data-theme="Christmas"] .hamburger.active span:nth-child(3),
+html[data-theme="Christmas"] .hamburger.active span:nth-child(3),
+body[data-theme="Christmas"] .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+:root[style*="--theme: 'Christmas'"],
+:root[data-theme="Christmas"],
+html[data-theme="Christmas"],
+body[data-theme="Christmas"] {
+    background:#0c1711; min-height:100%
+}
+
+:root[style*="--theme: 'Christmas'"],
+:root[data-theme="Christmas"],
+html[data-theme="Christmas"],
+body[data-theme="Christmas"] {
+    background:transparent; overflow-x:hidden
+}
+
+:root[style*="--theme: 'Christmas'"] nav,
+:root[data-theme="Christmas"] nav,
+html[data-theme="Christmas"] nav,
+body[data-theme="Christmas"] nav,
+:root[style*="--theme: 'Christmas'"] .nx-partners,
+:root[data-theme="Christmas"] .nx-partners,
+html[data-theme="Christmas"] .nx-partners,
+body[data-theme="Christmas"] .nx-partners,
+:root[style*="--theme: 'Christmas'"] .content,
+:root[data-theme="Christmas"] .content,
+html[data-theme="Christmas"] .content,
+body[data-theme="Christmas"] .content,
+:root[style*="--theme: 'Christmas'"] .nx-banner,
+:root[data-theme="Christmas"] .nx-banner,
+html[data-theme="Christmas"] .nx-banner,
+body[data-theme="Christmas"] .nx-banner,
+:root[style*="--theme: 'Christmas'"] .nx-banner-row,
+:root[data-theme="Christmas"] .nx-banner-row,
+html[data-theme="Christmas"] .nx-banner-row,
+body[data-theme="Christmas"] .nx-banner-row,
+:root[style*="--theme: 'Christmas'"] footer,
+:root[data-theme="Christmas"] footer,
+html[data-theme="Christmas"] footer,
+body[data-theme="Christmas"] footer {
+    will-change: transform;
+}
+
+:root[style*="--theme: 'Christmas'"] .nx-shard,
+:root[data-theme="Christmas"] .nx-shard,
+html[data-theme="Christmas"] .nx-shard,
+body[data-theme="Christmas"] .nx-shard {
+    position:fixed;
+        left:0; top:0;
+        width:var(--sz);
+        height:var(--sz);
+        pointer-events:none;
+        z-index:2147483647;
+        background:linear-gradient(135deg,#f5d76e 0%, #d4af37 40%, #fff5a8 70%, #b88900 100%);
+        border-radius:2px;
+        box-shadow:0 0 10px rgba(255,220,120,.75), 0 0 24px rgba(255,200,80,.35) inset;
+        mix-blend-mode:screen;
+        opacity:.98;
+        transform:translate(var(--x), var(--y)) scale(.85) rotate(var(--rot));
+        animation:nx-shard-fly var(--dur) cubic-bezier(.22,.61,.36,1) forwards;
+}
+
+:root[style*="--theme: 'Christmas'"] ::-webkit-scrollbar,
+:root[data-theme="Christmas"] ::-webkit-scrollbar,
+html[data-theme="Christmas"] ::-webkit-scrollbar,
+body[data-theme="Christmas"] ::-webkit-scrollbar {
+    width: 3.5px;
+}
+
+:root[style*="--theme: 'Christmas'"] ::-webkit-scrollbar-track,
+:root[data-theme="Christmas"] ::-webkit-scrollbar-track,
+html[data-theme="Christmas"] ::-webkit-scrollbar-track,
+body[data-theme="Christmas"] ::-webkit-scrollbar-track {
+    background: #00000000;
+}
+
+:root[style*="--theme: 'Christmas'"] ::-webkit-scrollbar-thumb,
+:root[data-theme="Christmas"] ::-webkit-scrollbar-thumb,
+html[data-theme="Christmas"] ::-webkit-scrollbar-thumb,
+body[data-theme="Christmas"] ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #43a071, #e5c872, #d84545);
+    transition: background-color 0.3s;
+}
+
+:root[style*="--theme: 'Christmas'"] .nx-toast-area,
+:root[data-theme="Christmas"] .nx-toast-area,
+html[data-theme="Christmas"] .nx-toast-area,
+body[data-theme="Christmas"] .nx-toast-area {
+    position:fixed;
+        left:max(12px, env(safe-area-inset-left));
+        bottom:max(12px, env(safe-area-inset-bottom));
+        display:flex;
+        flex-direction:column;
+        gap:8px;
+        z-index:3000;
+        pointer-events:none;
+}
+
+:root[style*="--theme: 'Christmas'"] .nx-toast,
+:root[data-theme="Christmas"] .nx-toast,
+html[data-theme="Christmas"] .nx-toast,
+body[data-theme="Christmas"] .nx-toast {
+    pointer-events:auto;
+        display:flex;
+        align-items:center;
+        gap:.65rem;
+        min-width:220px;
+        max-width:320px;
+        padding:.75rem .9rem;
+        background:#0f1c16;
+        color:#eee;
+        border:1px solid #244436;
+        border-radius:10px;
+        box-shadow:0 6px 18px rgba(0,0,0,.35);
+        opacity:0;
+        transform:translateX(-18px) translateY(8px);
+        animation:nx-toast-in .35s cubic-bezier(.2,.7,.3,1) forwards;
+}
+
+:root[style*="--theme: 'Christmas'"] .nx-toast__bar,
+:root[data-theme="Christmas"] .nx-toast__bar,
+html[data-theme="Christmas"] .nx-toast__bar,
+body[data-theme="Christmas"] .nx-toast__bar {
+    width:6px;
+    align-self:stretch;
+    border-radius:6px;
+    background:linear-gradient(180deg,#2a0f12 0%, #e5c872 55%, #76c99a 100%);
+    opacity:.95;
+}
+
+:root[style*="--theme: 'Christmas'"] .nx-toast__text,
+:root[data-theme="Christmas"] .nx-toast__text,
+html[data-theme="Christmas"] .nx-toast__text,
+body[data-theme="Christmas"] .nx-toast__text {
+    font-size:.9rem;
+        line-height:1.35;
+        color:#f3f3f3;
+}
+
+:root[style*="--theme: 'Christmas'"] .nx-toast-area,
+:root[data-theme="Christmas"] .nx-toast-area,
+html[data-theme="Christmas"] .nx-toast-area,
+body[data-theme="Christmas"] .nx-toast-area {
+    left: auto;
+        right: max(12px, env(safe-area-inset-right));
+        bottom: max(12px, env(safe-area-inset-bottom));
+        align-items: flex-end;
+}
+
+:root[style*="--theme: 'Christmas'"] .nx-toast,
+:root[data-theme="Christmas"] .nx-toast,
+html[data-theme="Christmas"] .nx-toast,
+body[data-theme="Christmas"] .nx-toast {
+    transform: translateX(18px) translateY(8px);
+        animation: nx-toast-in-right .35s cubic-bezier(.2,.7,.3,1) forwards;
+}
+
+:root[style*="--theme: 'Christmas'"] .nx-toast--closing,
+:root[data-theme="Christmas"] .nx-toast--closing,
+html[data-theme="Christmas"] .nx-toast--closing,
+body[data-theme="Christmas"] .nx-toast--closing {
+    animation: nx-toast-out-right .28s cubic-bezier(.2,.7,.3,1) forwards;
+}
+
+@media (max-width:768px) {
+    :root[style*="--theme: 'Christmas'"] .nx-toast,
+    :root[data-theme="Christmas"] .nx-toast,
+    html[data-theme="Christmas"] .nx-toast,
+    body[data-theme="Christmas"] .nx-toast {
+        min-width:200px; max-width:280px; padding:.7rem .85rem;
     }
-    
-    .nav-center.show {
+
+    :root[style*="--theme: 'Christmas'"] .nx-toast__text,
+    :root[data-theme="Christmas"] .nx-toast__text,
+    html[data-theme="Christmas"] .nx-toast__text,
+    body[data-theme="Christmas"] .nx-toast__text {
+        font-size:.85rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    :root[style*="--theme: 'Christmas'"],
+    :root[data-theme="Christmas"],
+    html[data-theme="Christmas"],
+    body[data-theme="Christmas"] {
+        padding-top: 10px;
+    }
+
+    :root[style*="--theme: 'Christmas'"] h1,
+    :root[data-theme="Christmas"] h1,
+    html[data-theme="Christmas"] h1,
+    body[data-theme="Christmas"] h1 {
+        margin-bottom: 1.5rem;
+    }
+
+    :root[style*="--theme: 'Christmas'"] .divider,
+    :root[data-theme="Christmas"] .divider,
+    html[data-theme="Christmas"] .divider,
+    body[data-theme="Christmas"] .divider {
+        display: none;
+    }
+
+    :root[style*="--theme: 'Christmas'"] .setting-frame,
+    :root[data-theme="Christmas"] .setting-frame,
+    html[data-theme="Christmas"] .setting-frame,
+    body[data-theme="Christmas"] .setting-frame {
+        padding: 1rem;
+                width: 300px;
+                margin: 0.5rem auto;
+    }
+
+    :root[style*="--theme: 'Christmas'"] .setting-container,
+    :root[data-theme="Christmas"] .setting-container,
+    html[data-theme="Christmas"] .setting-container,
+    body[data-theme="Christmas"] .setting-container {
+        flex-direction: column;
+                gap: 0;
+    }
+
+    :root[style*="--theme: 'Christmas'"] .content-2,
+    :root[data-theme="Christmas"] .content-2,
+    html[data-theme="Christmas"] .content-2,
+    body[data-theme="Christmas"] .content-2 {
+        padding: 1rem 1rem;
+    }
+
+    :root[style*="--theme: 'Christmas'"] .content-2 h1,
+    :root[data-theme="Christmas"] .content-2 h1,
+    html[data-theme="Christmas"] .content-2 h1,
+    body[data-theme="Christmas"] .content-2 h1 {
+        font-size: 1.5rem;
+    }
+
+    :root[style*="--theme: 'Christmas'"] .footer-container,
+    :root[data-theme="Christmas"] .footer-container,
+    html[data-theme="Christmas"] .footer-container,
+    body[data-theme="Christmas"] .footer-container {
+        flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+    }
+
+    :root[style*="--theme: 'Christmas'"] .footer-column,
+    :root[data-theme="Christmas"] .footer-column,
+    html[data-theme="Christmas"] .footer-column,
+    body[data-theme="Christmas"] .footer-column {
+        flex: 1 1 100%;
+    }
+
+    :root[style*="--theme: 'Christmas'"] .hamburger,
+    :root[data-theme="Christmas"] .hamburger,
+    html[data-theme="Christmas"] .hamburger,
+    body[data-theme="Christmas"] .hamburger {
+        display: flex;
+    }
+
+    :root[style*="--theme: 'Christmas'"] .nav-center,
+    :root[data-theme="Christmas"] .nav-center,
+    html[data-theme="Christmas"] .nav-center,
+    body[data-theme="Christmas"] .nav-center {
+        position: absolute;
+                top: 64px;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(180deg, #112019, #0c1711);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+                padding: 0;
+                overflow: hidden;
+                max-height: 0;
+                transition: max-height 0.4s ease, padding 0.3s ease;
+                z-index: 999;
+                border-bottom: 1px solid #222;
+    }
+
+    :root[style*="--theme: 'Christmas'"] .nav-center.show,
+    :root[data-theme="Christmas"] .nav-center.show,
+    html[data-theme="Christmas"] .nav-center.show,
+    body[data-theme="Christmas"] .nav-center.show {
         padding: 1rem 0;
-        max-height: 200px;
+                max-height: 200px;
+    }
+}
+
+:root[style*="--theme: 'NewYear'"] *,
+:root[data-theme="NewYear"] *,
+html[data-theme="NewYear"] *,
+body[data-theme="NewYear"] * {
+    margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', sans-serif;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+        -webkit-tap-highlight-color: transparent;
+}
+
+:root[style*="--theme: 'NewYear'"] a,
+:root[data-theme="NewYear"] a,
+html[data-theme="NewYear"] a,
+body[data-theme="NewYear"] a,
+:root[style*="--theme: 'NewYear'"] button,
+:root[data-theme="NewYear"] button,
+html[data-theme="NewYear"] button,
+body[data-theme="NewYear"] button,
+:root[style*="--theme: 'NewYear'"] input,
+:root[data-theme="NewYear"] input,
+html[data-theme="NewYear"] input,
+body[data-theme="NewYear"] input,
+:root[style*="--theme: 'NewYear'"] label,
+:root[data-theme="NewYear"] label,
+html[data-theme="NewYear"] label,
+body[data-theme="NewYear"] label {
+    outline: none;
+      -webkit-tap-highlight-color: transparent;
+}
+
+:root[style*="--theme: 'NewYear'"],
+:root[data-theme="NewYear"],
+html[data-theme="NewYear"],
+body[data-theme="NewYear"] {
+    background-color: #111;
+        color: #eee;
+        padding-top: 64px;
+}
+
+:root[style*="--theme: 'NewYear'"] .top-nav,
+:root[data-theme="NewYear"] .top-nav,
+html[data-theme="NewYear"] .top-nav,
+body[data-theme="NewYear"] .top-nav {
+    position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 64px;
+        background: #111;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 2rem;
+        z-index: 1000;
+        backdrop-filter: blur(6px);
+        border-bottom: 1px solid #222;
+}
+
+:root[style*="--theme: 'NewYear'"] .nav-left,
+:root[data-theme="NewYear"] .nav-left,
+html[data-theme="NewYear"] .nav-left,
+body[data-theme="NewYear"] .nav-left,
+:root[style*="--theme: 'NewYear'"] .nav-right,
+:root[data-theme="NewYear"] .nav-right,
+html[data-theme="NewYear"] .nav-right,
+body[data-theme="NewYear"] .nav-right {
+    flex: 1;
+        display: flex;
+        align-items: center;
+}
+
+:root[style*="--theme: 'NewYear'"] .nav-logo img,
+:root[data-theme="NewYear"] .nav-logo img,
+html[data-theme="NewYear"] .nav-logo img,
+body[data-theme="NewYear"] .nav-logo img {
+    height: 50px;
+        object-fit: contain;
+        margin-left: -1rem;
+        margin-top: 5px;
+        pointer-events: none;
+        -webkit-user-drag: none;
+        user-drag: none;
+}
+
+:root[style*="--theme: 'NewYear'"] .nav-center,
+:root[data-theme="NewYear"] .nav-center,
+html[data-theme="NewYear"] .nav-center,
+body[data-theme="NewYear"] .nav-center {
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        flex: 0 1 auto;
+}
+
+:root[style*="--theme: 'NewYear'"] .nav-center a,
+:root[data-theme="NewYear"] .nav-center a,
+html[data-theme="NewYear"] .nav-center a,
+body[data-theme="NewYear"] .nav-center a {
+    text-decoration: none;
+        font-size: 0.9rem;
+        color: #aaa;
+        font-weight: 500;
+        transition: 0.3s ease;
+}
+
+:root[style*="--theme: 'NewYear'"] .nav-center a:hover,
+:root[data-theme="NewYear"] .nav-center a:hover,
+html[data-theme="NewYear"] .nav-center a:hover,
+body[data-theme="NewYear"] .nav-center a:hover,
+:root[style*="--theme: 'NewYear'"] .nav-center a.active,
+:root[data-theme="NewYear"] .nav-center a.active,
+html[data-theme="NewYear"] .nav-center a.active,
+body[data-theme="NewYear"] .nav-center a.active {
+    color: #fff;
+}
+
+:root[style*="--theme: 'NewYear'"] .content,
+:root[data-theme="NewYear"] .content,
+html[data-theme="NewYear"] .content,
+body[data-theme="NewYear"] .content {
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 15rem 1rem;
+}
+
+:root[style*="--theme: 'NewYear'"] .content-2,
+:root[data-theme="NewYear"] .content-2,
+html[data-theme="NewYear"] .content-2,
+body[data-theme="NewYear"] .content-2 {
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 15rem 0;
+}
+
+:root[style*="--theme: 'NewYear'"] .setting-frame,
+:root[data-theme="NewYear"] .setting-frame,
+html[data-theme="NewYear"] .setting-frame,
+body[data-theme="NewYear"] .setting-frame {
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #1a1a1a;
+        border: 1px solid #333;
+        border-radius: 8px;
+        padding: 1rem 2rem;
+        width: 400px;
+        margin: 0.5rem auto;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.4s ease;
+        flex-direction: column;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+:root[style*="--theme: 'NewYear'"] .setting-title,
+:root[data-theme="NewYear"] .setting-title,
+html[data-theme="NewYear"] .setting-title,
+body[data-theme="NewYear"] .setting-title {
+    max-height: 0;
+        overflow: hidden;
+        color: #ccc;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        word-wrap: break-word;
+        text-align: left;
+        width: 100%;
+        white-space: normal;
+        opacity: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        box-sizing: content-box;
+        transition: max-height 0.5s ease, opacity 0.4s, padding 0.4s;
+}
+
+:root[style*="--theme: 'NewYear'"] .setting-frame.open .setting-title,
+:root[data-theme="NewYear"] .setting-frame.open .setting-title,
+html[data-theme="NewYear"] .setting-frame.open .setting-title,
+body[data-theme="NewYear"] .setting-frame.open .setting-title {
+    opacity: 1;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+}
+
+:root[style*="--theme: 'NewYear'"] .setting-header,
+:root[data-theme="NewYear"] .setting-header,
+html[data-theme="NewYear"] .setting-header,
+body[data-theme="NewYear"] .setting-header {
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+}
+
+:root[style*="--theme: 'NewYear'"] .setting-frame-left,
+:root[data-theme="NewYear"] .setting-frame-left,
+html[data-theme="NewYear"] .setting-frame-left,
+body[data-theme="NewYear"] .setting-frame-left,
+:root[style*="--theme: 'NewYear'"] .setting-frame-right,
+:root[data-theme="NewYear"] .setting-frame-right,
+html[data-theme="NewYear"] .setting-frame-right,
+body[data-theme="NewYear"] .setting-frame-right {
+    flex: 1;
+        min-width: 300px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+}
+
+:root[style*="--theme: 'NewYear'"] .setting-container,
+:root[data-theme="NewYear"] .setting-container,
+html[data-theme="NewYear"] .setting-container,
+body[data-theme="NewYear"] .setting-container {
+    display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2rem;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+        position: relative;
+}
+
+:root[style*="--theme: 'NewYear'"] .divider,
+:root[data-theme="NewYear"] .divider,
+html[data-theme="NewYear"] .divider,
+body[data-theme="NewYear"] .divider {
+    width: 1px;
+        background-color: #444;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.5;
+}
+
+:root[style*="--theme: 'NewYear'"] .divider-center,
+:root[data-theme="NewYear"] .divider-center,
+html[data-theme="NewYear"] .divider-center,
+body[data-theme="NewYear"] .divider-center {
+    height: 1px;
+        width: 100%;
+        background-color: #222;
+        margin: 4rem 0 10rem 0;
+        opacity: 0.5;
+}
+
+:root[style*="--theme: 'NewYear'"] .setting-label,
+:root[data-theme="NewYear"] .setting-label,
+html[data-theme="NewYear"] .setting-label,
+body[data-theme="NewYear"] .setting-label {
+    font-size: 1rem;
+        font-weight: 500;
+        color: #eee;
+        line-height: 24px;
+}
+
+:root[style*="--theme: 'NewYear'"] .switch,
+:root[data-theme="NewYear"] .switch,
+html[data-theme="NewYear"] .switch,
+body[data-theme="NewYear"] .switch {
+    position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 24px;
+        vertical-align: middle;
+}
+
+:root[style*="--theme: 'NewYear'"] .switch input,
+:root[data-theme="NewYear"] .switch input,
+html[data-theme="NewYear"] .switch input,
+body[data-theme="NewYear"] .switch input {
+    opacity: 0;
+        width: 0;
+        height: 0;
+}
+
+:root[style*="--theme: 'NewYear'"] .slider,
+:root[data-theme="NewYear"] .slider,
+html[data-theme="NewYear"] .slider,
+body[data-theme="NewYear"] .slider {
+    position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #555;
+        transition: 0.4s;
+        border-radius: 24px;
+}
+
+:root[style*="--theme: 'NewYear'"] .slider:before,
+:root[data-theme="NewYear"] .slider:before,
+html[data-theme="NewYear"] .slider:before,
+body[data-theme="NewYear"] .slider:before {
+    position: absolute;
+        content: "";
+        height: 18px;
+        width: 18px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
+}
+
+:root[style*="--theme: 'NewYear'"] input:checked + .slider,
+:root[data-theme="NewYear"] input:checked + .slider,
+html[data-theme="NewYear"] input:checked + .slider,
+body[data-theme="NewYear"] input:checked + .slider {
+    background-color: #4CAF50;
+}
+
+:root[style*="--theme: 'NewYear'"] input:checked + .slider:before,
+:root[data-theme="NewYear"] input:checked + .slider:before,
+html[data-theme="NewYear"] input:checked + .slider:before,
+body[data-theme="NewYear"] input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+:root[style*="--theme: 'NewYear'"] h1,
+:root[data-theme="NewYear"] h1,
+html[data-theme="NewYear"] h1,
+body[data-theme="NewYear"] h1 {
+    font-size: 3rem;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        color: #fff;
+}
+
+:root[style*="--theme: 'NewYear'"] h3,
+:root[data-theme="NewYear"] h3,
+html[data-theme="NewYear"] h3,
+body[data-theme="NewYear"] h3 {
+    font-size: 0.8rem;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        color: #aaa;
+}
+
+:root[style*="--theme: 'NewYear'"] .fade-slide-up,
+:root[data-theme="NewYear"] .fade-slide-up,
+html[data-theme="NewYear"] .fade-slide-up,
+body[data-theme="NewYear"] .fade-slide-up {
+    animation: fadeSlideUp 1s ease-out forwards;
+}
+
+:root[style*="--theme: 'NewYear'"] .fade-slide-down,
+:root[data-theme="NewYear"] .fade-slide-down,
+html[data-theme="NewYear"] .fade-slide-down,
+body[data-theme="NewYear"] .fade-slide-down {
+    animation: fadeSlideDown 1s ease-out forwards;
+}
+
+:root[style*="--theme: 'NewYear'"] .footer,
+:root[data-theme="NewYear"] .footer,
+html[data-theme="NewYear"] .footer,
+body[data-theme="NewYear"] .footer {
+    background-color: #111;
+        padding: 4rem 2rem 2.5rem;
+        color: #aaa;
+        font-size: 0.9rem;
+        margin-top: 4rem;
+        border-top: 1px solid #222;
+}
+
+:root[style*="--theme: 'NewYear'"] .footer-container,
+:root[data-theme="NewYear"] .footer-container,
+html[data-theme="NewYear"] .footer-container,
+body[data-theme="NewYear"] .footer-container {
+    display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: auto;
+        gap: 2rem;
+}
+
+:root[style*="--theme: 'NewYear'"] .footer-column,
+:root[data-theme="NewYear"] .footer-column,
+html[data-theme="NewYear"] .footer-column,
+body[data-theme="NewYear"] .footer-column {
+    flex: 1 1 200px;
+}
+
+:root[style*="--theme: 'NewYear'"] .footer-column h3,
+:root[data-theme="NewYear"] .footer-column h3,
+html[data-theme="NewYear"] .footer-column h3,
+body[data-theme="NewYear"] .footer-column h3 {
+    color: white;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+}
+
+:root[style*="--theme: 'NewYear'"] .footer-column p,
+:root[data-theme="NewYear"] .footer-column p,
+html[data-theme="NewYear"] .footer-column p,
+body[data-theme="NewYear"] .footer-column p,
+:root[style*="--theme: 'NewYear'"] .footer-column li,
+:root[data-theme="NewYear"] .footer-column li,
+html[data-theme="NewYear"] .footer-column li,
+body[data-theme="NewYear"] .footer-column li {
+    color: #aaa;
+        line-height: 1.5;
+}
+
+:root[style*="--theme: 'NewYear'"] .footer-column ul,
+:root[data-theme="NewYear"] .footer-column ul,
+html[data-theme="NewYear"] .footer-column ul,
+body[data-theme="NewYear"] .footer-column ul {
+    list-style: none;
+        padding: 0;
+}
+
+:root[style*="--theme: 'NewYear'"] .footer-column a,
+:root[data-theme="NewYear"] .footer-column a,
+html[data-theme="NewYear"] .footer-column a,
+body[data-theme="NewYear"] .footer-column a {
+    color: #aaa;
+        text-decoration: none;
+        transition: color 0.3s;
+}
+
+:root[style*="--theme: 'NewYear'"] .footer-column a:hover,
+:root[data-theme="NewYear"] .footer-column a:hover,
+html[data-theme="NewYear"] .footer-column a:hover,
+body[data-theme="NewYear"] .footer-column a:hover {
+    color: #fff;
+}
+
+:root[style*="--theme: 'NewYear'"] .footer-bottom img,
+:root[data-theme="NewYear"] .footer-bottom img,
+html[data-theme="NewYear"] .footer-bottom img,
+body[data-theme="NewYear"] .footer-bottom img {
+    height: 40px;
+        margin-bottom: 0.5rem;
+        pointer-events: none;
+        -webkit-user-drag: none;
+        user-drag: none;
+}
+
+:root[style*="--theme: 'NewYear'"] .footer-bottom p,
+:root[data-theme="NewYear"] .footer-bottom p,
+html[data-theme="NewYear"] .footer-bottom p,
+body[data-theme="NewYear"] .footer-bottom p {
+    color: #9e9e9e;
+        font-size: 0.8rem;
+}
+
+:root[style*="--theme: 'NewYear'"] .hamburger,
+:root[data-theme="NewYear"] .hamburger,
+html[data-theme="NewYear"] .hamburger,
+body[data-theme="NewYear"] .hamburger {
+    display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+}
+
+:root[style*="--theme: 'NewYear'"] .hamburger:focus,
+:root[data-theme="NewYear"] .hamburger:focus,
+html[data-theme="NewYear"] .hamburger:focus,
+body[data-theme="NewYear"] .hamburger:focus,
+:root[style*="--theme: 'NewYear'"] .hamburger:active,
+:root[data-theme="NewYear"] .hamburger:active,
+html[data-theme="NewYear"] .hamburger:active,
+body[data-theme="NewYear"] .hamburger:active {
+    outline: none;
+}
+
+:root[style*="--theme: 'NewYear'"] .hamburger span,
+:root[data-theme="NewYear"] .hamburger span,
+html[data-theme="NewYear"] .hamburger span,
+body[data-theme="NewYear"] .hamburger span {
+    width: 25px;
+        height: 3px;
+        background: #eee;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+}
+
+:root[style*="--theme: 'NewYear'"] .hamburger.active span:nth-child(1),
+:root[data-theme="NewYear"] .hamburger.active span:nth-child(1),
+html[data-theme="NewYear"] .hamburger.active span:nth-child(1),
+body[data-theme="NewYear"] .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+:root[style*="--theme: 'NewYear'"] .hamburger.active span:nth-child(2),
+:root[data-theme="NewYear"] .hamburger.active span:nth-child(2),
+html[data-theme="NewYear"] .hamburger.active span:nth-child(2),
+body[data-theme="NewYear"] .hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+:root[style*="--theme: 'NewYear'"] .hamburger.active span:nth-child(3),
+:root[data-theme="NewYear"] .hamburger.active span:nth-child(3),
+html[data-theme="NewYear"] .hamburger.active span:nth-child(3),
+body[data-theme="NewYear"] .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+:root[style*="--theme: 'NewYear'"],
+:root[data-theme="NewYear"],
+html[data-theme="NewYear"],
+body[data-theme="NewYear"] {
+    background:#111; min-height:100%
+}
+
+:root[style*="--theme: 'NewYear'"],
+:root[data-theme="NewYear"],
+html[data-theme="NewYear"],
+body[data-theme="NewYear"] {
+    background:#111; overflow-x:hidden
+}
+
+:root[style*="--theme: 'NewYear'"] nav,
+:root[data-theme="NewYear"] nav,
+html[data-theme="NewYear"] nav,
+body[data-theme="NewYear"] nav,
+:root[style*="--theme: 'NewYear'"] .nx-partners,
+:root[data-theme="NewYear"] .nx-partners,
+html[data-theme="NewYear"] .nx-partners,
+body[data-theme="NewYear"] .nx-partners,
+:root[style*="--theme: 'NewYear'"] .content,
+:root[data-theme="NewYear"] .content,
+html[data-theme="NewYear"] .content,
+body[data-theme="NewYear"] .content,
+:root[style*="--theme: 'NewYear'"] .nx-banner,
+:root[data-theme="NewYear"] .nx-banner,
+html[data-theme="NewYear"] .nx-banner,
+body[data-theme="NewYear"] .nx-banner,
+:root[style*="--theme: 'NewYear'"] .nx-banner-row,
+:root[data-theme="NewYear"] .nx-banner-row,
+html[data-theme="NewYear"] .nx-banner-row,
+body[data-theme="NewYear"] .nx-banner-row,
+:root[style*="--theme: 'NewYear'"] footer,
+:root[data-theme="NewYear"] footer,
+html[data-theme="NewYear"] footer,
+body[data-theme="NewYear"] footer {
+    will-change: transform;
+}
+
+:root[style*="--theme: 'NewYear'"] .nx-shard,
+:root[data-theme="NewYear"] .nx-shard,
+html[data-theme="NewYear"] .nx-shard,
+body[data-theme="NewYear"] .nx-shard {
+    position:fixed;
+        left:0; top:0;
+        width:var(--sz);
+        height:var(--sz);
+        pointer-events:none;
+        z-index:2147483647;
+        background:linear-gradient(135deg,#f5d76e 0%, #d4af37 40%, #fff5a8 70%, #b88900 100%);
+        border-radius:2px;
+        box-shadow:0 0 10px rgba(255,220,120,.75), 0 0 24px rgba(255,200,80,.35) inset;
+        mix-blend-mode:screen;
+        opacity:.98;
+        transform:translate(var(--x), var(--y)) scale(.85) rotate(var(--rot));
+        animation:nx-shard-fly var(--dur) cubic-bezier(.22,.61,.36,1) forwards;
+}
+
+:root[style*="--theme: 'NewYear'"] ::-webkit-scrollbar,
+:root[data-theme="NewYear"] ::-webkit-scrollbar,
+html[data-theme="NewYear"] ::-webkit-scrollbar,
+body[data-theme="NewYear"] ::-webkit-scrollbar {
+    width: 3.5px;
+}
+
+:root[style*="--theme: 'NewYear'"] ::-webkit-scrollbar-track,
+:root[data-theme="NewYear"] ::-webkit-scrollbar-track,
+html[data-theme="NewYear"] ::-webkit-scrollbar-track,
+body[data-theme="NewYear"] ::-webkit-scrollbar-track {
+    background: #00000000;
+}
+
+:root[style*="--theme: 'NewYear'"] ::-webkit-scrollbar-thumb,
+:root[data-theme="NewYear"] ::-webkit-scrollbar-thumb,
+html[data-theme="NewYear"] ::-webkit-scrollbar-thumb,
+body[data-theme="NewYear"] ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #aaa, #aaa, #aaa);
+        transition: background-color 0.3s;
+}
+
+:root[style*="--theme: 'NewYear'"] .nx-toast-area,
+:root[data-theme="NewYear"] .nx-toast-area,
+html[data-theme="NewYear"] .nx-toast-area,
+body[data-theme="NewYear"] .nx-toast-area {
+    position:fixed;
+        left:max(12px, env(safe-area-inset-left));
+        bottom:max(12px, env(safe-area-inset-bottom));
+        display:flex;
+        flex-direction:column;
+        gap:8px;
+        z-index:3000;
+        pointer-events:none;
+}
+
+:root[style*="--theme: 'NewYear'"] .nx-toast,
+:root[data-theme="NewYear"] .nx-toast,
+html[data-theme="NewYear"] .nx-toast,
+body[data-theme="NewYear"] .nx-toast {
+    pointer-events:auto;
+        display:flex;
+        align-items:center;
+        gap:.65rem;
+        min-width:220px;
+        max-width:320px;
+        padding:.75rem .9rem;
+        background:#181818;
+        color:#eee;
+        border:1px solid #333;
+        border-radius:10px;
+        box-shadow:0 6px 18px rgba(0,0,0,.35);
+        opacity:0;
+        transform:translateX(-18px) translateY(8px);
+        animation:nx-toast-in .35s cubic-bezier(.2,.7,.3,1) forwards;
+}
+
+:root[style*="--theme: 'NewYear'"] .nx-toast__bar,
+:root[data-theme="NewYear"] .nx-toast__bar,
+html[data-theme="NewYear"] .nx-toast__bar,
+body[data-theme="NewYear"] .nx-toast__bar {
+    width:6px;
+        align-self:stretch;
+        border-radius:6px;
+        background:linear-gradient(180deg,#f5d76e 0%, #d4af37 60%, #fff1a8 100%);
+        opacity:.95;
+}
+
+:root[style*="--theme: 'NewYear'"] .nx-toast__text,
+:root[data-theme="NewYear"] .nx-toast__text,
+html[data-theme="NewYear"] .nx-toast__text,
+body[data-theme="NewYear"] .nx-toast__text {
+    font-size:.9rem;
+        line-height:1.35;
+        color:#f3f3f3;
+}
+
+:root[style*="--theme: 'NewYear'"] .nx-toast-area,
+:root[data-theme="NewYear"] .nx-toast-area,
+html[data-theme="NewYear"] .nx-toast-area,
+body[data-theme="NewYear"] .nx-toast-area {
+    left: auto;
+        right: max(12px, env(safe-area-inset-right));
+        bottom: max(12px, env(safe-area-inset-bottom));
+        align-items: flex-end;
+}
+
+:root[style*="--theme: 'NewYear'"] .nx-toast,
+:root[data-theme="NewYear"] .nx-toast,
+html[data-theme="NewYear"] .nx-toast,
+body[data-theme="NewYear"] .nx-toast {
+    transform: translateX(18px) translateY(8px);
+        animation: nx-toast-in-right .35s cubic-bezier(.2,.7,.3,1) forwards;
+}
+
+:root[style*="--theme: 'NewYear'"] .nx-toast--closing,
+:root[data-theme="NewYear"] .nx-toast--closing,
+html[data-theme="NewYear"] .nx-toast--closing,
+body[data-theme="NewYear"] .nx-toast--closing {
+    animation: nx-toast-out-right .28s cubic-bezier(.2,.7,.3,1) forwards;
+}
+
+@media (max-width:768px) {
+    :root[style*="--theme: 'NewYear'"] .nx-toast,
+    :root[data-theme="NewYear"] .nx-toast,
+    html[data-theme="NewYear"] .nx-toast,
+    body[data-theme="NewYear"] .nx-toast {
+        min-width:200px; max-width:280px; padding:.7rem .85rem;
+    }
+
+    :root[style*="--theme: 'NewYear'"] .nx-toast__text,
+    :root[data-theme="NewYear"] .nx-toast__text,
+    html[data-theme="NewYear"] .nx-toast__text,
+    body[data-theme="NewYear"] .nx-toast__text {
+        font-size:.85rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    :root[style*="--theme: 'NewYear'"],
+    :root[data-theme="NewYear"],
+    html[data-theme="NewYear"],
+    body[data-theme="NewYear"] {
+        padding-top: 10px;
+    }
+
+    :root[style*="--theme: 'NewYear'"] h1,
+    :root[data-theme="NewYear"] h1,
+    html[data-theme="NewYear"] h1,
+    body[data-theme="NewYear"] h1 {
+        margin-bottom: 1.5rem;
+    }
+
+    :root[style*="--theme: 'NewYear'"] .divider,
+    :root[data-theme="NewYear"] .divider,
+    html[data-theme="NewYear"] .divider,
+    body[data-theme="NewYear"] .divider {
+        display: none;
+    }
+
+    :root[style*="--theme: 'NewYear'"] .setting-frame,
+    :root[data-theme="NewYear"] .setting-frame,
+    html[data-theme="NewYear"] .setting-frame,
+    body[data-theme="NewYear"] .setting-frame {
+        padding: 1rem;
+                width: 300px;
+                margin: 0.5rem auto;
+    }
+
+    :root[style*="--theme: 'NewYear'"] .setting-container,
+    :root[data-theme="NewYear"] .setting-container,
+    html[data-theme="NewYear"] .setting-container,
+    body[data-theme="NewYear"] .setting-container {
+        flex-direction: column;
+                gap: 0;
+    }
+
+    :root[style*="--theme: 'NewYear'"] .content-2,
+    :root[data-theme="NewYear"] .content-2,
+    html[data-theme="NewYear"] .content-2,
+    body[data-theme="NewYear"] .content-2 {
+        padding: 1rem 1rem;
+    }
+
+    :root[style*="--theme: 'NewYear'"] .content-2 h1,
+    :root[data-theme="NewYear"] .content-2 h1,
+    html[data-theme="NewYear"] .content-2 h1,
+    body[data-theme="NewYear"] .content-2 h1 {
+        font-size: 1.5rem;
+    }
+
+    :root[style*="--theme: 'NewYear'"] .footer-container,
+    :root[data-theme="NewYear"] .footer-container,
+    html[data-theme="NewYear"] .footer-container,
+    body[data-theme="NewYear"] .footer-container {
+        flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+    }
+
+    :root[style*="--theme: 'NewYear'"] .footer-column,
+    :root[data-theme="NewYear"] .footer-column,
+    html[data-theme="NewYear"] .footer-column,
+    body[data-theme="NewYear"] .footer-column {
+        flex: 1 1 100%;
+    }
+
+    :root[style*="--theme: 'NewYear'"] .hamburger,
+    :root[data-theme="NewYear"] .hamburger,
+    html[data-theme="NewYear"] .hamburger,
+    body[data-theme="NewYear"] .hamburger {
+        display: flex;
+    }
+
+    :root[style*="--theme: 'NewYear'"] .nav-center,
+    :root[data-theme="NewYear"] .nav-center,
+    html[data-theme="NewYear"] .nav-center,
+    body[data-theme="NewYear"] .nav-center {
+        position: absolute;
+                top: 64px;
+                right: 0;
+                width: 100%;
+                background-color: #111;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+                padding: 0;
+                overflow: hidden;
+                max-height: 0;
+                transition: max-height 0.4s ease, padding 0.3s ease;
+                z-index: 999;
+                border-bottom: 1px solid #222;
+    }
+
+    :root[style*="--theme: 'NewYear'"] .nav-center.show,
+    :root[data-theme="NewYear"] .nav-center.show,
+    html[data-theme="NewYear"] .nav-center.show,
+    body[data-theme="NewYear"] .nav-center.show {
+        padding: 1rem 0;
+                max-height: 200px;
+    }
+}
+
+:root[style*="--theme: 'NewYear'"],
+:root[data-theme="NewYear"],
+html[data-theme="NewYear"],
+body[data-theme="NewYear"] {
+    --ny-midnight:#060a1a;
+        --ny-black:#090b14;
+        --ny-deep:#0c1230;
+        --ny-indigo:#111a3d;
+        --ny-ink:#0b1229;
+        --ny-blue:#1a2a5a;
+        --ny-gold:#d4af37;
+        --ny-gold-2:#f5d76e;
+        --ny-champagne:#fff5a8;
+        --ny-silver:#cfd8e3;
+        --ny-white:#f7f9ff;
+}
+
+:root[style*="--theme: 'NewYear'"],
+:root[data-theme="NewYear"],
+html[data-theme="NewYear"],
+body[data-theme="NewYear"] {
+    background:
+            radial-gradient(1200px 600px at 70% -10%, rgba(255,233,181,.10), rgba(0,0,0,0)),
+            linear-gradient(180deg, var(--ny-deep) 0%, #070b18 55%, var(--ny-midnight) 100%);
+        color:#eef2ff;
+}
+
+:root[style*="--theme: 'NewYear'"] body::after,
+:root[data-theme="NewYear"] body::after,
+html[data-theme="NewYear"] body::after,
+body[data-theme="NewYear"] body::after {
+    content:"";
+        position:fixed; inset:-50px 0 0 0;
+        pointer-events:none; z-index:2;
+        background-image:
+            radial-gradient(2px 2px at 20% 10%, rgba(245,215,110,.28) 50%, transparent 51%),
+            radial-gradient(2px 2px at 60% 30%, rgba(212,175,55,.24) 50%, transparent 51%),
+            radial-gradient(1.5px 1.5px at 40% 80%, rgba(255,245,168,.22) 50%, transparent 51%),
+            radial-gradient(1.5px 1.5px at 75% 55%, rgba(207,216,227,.25) 50%, transparent 51%);
+        background-size: 320px 520px, 360px 560px, 420px 700px, 300px 480px;
+        animation: nye-sparkles 36s linear infinite;
+        mix-blend-mode:screen; opacity:.55;
+}
+
+@keyframes nye-sparkles {
+
+        0%{ background-position: 0 -220px, 0 -260px, 0 -320px, 0 -180px; }
+        100%{ background-position: 0 640px, 0 760px, 0 920px, 0 700px; }
+}
+
+:root[style*="--theme: 'NewYear'"] .top-nav,
+:root[data-theme="NewYear"] .top-nav,
+html[data-theme="NewYear"] .top-nav,
+body[data-theme="NewYear"] .top-nav {
+    background: linear-gradient(180deg, #132055, var(--ny-indigo));
+        border-bottom: 1px solid rgba(212,175,55,.35);
+        backdrop-filter: blur(8px);
+}
+
+:root[style*="--theme: 'NewYear'"] .nav-center a,
+:root[data-theme="NewYear"] .nav-center a,
+html[data-theme="NewYear"] .nav-center a,
+body[data-theme="NewYear"] .nav-center a {
+    color:#dfe6ff;
+}
+
+:root[style*="--theme: 'NewYear'"] .nav-center a:hover,
+:root[data-theme="NewYear"] .nav-center a:hover,
+html[data-theme="NewYear"] .nav-center a:hover,
+body[data-theme="NewYear"] .nav-center a:hover,
+:root[style*="--theme: 'NewYear'"] .nav-center a.active,
+:root[data-theme="NewYear"] .nav-center a.active,
+html[data-theme="NewYear"] .nav-center a.active,
+body[data-theme="NewYear"] .nav-center a.active {
+    color:#fff;
+        text-shadow:0 0 10px rgba(245,215,110,.25);
+}
+
+:root[style*="--theme: 'NewYear'"] .hamburger span,
+:root[data-theme="NewYear"] .hamburger span,
+html[data-theme="NewYear"] .hamburger span,
+body[data-theme="NewYear"] .hamburger span {
+    background:#fff3e6;
+}
+
+:root[style*="--theme: 'NewYear'"] h1,
+:root[data-theme="NewYear"] h1,
+html[data-theme="NewYear"] h1,
+body[data-theme="NewYear"] h1 {
+    color:#ffffff; text-shadow:0 2px 16px rgba(245,215,110,.12);
+}
+
+:root[style*="--theme: 'NewYear'"] h3,
+:root[data-theme="NewYear"] h3,
+html[data-theme="NewYear"] h3,
+body[data-theme="NewYear"] h3 {
+    color:#cfd8ff;
+}
+
+:root[style*="--theme: 'NewYear'"] .setting-frame,
+:root[data-theme="NewYear"] .setting-frame,
+html[data-theme="NewYear"] .setting-frame,
+body[data-theme="NewYear"] .setting-frame {
+    background: linear-gradient(180deg, #121c45, #0f1736);
+        border: 1px solid rgba(212,175,55,.28);
+        box-shadow: 0 0 0 1px rgba(0,0,0,.25) inset, 0 10px 30px rgba(0,0,0,.45);
+}
+
+:root[style*="--theme: 'NewYear'"] .setting-title,
+:root[data-theme="NewYear"] .setting-title,
+html[data-theme="NewYear"] .setting-title,
+body[data-theme="NewYear"] .setting-title {
+    color:#e7ecff;
+}
+
+:root[style*="--theme: 'NewYear'"] .setting-label,
+:root[data-theme="NewYear"] .setting-label,
+html[data-theme="NewYear"] .setting-label,
+body[data-theme="NewYear"] .setting-label {
+    color:#f4f7ff;
+}
+
+:root[style*="--theme: 'NewYear'"] .slider,
+:root[data-theme="NewYear"] .slider,
+html[data-theme="NewYear"] .slider,
+body[data-theme="NewYear"] .slider {
+    background: #2a3a66;
+        box-shadow: inset 0 0 0 1px rgba(255,255,255,.06);
+}
+
+:root[style*="--theme: 'NewYear'"] .slider:before,
+:root[data-theme="NewYear"] .slider:before,
+html[data-theme="NewYear"] .slider:before,
+body[data-theme="NewYear"] .slider:before {
+    background: linear-gradient(180deg, #fff, #eef3ff);
+        box-shadow: 0 2px 6px rgba(0,0,0,.35);
+}
+
+:root[style*="--theme: 'NewYear'"] input:checked + .slider,
+:root[data-theme="NewYear"] input:checked + .slider,
+html[data-theme="NewYear"] input:checked + .slider,
+body[data-theme="NewYear"] input:checked + .slider {
+    background: linear-gradient(90deg, var(--ny-gold) 0%, var(--ny-gold-2) 50%, var(--ny-gold) 100%);
+        box-shadow: 0 0 18px rgba(245,215,110,.35), inset 0 0 0 1px rgba(0,0,0,.15);
+}
+
+:root[style*="--theme: 'NewYear'"] input:checked + .slider:before,
+:root[data-theme="NewYear"] input:checked + .slider:before,
+html[data-theme="NewYear"] input:checked + .slider:before,
+body[data-theme="NewYear"] input:checked + .slider:before {
+    background: radial-gradient(circle at 40% 40%, #fff 0%, #fff6cc 60%, #ffe88a 100%);
+        box-shadow: 0 0 10px rgba(255,240,170,.6);
+}
+
+:root[style*="--theme: 'NewYear'"] .footer,
+:root[data-theme="NewYear"] .footer,
+html[data-theme="NewYear"] .footer,
+body[data-theme="NewYear"] .footer {
+    background: linear-gradient(180deg, #10183a, #0b1127);
+        border-top: 1px solid rgba(212,175,55,.28);
+        color:#dfe6ff;
+}
+
+:root[style*="--theme: 'NewYear'"] .footer-column h3,
+:root[data-theme="NewYear"] .footer-column h3,
+html[data-theme="NewYear"] .footer-column h3,
+body[data-theme="NewYear"] .footer-column h3 {
+    color:#fff;
+}
+
+:root[style*="--theme: 'NewYear'"] .footer-column a,
+:root[data-theme="NewYear"] .footer-column a,
+html[data-theme="NewYear"] .footer-column a,
+body[data-theme="NewYear"] .footer-column a {
+    color:#dfe6ff;
+}
+
+:root[style*="--theme: 'NewYear'"] .footer-column a:hover,
+:root[data-theme="NewYear"] .footer-column a:hover,
+html[data-theme="NewYear"] .footer-column a:hover,
+body[data-theme="NewYear"] .footer-column a:hover {
+    color:#ffffff;
+}
+
+:root[style*="--theme: 'NewYear'"] .nx-toast,
+:root[data-theme="NewYear"] .nx-toast,
+html[data-theme="NewYear"] .nx-toast,
+body[data-theme="NewYear"] .nx-toast {
+    background:#111a3d;
+        border-color:#213078;
+        box-shadow:0 6px 18px rgba(0,0,0,.35);
+}
+
+:root[style*="--theme: 'NewYear'"] .nx-toast__bar,
+:root[data-theme="NewYear"] .nx-toast__bar,
+html[data-theme="NewYear"] .nx-toast__bar,
+body[data-theme="NewYear"] .nx-toast__bar {
+    background: linear-gradient(180deg, var(--ny-indigo) 0%, var(--ny-gold-2) 55%, var(--ny-champagne) 100%);
+}
+
+:root[style*="--theme: 'NewYear'"] ::-webkit-scrollbar,
+:root[data-theme="NewYear"] ::-webkit-scrollbar,
+html[data-theme="NewYear"] ::-webkit-scrollbar,
+body[data-theme="NewYear"] ::-webkit-scrollbar {
+    width:3.5px; background-color:#0b0f1e;
+}
+
+:root[style*="--theme: 'NewYear'"] ::-webkit-scrollbar-thumb,
+:root[data-theme="NewYear"] ::-webkit-scrollbar-thumb,
+html[data-theme="NewYear"] ::-webkit-scrollbar-thumb,
+body[data-theme="NewYear"] ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, var(--ny-gold), var(--ny-gold-2), var(--ny-silver));
+}
+
+:root[style*="--theme: 'NewYear'"] .nx-shard,
+:root[data-theme="NewYear"] .nx-shard,
+html[data-theme="NewYear"] .nx-shard,
+body[data-theme="NewYear"] .nx-shard {
+    background:linear-gradient(135deg, var(--ny-champagne) 0%, var(--ny-gold) 40%, var(--ny-champagne) 70%, #b88900 100%);
+        box-shadow:0 0 10px rgba(255,220,120,.85), 0 0 24px rgba(255,200,80,.45) inset;
+}
+
+@media (max-width:768px) {
+    :root[style*="--theme: 'NewYear'"] .nav-center,
+    :root[data-theme="NewYear"] .nav-center,
+    html[data-theme="NewYear"] .nav-center,
+    body[data-theme="NewYear"] .nav-center {
+        background: linear-gradient(180deg, #18245a, #111a3d);
+                border-bottom: 1px solid rgba(212,175,55,.25);
+    }
+}
+
+:root[style*="--theme: 'Halloween'"] *,
+:root[data-theme="Halloween"] *,
+html[data-theme="Halloween"] *,
+body[data-theme="Halloween"] * {
+    margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', sans-serif;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+        -webkit-tap-highlight-color: transparent;
+}
+
+:root[style*="--theme: 'Halloween'"] a,
+:root[data-theme="Halloween"] a,
+html[data-theme="Halloween"] a,
+body[data-theme="Halloween"] a,
+:root[style*="--theme: 'Halloween'"] button,
+:root[data-theme="Halloween"] button,
+html[data-theme="Halloween"] button,
+body[data-theme="Halloween"] button,
+:root[style*="--theme: 'Halloween'"] input,
+:root[data-theme="Halloween"] input,
+html[data-theme="Halloween"] input,
+body[data-theme="Halloween"] input,
+:root[style*="--theme: 'Halloween'"] label,
+:root[data-theme="Halloween"] label,
+html[data-theme="Halloween"] label,
+body[data-theme="Halloween"] label {
+    outline: none;
+      -webkit-tap-highlight-color: transparent;
+}
+
+:root[style*="--theme: 'Halloween'"],
+:root[data-theme="Halloween"],
+html[data-theme="Halloween"],
+body[data-theme="Halloween"] {
+    background-color: #111;
+        color: #eee;
+        padding-top: 64px;
+}
+
+:root[style*="--theme: 'Halloween'"] .top-nav,
+:root[data-theme="Halloween"] .top-nav,
+html[data-theme="Halloween"] .top-nav,
+body[data-theme="Halloween"] .top-nav {
+    position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 64px;
+        background: #111;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 2rem;
+        z-index: 1000;
+        backdrop-filter: blur(6px);
+        border-bottom: 1px solid #222;
+}
+
+:root[style*="--theme: 'Halloween'"] .nav-left,
+:root[data-theme="Halloween"] .nav-left,
+html[data-theme="Halloween"] .nav-left,
+body[data-theme="Halloween"] .nav-left,
+:root[style*="--theme: 'Halloween'"] .nav-right,
+:root[data-theme="Halloween"] .nav-right,
+html[data-theme="Halloween"] .nav-right,
+body[data-theme="Halloween"] .nav-right {
+    flex: 1;
+        display: flex;
+        align-items: center;
+}
+
+:root[style*="--theme: 'Halloween'"] .nav-logo img,
+:root[data-theme="Halloween"] .nav-logo img,
+html[data-theme="Halloween"] .nav-logo img,
+body[data-theme="Halloween"] .nav-logo img {
+    height: 50px;
+        object-fit: contain;
+        margin-left: -1rem;
+        margin-top: 5px;
+        pointer-events: none;
+        -webkit-user-drag: none;
+        user-drag: none;
+}
+
+:root[style*="--theme: 'Halloween'"] .nav-center,
+:root[data-theme="Halloween"] .nav-center,
+html[data-theme="Halloween"] .nav-center,
+body[data-theme="Halloween"] .nav-center {
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        flex: 0 1 auto;
+}
+
+:root[style*="--theme: 'Halloween'"] .nav-center a,
+:root[data-theme="Halloween"] .nav-center a,
+html[data-theme="Halloween"] .nav-center a,
+body[data-theme="Halloween"] .nav-center a {
+    text-decoration: none;
+        font-size: 0.9rem;
+        color: #aaa;
+        font-weight: 500;
+        transition: 0.3s ease;
+}
+
+:root[style*="--theme: 'Halloween'"] .nav-center a:hover,
+:root[data-theme="Halloween"] .nav-center a:hover,
+html[data-theme="Halloween"] .nav-center a:hover,
+body[data-theme="Halloween"] .nav-center a:hover,
+:root[style*="--theme: 'Halloween'"] .nav-center a.active,
+:root[data-theme="Halloween"] .nav-center a.active,
+html[data-theme="Halloween"] .nav-center a.active,
+body[data-theme="Halloween"] .nav-center a.active {
+    color: #fff;
+}
+
+:root[style*="--theme: 'Halloween'"] .content,
+:root[data-theme="Halloween"] .content,
+html[data-theme="Halloween"] .content,
+body[data-theme="Halloween"] .content {
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 15rem 1rem;
+}
+
+:root[style*="--theme: 'Halloween'"] .content-2,
+:root[data-theme="Halloween"] .content-2,
+html[data-theme="Halloween"] .content-2,
+body[data-theme="Halloween"] .content-2 {
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 15rem 0;
+}
+
+:root[style*="--theme: 'Halloween'"] .setting-frame,
+:root[data-theme="Halloween"] .setting-frame,
+html[data-theme="Halloween"] .setting-frame,
+body[data-theme="Halloween"] .setting-frame {
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #1a1a1a;
+        border: 1px solid #333;
+        border-radius: 8px;
+        padding: 1rem 2rem;
+        width: 400px;
+        margin: 0.5rem auto;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.4s ease;
+        flex-direction: column;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+:root[style*="--theme: 'Halloween'"] .setting-title,
+:root[data-theme="Halloween"] .setting-title,
+html[data-theme="Halloween"] .setting-title,
+body[data-theme="Halloween"] .setting-title {
+    max-height: 0;
+        overflow: hidden;
+        color: #ccc;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        word-wrap: break-word;
+        text-align: left;
+        width: 100%;
+        white-space: normal;
+        opacity: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        box-sizing: content-box;
+        transition: max-height 0.5s ease, opacity 0.4s, padding 0.4s;
+}
+
+:root[style*="--theme: 'Halloween'"] .setting-frame.open .setting-title,
+:root[data-theme="Halloween"] .setting-frame.open .setting-title,
+html[data-theme="Halloween"] .setting-frame.open .setting-title,
+body[data-theme="Halloween"] .setting-frame.open .setting-title {
+    opacity: 1;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+}
+
+:root[style*="--theme: 'Halloween'"] .setting-header,
+:root[data-theme="Halloween"] .setting-header,
+html[data-theme="Halloween"] .setting-header,
+body[data-theme="Halloween"] .setting-header {
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+}
+
+:root[style*="--theme: 'Halloween'"] .setting-frame-left,
+:root[data-theme="Halloween"] .setting-frame-left,
+html[data-theme="Halloween"] .setting-frame-left,
+body[data-theme="Halloween"] .setting-frame-left,
+:root[style*="--theme: 'Halloween'"] .setting-frame-right,
+:root[data-theme="Halloween"] .setting-frame-right,
+html[data-theme="Halloween"] .setting-frame-right,
+body[data-theme="Halloween"] .setting-frame-right {
+    flex: 1;
+        min-width: 300px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+}
+
+:root[style*="--theme: 'Halloween'"] .setting-container,
+:root[data-theme="Halloween"] .setting-container,
+html[data-theme="Halloween"] .setting-container,
+body[data-theme="Halloween"] .setting-container {
+    display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2rem;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+        position: relative;
+}
+
+:root[style*="--theme: 'Halloween'"] .divider,
+:root[data-theme="Halloween"] .divider,
+html[data-theme="Halloween"] .divider,
+body[data-theme="Halloween"] .divider {
+    width: 1px;
+        background-color: #444;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.5;
+}
+
+:root[style*="--theme: 'Halloween'"] .divider-center,
+:root[data-theme="Halloween"] .divider-center,
+html[data-theme="Halloween"] .divider-center,
+body[data-theme="Halloween"] .divider-center {
+    height: 1px;
+        width: 100%;
+        background-color: #222;
+        margin: 4rem 0 10rem 0;
+        opacity: 0.5;
+}
+
+:root[style*="--theme: 'Halloween'"] .setting-label,
+:root[data-theme="Halloween"] .setting-label,
+html[data-theme="Halloween"] .setting-label,
+body[data-theme="Halloween"] .setting-label {
+    font-size: 1rem;
+        font-weight: 500;
+        color: #eee;
+        line-height: 24px;
+}
+
+:root[style*="--theme: 'Halloween'"] .switch,
+:root[data-theme="Halloween"] .switch,
+html[data-theme="Halloween"] .switch,
+body[data-theme="Halloween"] .switch {
+    position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 24px;
+        vertical-align: middle;
+}
+
+:root[style*="--theme: 'Halloween'"] .switch input,
+:root[data-theme="Halloween"] .switch input,
+html[data-theme="Halloween"] .switch input,
+body[data-theme="Halloween"] .switch input {
+    opacity: 0;
+        width: 0;
+        height: 0;
+}
+
+:root[style*="--theme: 'Halloween'"] .slider,
+:root[data-theme="Halloween"] .slider,
+html[data-theme="Halloween"] .slider,
+body[data-theme="Halloween"] .slider {
+    position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #555;
+        transition: 0.4s;
+        border-radius: 24px;
+}
+
+:root[style*="--theme: 'Halloween'"] .slider:before,
+:root[data-theme="Halloween"] .slider:before,
+html[data-theme="Halloween"] .slider:before,
+body[data-theme="Halloween"] .slider:before {
+    position: absolute;
+        content: "";
+        height: 18px;
+        width: 18px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
+}
+
+:root[style*="--theme: 'Halloween'"] input:checked + .slider,
+:root[data-theme="Halloween"] input:checked + .slider,
+html[data-theme="Halloween"] input:checked + .slider,
+body[data-theme="Halloween"] input:checked + .slider {
+    background-color: #4CAF50;
+}
+
+:root[style*="--theme: 'Halloween'"] input:checked + .slider:before,
+:root[data-theme="Halloween"] input:checked + .slider:before,
+html[data-theme="Halloween"] input:checked + .slider:before,
+body[data-theme="Halloween"] input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+:root[style*="--theme: 'Halloween'"] h1,
+:root[data-theme="Halloween"] h1,
+html[data-theme="Halloween"] h1,
+body[data-theme="Halloween"] h1 {
+    font-size: 3rem;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        color: #fff;
+}
+
+:root[style*="--theme: 'Halloween'"] h3,
+:root[data-theme="Halloween"] h3,
+html[data-theme="Halloween"] h3,
+body[data-theme="Halloween"] h3 {
+    font-size: 0.8rem;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        color: #aaa;
+}
+
+:root[style*="--theme: 'Halloween'"] .fade-slide-up,
+:root[data-theme="Halloween"] .fade-slide-up,
+html[data-theme="Halloween"] .fade-slide-up,
+body[data-theme="Halloween"] .fade-slide-up {
+    animation: fadeSlideUp 1s ease-out forwards;
+}
+
+:root[style*="--theme: 'Halloween'"] .fade-slide-down,
+:root[data-theme="Halloween"] .fade-slide-down,
+html[data-theme="Halloween"] .fade-slide-down,
+body[data-theme="Halloween"] .fade-slide-down {
+    animation: fadeSlideDown 1s ease-out forwards;
+}
+
+:root[style*="--theme: 'Halloween'"] .footer,
+:root[data-theme="Halloween"] .footer,
+html[data-theme="Halloween"] .footer,
+body[data-theme="Halloween"] .footer {
+    background-color: #111;
+        padding: 4rem 2rem 2.5rem;
+        color: #aaa;
+        font-size: 0.9rem;
+        margin-top: 4rem;
+        border-top: 1px solid #222;
+}
+
+:root[style*="--theme: 'Halloween'"] .footer-container,
+:root[data-theme="Halloween"] .footer-container,
+html[data-theme="Halloween"] .footer-container,
+body[data-theme="Halloween"] .footer-container {
+    display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: auto;
+        gap: 2rem;
+}
+
+:root[style*="--theme: 'Halloween'"] .footer-column,
+:root[data-theme="Halloween"] .footer-column,
+html[data-theme="Halloween"] .footer-column,
+body[data-theme="Halloween"] .footer-column {
+    flex: 1 1 200px;
+}
+
+:root[style*="--theme: 'Halloween'"] .footer-column h3,
+:root[data-theme="Halloween"] .footer-column h3,
+html[data-theme="Halloween"] .footer-column h3,
+body[data-theme="Halloween"] .footer-column h3 {
+    color: white;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+}
+
+:root[style*="--theme: 'Halloween'"] .footer-column p,
+:root[data-theme="Halloween"] .footer-column p,
+html[data-theme="Halloween"] .footer-column p,
+body[data-theme="Halloween"] .footer-column p,
+:root[style*="--theme: 'Halloween'"] .footer-column li,
+:root[data-theme="Halloween"] .footer-column li,
+html[data-theme="Halloween"] .footer-column li,
+body[data-theme="Halloween"] .footer-column li {
+    color: #aaa;
+        line-height: 1.5;
+}
+
+:root[style*="--theme: 'Halloween'"] .footer-column ul,
+:root[data-theme="Halloween"] .footer-column ul,
+html[data-theme="Halloween"] .footer-column ul,
+body[data-theme="Halloween"] .footer-column ul {
+    list-style: none;
+        padding: 0;
+}
+
+:root[style*="--theme: 'Halloween'"] .footer-column a,
+:root[data-theme="Halloween"] .footer-column a,
+html[data-theme="Halloween"] .footer-column a,
+body[data-theme="Halloween"] .footer-column a {
+    color: #aaa;
+        text-decoration: none;
+        transition: color 0.3s;
+}
+
+:root[style*="--theme: 'Halloween'"] .footer-column a:hover,
+:root[data-theme="Halloween"] .footer-column a:hover,
+html[data-theme="Halloween"] .footer-column a:hover,
+body[data-theme="Halloween"] .footer-column a:hover {
+    color: #fff;
+}
+
+:root[style*="--theme: 'Halloween'"] .footer-bottom img,
+:root[data-theme="Halloween"] .footer-bottom img,
+html[data-theme="Halloween"] .footer-bottom img,
+body[data-theme="Halloween"] .footer-bottom img {
+    height: 40px;
+        margin-bottom: 0.5rem;
+        pointer-events: none;
+        -webkit-user-drag: none;
+        user-drag: none;
+}
+
+:root[style*="--theme: 'Halloween'"] .footer-bottom p,
+:root[data-theme="Halloween"] .footer-bottom p,
+html[data-theme="Halloween"] .footer-bottom p,
+body[data-theme="Halloween"] .footer-bottom p {
+    color: #9e9e9e;
+        font-size: 0.8rem;
+}
+
+:root[style*="--theme: 'Halloween'"] .hamburger,
+:root[data-theme="Halloween"] .hamburger,
+html[data-theme="Halloween"] .hamburger,
+body[data-theme="Halloween"] .hamburger {
+    display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+}
+
+:root[style*="--theme: 'Halloween'"] .hamburger:focus,
+:root[data-theme="Halloween"] .hamburger:focus,
+html[data-theme="Halloween"] .hamburger:focus,
+body[data-theme="Halloween"] .hamburger:focus,
+:root[style*="--theme: 'Halloween'"] .hamburger:active,
+:root[data-theme="Halloween"] .hamburger:active,
+html[data-theme="Halloween"] .hamburger:active,
+body[data-theme="Halloween"] .hamburger:active {
+    outline: none;
+}
+
+:root[style*="--theme: 'Halloween'"] .hamburger span,
+:root[data-theme="Halloween"] .hamburger span,
+html[data-theme="Halloween"] .hamburger span,
+body[data-theme="Halloween"] .hamburger span {
+    width: 25px;
+        height: 3px;
+        background: #eee;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+}
+
+:root[style*="--theme: 'Halloween'"] .hamburger.active span:nth-child(1),
+:root[data-theme="Halloween"] .hamburger.active span:nth-child(1),
+html[data-theme="Halloween"] .hamburger.active span:nth-child(1),
+body[data-theme="Halloween"] .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+:root[style*="--theme: 'Halloween'"] .hamburger.active span:nth-child(2),
+:root[data-theme="Halloween"] .hamburger.active span:nth-child(2),
+html[data-theme="Halloween"] .hamburger.active span:nth-child(2),
+body[data-theme="Halloween"] .hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+:root[style*="--theme: 'Halloween'"] .hamburger.active span:nth-child(3),
+:root[data-theme="Halloween"] .hamburger.active span:nth-child(3),
+html[data-theme="Halloween"] .hamburger.active span:nth-child(3),
+body[data-theme="Halloween"] .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+:root[style*="--theme: 'Halloween'"],
+:root[data-theme="Halloween"],
+html[data-theme="Halloween"],
+body[data-theme="Halloween"] {
+    background:#111; min-height:100%
+}
+
+:root[style*="--theme: 'Halloween'"],
+:root[data-theme="Halloween"],
+html[data-theme="Halloween"],
+body[data-theme="Halloween"] {
+    background:#111; overflow-x:hidden
+}
+
+:root[style*="--theme: 'Halloween'"] nav,
+:root[data-theme="Halloween"] nav,
+html[data-theme="Halloween"] nav,
+body[data-theme="Halloween"] nav,
+:root[style*="--theme: 'Halloween'"] .nx-partners,
+:root[data-theme="Halloween"] .nx-partners,
+html[data-theme="Halloween"] .nx-partners,
+body[data-theme="Halloween"] .nx-partners,
+:root[style*="--theme: 'Halloween'"] .content,
+:root[data-theme="Halloween"] .content,
+html[data-theme="Halloween"] .content,
+body[data-theme="Halloween"] .content,
+:root[style*="--theme: 'Halloween'"] .nx-banner,
+:root[data-theme="Halloween"] .nx-banner,
+html[data-theme="Halloween"] .nx-banner,
+body[data-theme="Halloween"] .nx-banner,
+:root[style*="--theme: 'Halloween'"] .nx-banner-row,
+:root[data-theme="Halloween"] .nx-banner-row,
+html[data-theme="Halloween"] .nx-banner-row,
+body[data-theme="Halloween"] .nx-banner-row,
+:root[style*="--theme: 'Halloween'"] footer,
+:root[data-theme="Halloween"] footer,
+html[data-theme="Halloween"] footer,
+body[data-theme="Halloween"] footer {
+    will-change: transform;
+}
+
+:root[style*="--theme: 'Halloween'"] .nx-shard,
+:root[data-theme="Halloween"] .nx-shard,
+html[data-theme="Halloween"] .nx-shard,
+body[data-theme="Halloween"] .nx-shard {
+    position:fixed;
+        left:0; top:0;
+        width:var(--sz);
+        height:var(--sz);
+        pointer-events:none;
+        z-index:2147483647;
+        background:linear-gradient(135deg,#f5d76e 0%, #d4af37 40%, #fff5a8 70%, #b88900 100%);
+        border-radius:2px;
+        box-shadow:0 0 10px rgba(255,220,120,.75), 0 0 24px rgba(255,200,80,.35) inset;
+        mix-blend-mode:screen;
+        opacity:.98;
+        transform:translate(var(--x), var(--y)) scale(.85) rotate(var(--rot));
+        animation:nx-shard-fly var(--dur) cubic-bezier(.22,.61,.36,1) forwards;
+}
+
+:root[style*="--theme: 'Halloween'"] ::-webkit-scrollbar,
+:root[data-theme="Halloween"] ::-webkit-scrollbar,
+html[data-theme="Halloween"] ::-webkit-scrollbar,
+body[data-theme="Halloween"] ::-webkit-scrollbar {
+    width: 3.5px;
+        background-color: #0b0713;
+}
+
+:root[style*="--theme: 'Halloween'"] ::-webkit-scrollbar-track,
+:root[data-theme="Halloween"] ::-webkit-scrollbar-track,
+html[data-theme="Halloween"] ::-webkit-scrollbar-track,
+body[data-theme="Halloween"] ::-webkit-scrollbar-track {
+    background: #00000000;
+}
+
+:root[style*="--theme: 'Halloween'"] ::-webkit-scrollbar-thumb,
+:root[data-theme="Halloween"] ::-webkit-scrollbar-thumb,
+html[data-theme="Halloween"] ::-webkit-scrollbar-thumb,
+body[data-theme="Halloween"] ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #ff8a2a, #ffb14d, #2a1846);
+        transition: background-color 0.3s;
+}
+
+:root[style*="--theme: 'Halloween'"] .nx-toast-area,
+:root[data-theme="Halloween"] .nx-toast-area,
+html[data-theme="Halloween"] .nx-toast-area,
+body[data-theme="Halloween"] .nx-toast-area {
+    position:fixed;
+        left:max(12px, env(safe-area-inset-left));
+        bottom:max(12px, env(safe-area-inset-bottom));
+        display:flex;
+        flex-direction:column;
+        gap:8px;
+        z-index:3000;
+        pointer-events:none;
+}
+
+:root[style*="--theme: 'Halloween'"] .nx-toast,
+:root[data-theme="Halloween"] .nx-toast,
+html[data-theme="Halloween"] .nx-toast,
+body[data-theme="Halloween"] .nx-toast {
+    pointer-events:auto;
+        display:flex;
+        align-items:center;
+        gap:.65rem;
+        min-width:220px;
+        max-width:320px;
+        padding:.75rem .9rem;
+        background:#181818;
+        color:#eee;
+        border:1px solid #333;
+        border-radius:10px;
+        box-shadow:0 6px 18px rgba(0,0,0,.35);
+        opacity:0;
+        transform:translateX(-18px) translateY(8px);
+        animation:nx-toast-in .35s cubic-bezier(.2,.7,.3,1) forwards;
+}
+
+:root[style*="--theme: 'Halloween'"] .nx-toast__bar,
+:root[data-theme="Halloween"] .nx-toast__bar,
+html[data-theme="Halloween"] .nx-toast__bar,
+body[data-theme="Halloween"] .nx-toast__bar {
+    width:6px;
+        align-self:stretch;
+        border-radius:6px;
+        background:linear-gradient(180deg,#f5d76e 0%, #d4af37 60%, #fff1a8 100%);
+        opacity:.95;
+}
+
+:root[style*="--theme: 'Halloween'"] .nx-toast__text,
+:root[data-theme="Halloween"] .nx-toast__text,
+html[data-theme="Halloween"] .nx-toast__text,
+body[data-theme="Halloween"] .nx-toast__text {
+    font-size:.9rem;
+        line-height:1.35;
+        color:#f3f3f3;
+}
+
+:root[style*="--theme: 'Halloween'"] .nx-toast-area,
+:root[data-theme="Halloween"] .nx-toast-area,
+html[data-theme="Halloween"] .nx-toast-area,
+body[data-theme="Halloween"] .nx-toast-area {
+    left: auto;
+        right: max(12px, env(safe-area-inset-right));
+        bottom: max(12px, env(safe-area-inset-bottom));
+        align-items: flex-end;
+}
+
+:root[style*="--theme: 'Halloween'"] .nx-toast,
+:root[data-theme="Halloween"] .nx-toast,
+html[data-theme="Halloween"] .nx-toast,
+body[data-theme="Halloween"] .nx-toast {
+    transform: translateX(18px) translateY(8px);
+        animation: nx-toast-in-right .35s cubic-bezier(.2,.7,.3,1) forwards;
+}
+
+:root[style*="--theme: 'Halloween'"] .nx-toast--closing,
+:root[data-theme="Halloween"] .nx-toast--closing,
+html[data-theme="Halloween"] .nx-toast--closing,
+body[data-theme="Halloween"] .nx-toast--closing {
+    animation: nx-toast-out-right .28s cubic-bezier(.2,.7,.3,1) forwards;
+}
+
+@media (max-width:768px) {
+    :root[style*="--theme: 'Halloween'"] .nx-toast,
+    :root[data-theme="Halloween"] .nx-toast,
+    html[data-theme="Halloween"] .nx-toast,
+    body[data-theme="Halloween"] .nx-toast {
+        min-width:200px; max-width:280px; padding:.7rem .85rem;
+    }
+
+    :root[style*="--theme: 'Halloween'"] .nx-toast__text,
+    :root[data-theme="Halloween"] .nx-toast__text,
+    html[data-theme="Halloween"] .nx-toast__text,
+    body[data-theme="Halloween"] .nx-toast__text {
+        font-size:.85rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    :root[style*="--theme: 'Halloween'"],
+    :root[data-theme="Halloween"],
+    html[data-theme="Halloween"],
+    body[data-theme="Halloween"] {
+        padding-top: 10px;
+    }
+
+    :root[style*="--theme: 'Halloween'"] h1,
+    :root[data-theme="Halloween"] h1,
+    html[data-theme="Halloween"] h1,
+    body[data-theme="Halloween"] h1 {
+        margin-bottom: 1.5rem;
+    }
+
+    :root[style*="--theme: 'Halloween'"] .divider,
+    :root[data-theme="Halloween"] .divider,
+    html[data-theme="Halloween"] .divider,
+    body[data-theme="Halloween"] .divider {
+        display: none;
+    }
+
+    :root[style*="--theme: 'Halloween'"] .setting-frame,
+    :root[data-theme="Halloween"] .setting-frame,
+    html[data-theme="Halloween"] .setting-frame,
+    body[data-theme="Halloween"] .setting-frame {
+        padding: 1rem;
+                width: 300px;
+                margin: 0.5rem auto;
+    }
+
+    :root[style*="--theme: 'Halloween'"] .setting-container,
+    :root[data-theme="Halloween"] .setting-container,
+    html[data-theme="Halloween"] .setting-container,
+    body[data-theme="Halloween"] .setting-container {
+        flex-direction: column;
+                gap: 0;
+    }
+
+    :root[style*="--theme: 'Halloween'"] .content-2,
+    :root[data-theme="Halloween"] .content-2,
+    html[data-theme="Halloween"] .content-2,
+    body[data-theme="Halloween"] .content-2 {
+        padding: 1rem 1rem;
+    }
+
+    :root[style*="--theme: 'Halloween'"] .content-2 h1,
+    :root[data-theme="Halloween"] .content-2 h1,
+    html[data-theme="Halloween"] .content-2 h1,
+    body[data-theme="Halloween"] .content-2 h1 {
+        font-size: 1.5rem;
+    }
+
+    :root[style*="--theme: 'Halloween'"] .footer-container,
+    :root[data-theme="Halloween"] .footer-container,
+    html[data-theme="Halloween"] .footer-container,
+    body[data-theme="Halloween"] .footer-container {
+        flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+    }
+
+    :root[style*="--theme: 'Halloween'"] .footer-column,
+    :root[data-theme="Halloween"] .footer-column,
+    html[data-theme="Halloween"] .footer-column,
+    body[data-theme="Halloween"] .footer-column {
+        flex: 1 1 100%;
+    }
+
+    :root[style*="--theme: 'Halloween'"] .hamburger,
+    :root[data-theme="Halloween"] .hamburger,
+    html[data-theme="Halloween"] .hamburger,
+    body[data-theme="Halloween"] .hamburger {
+        display: flex;
+    }
+
+    :root[style*="--theme: 'Halloween'"] .nav-center,
+    :root[data-theme="Halloween"] .nav-center,
+    html[data-theme="Halloween"] .nav-center,
+    body[data-theme="Halloween"] .nav-center {
+        position: absolute;
+                top: 64px;
+                right: 0;
+                width: 100%;
+                background-color: #111;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+                padding: 0;
+                overflow: hidden;
+                max-height: 0;
+                transition: max-height 0.4s ease, padding 0.3s ease;
+                z-index: 999;
+                border-bottom: 1px solid #222;
+    }
+
+    :root[style*="--theme: 'Halloween'"] .nav-center.show,
+    :root[data-theme="Halloween"] .nav-center.show,
+    html[data-theme="Halloween"] .nav-center.show,
+    body[data-theme="Halloween"] .nav-center.show {
+        padding: 1rem 0;
+                max-height: 200px;
+    }
+}
+
+:root[style*="--theme: 'Halloween'"],
+:root[data-theme="Halloween"],
+html[data-theme="Halloween"],
+body[data-theme="Halloween"] {
+    --hlw-black:#0b0a0d;
+        --hlw-deep:#0f0a1a;
+        --violet-deep:#0b0713;
+        --violet-1:#1a0f2b;
+        --violet-2:#24143b;
+        --violet-3:#2e1950;
+        --violet-4:#3a1f66;
+        --lavender:#e8ddff;
+        --lavender-2:#d2c4ff;
+        --accent:#ff9b3d;
+        --paper:#0f0c19;
+}
+
+:root[style*="--theme: 'Halloween'"],
+:root[data-theme="Halloween"],
+html[data-theme="Halloween"],
+body[data-theme="Halloween"] {
+    background:
+            radial-gradient(1200px 600px at 70% -10%, rgba(255,138,42,.08), rgba(0, 0, 0, 0)),
+            linear-gradient(180deg, var(--hlw-deep) 0%, #0a0810 55%, var(--hlw-black) 100%);
+        color:#efeaf6;
+}
+
+:root[style*="--theme: 'Halloween'"] body::after,
+:root[data-theme="Halloween"] body::after,
+html[data-theme="Halloween"] body::after,
+body[data-theme="Halloween"] body::after {
+    content:""; position:fixed; inset:-50px 0 0 0; pointer-events:none; z-index:2;
+        background-image:
+            radial-gradient(2px 2px at 20% 10%, rgba(255,138,42,.22) 50%, transparent 51%),
+            radial-gradient(2px 2px at 60% 30%, rgba(255,177,77,.18) 50%, transparent 51%),
+            radial-gradient(3px 3px at 80% 50%, rgba(255,138,42,.14) 50%, transparent 51%),
+            radial-gradient(1.5px 1.5px at 40% 80%, rgba(255,177,77,.22) 50%, transparent 51%);
+        background-size: 320px 520px, 360px 560px, 420px 700px, 300px 480px;
+        animation: hlw-embers 36s linear infinite;
+        mix-blend-mode:screen; opacity:.6;
+}
+
+@keyframes hlw-embers {
+
+        0%{ background-position: 0 -200px, 0 -260px, 0 -320px, 0 -180px; }
+        100%{ background-position: 0 640px, 0 760px, 0 920px, 0 700px; }
+}
+
+:root[style*="--theme: 'Halloween'"] body::before,
+:root[data-theme="Halloween"] body::before,
+html[data-theme="Halloween"] body::before,
+body[data-theme="Halloween"] body::before {
+    content:""; position:fixed; inset:0; pointer-events:none; z-index:1;
+        background:
+            radial-gradient(800px 420px at 50% -5%, rgba(180,140,255,.12), rgba(0,0,0,0) 65%);
+        mix-blend-mode:screen;
+}
+
+:root[style*="--theme: 'Halloween'"] .top-nav,
+:root[data-theme="Halloween"] .top-nav,
+html[data-theme="Halloween"] .top-nav,
+body[data-theme="Halloween"] .top-nav {
+    background: linear-gradient(180deg, var(--violet-3), var(--violet-2));
+        border-bottom: 1px solid rgba(255,155,61,.25);
+        backdrop-filter: blur(8px);
+}
+
+:root[style*="--theme: 'Halloween'"] .nav-center a,
+:root[data-theme="Halloween"] .nav-center a,
+html[data-theme="Halloween"] .nav-center a,
+body[data-theme="Halloween"] .nav-center a {
+    color:#d8ccff;
+}
+
+:root[style*="--theme: 'Halloween'"] .nav-center a:hover,
+:root[data-theme="Halloween"] .nav-center a:hover,
+html[data-theme="Halloween"] .nav-center a:hover,
+body[data-theme="Halloween"] .nav-center a:hover,
+:root[style*="--theme: 'Halloween'"] .nav-center a.active,
+:root[data-theme="Halloween"] .nav-center a.active,
+html[data-theme="Halloween"] .nav-center a.active,
+body[data-theme="Halloween"] .nav-center a.active {
+    color:#fff; text-shadow:0 0 10px rgba(255,155,61,.25);
+}
+
+:root[style*="--theme: 'Halloween'"] .hamburger span,
+:root[data-theme="Halloween"] .hamburger span,
+html[data-theme="Halloween"] .hamburger span,
+body[data-theme="Halloween"] .hamburger span {
+    background:#fff2fe;
+}
+
+:root[style*="--theme: 'Halloween'"] .setting-frame,
+:root[data-theme="Halloween"] .setting-frame,
+html[data-theme="Halloween"] .setting-frame,
+body[data-theme="Halloween"] .setting-frame {
+    background: linear-gradient(180deg, var(--violet-2), var(--violet-1));
+        border:1px solid rgba(255,155,61,.22);
+        box-shadow: 0 0 0 1px rgba(0,0,0,.2) inset, 0 10px 28px rgba(0,0,0,.45);
+}
+
+:root[style*="--theme: 'Halloween'"] .setting-title,
+:root[data-theme="Halloween"] .setting-title,
+html[data-theme="Halloween"] .setting-title,
+body[data-theme="Halloween"] .setting-title {
+    color:#d9cffc;
+}
+
+:root[style*="--theme: 'Halloween'"] .setting-label,
+:root[data-theme="Halloween"] .setting-label,
+html[data-theme="Halloween"] .setting-label,
+body[data-theme="Halloween"] .setting-label {
+    color:#f0e9ff;
+}
+
+:root[style*="--theme: 'Halloween'"] .slider,
+:root[data-theme="Halloween"] .slider,
+html[data-theme="Halloween"] .slider,
+body[data-theme="Halloween"] .slider {
+    background-color:#4a3a6b;
+}
+
+:root[style*="--theme: 'Halloween'"] .slider:before,
+:root[data-theme="Halloween"] .slider:before,
+html[data-theme="Halloween"] .slider:before,
+body[data-theme="Halloween"] .slider:before {
+    background-color:#fff3cc;
+}
+
+:root[style*="--theme: 'Halloween'"] input:checked + .slider,
+:root[data-theme="Halloween"] input:checked + .slider,
+html[data-theme="Halloween"] input:checked + .slider,
+body[data-theme="Halloween"] input:checked + .slider {
+    background-color:#7c57ff;
+}
+
+:root[style*="--theme: 'Halloween'"] h1,
+:root[data-theme="Halloween"] h1,
+html[data-theme="Halloween"] h1,
+body[data-theme="Halloween"] h1 {
+    color:#ffffff; text-shadow:0 2px 16px rgba(124,87,255,.15);
+}
+
+:root[style*="--theme: 'Halloween'"] h3,
+:root[data-theme="Halloween"] h3,
+html[data-theme="Halloween"] h3,
+body[data-theme="Halloween"] h3 {
+    color:#bdaef0;
+}
+
+:root[style*="--theme: 'Halloween'"] .footer,
+:root[data-theme="Halloween"] .footer,
+html[data-theme="Halloween"] .footer,
+body[data-theme="Halloween"] .footer {
+    background: linear-gradient(180deg, var(--violet-1), var(--violet-deep));
+        border-top:1px solid rgba(255,155,61,.2);
+        color:#cfc3ff;
+}
+
+:root[style*="--theme: 'Halloween'"] .footer-column h3,
+:root[data-theme="Halloween"] .footer-column h3,
+html[data-theme="Halloween"] .footer-column h3,
+body[data-theme="Halloween"] .footer-column h3 {
+    color:#fff;
+}
+
+:root[style*="--theme: 'Halloween'"] .footer-column a,
+:root[data-theme="Halloween"] .footer-column a,
+html[data-theme="Halloween"] .footer-column a,
+body[data-theme="Halloween"] .footer-column a {
+    color:#d6caff;
+}
+
+:root[style*="--theme: 'Halloween'"] .footer-column a:hover,
+:root[data-theme="Halloween"] .footer-column a:hover,
+html[data-theme="Halloween"] .footer-column a:hover,
+body[data-theme="Halloween"] .footer-column a:hover {
+    color:#ffffff;
+}
+
+:root[style*="--theme: 'Halloween'"] .nx-toast,
+:root[data-theme="Halloween"] .nx-toast,
+html[data-theme="Halloween"] .nx-toast,
+body[data-theme="Halloween"] .nx-toast {
+    background:#1a1230; border-color:#3a2a64;
+}
+
+:root[style*="--theme: 'Halloween'"] .nx-toast__bar,
+:root[data-theme="Halloween"] .nx-toast__bar,
+html[data-theme="Halloween"] .nx-toast__bar,
+body[data-theme="Halloween"] .nx-toast__bar {
+    background: linear-gradient(180deg, var(--violet-4) 0%, #a57cff 55%, var(--accent) 100%);
+}
+
+@media (max-width:768px) {
+    :root[style*="--theme: 'Halloween'"] .nav-center,
+    :root[data-theme="Halloween"] .nav-center,
+    html[data-theme="Halloween"] .nav-center,
+    body[data-theme="Halloween"] .nav-center {
+        background: linear-gradient(180deg, var(--violet-3), var(--violet-2));
+                border-bottom: 1px solid rgba(255,155,61,.18);
     }
 }
