@@ -1,281 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>NEXORIA SETTINGS</title>
-  <link rel="icon" type="image/png" href="./img/NEXORIA_GOLD_LOGO.png"/>
-  <link rel="stylesheet" href="./css/setting.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>NEXORIA SETTINGS</title>
+    <link rel="icon" type="image/png" href="./img/NEXORIA_GOLD_LOGO.png"/>
+    <link rel="stylesheet" href="./css/setting.css">
 </head>
 <body>
-  <nav class="top-nav">
-    <div class="nav-logo">
-      <img src="./img/NEXORIA_WHITE_LOGO.png" alt="NEXORIA logo">
-    </div>
-  
-    <div class="hamburger" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  
-    <div class="nav-center" id="mobileMenu">
-      <a href="/">HOME</a>
-    </div>
-  </nav>
-
-  <div class="content">
-    <h1 class="fade-slide-up">SETTINGS</h1>
-    <h3 class="fade-slide-up"
-      data-en="You can manage website here."
-      data-th="คุณสามารถตั้งค่าเว็ปไซต์ได้ที่นี่">
-      You can manage website here.
-    </h3>
-
-    <div>
-
-      <div class="setting-container fade-slide-up">
-        <div class="setting-frame-left">
-
-          <div class="setting-frame" onclick="toggleSetting(this, event)">
-            <div class="setting-header">
-              <span class="setting-label">Thai language / ภาษาไทย</span>
-              <label class="switch" onclick="event.stopPropagation()">
-                <input id="langToggle" type="checkbox" onclick="event.stopPropagation()">
-                <span class="slider"></span>
-              </label>
-            </div>
-            <div class="setting-title">Once activated, the entire interface will switch to Thai.<br><br>เมื่อเปิดแล้ว ภาษาจะถูกเปลี่ยนเป็นภาษาไทยทั้งหมด</div>
-          </div>
-
+    <nav class="top-nav">
+        <div class="nav-logo">
+            <img src="./img/NEXORIA_WHITE_LOGO.png" alt="NEXORIA logo">
         </div>
-      </div>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="nav-center" id="mobileMenu">
+            <a href="/">HOME</a>
+        </div>
+    </nav>
+
+    <div class="content">
+        <h1 class="fade-slide-up">SETTINGS</h1>
+        <h3 class="fade-slide-up"
+            data-en="You can manage website here."
+            data-th="คุณสามารถตั้งค่าเว็ปไซต์ได้ที่นี่">
+            You can manage website here.
+        </h3>
+
+        <div>
+            <div class="setting-container fade-slide-up">
+                <div class="setting-frame-left">
+                    <div class="setting-frame" onclick="toggleSetting(this, event)">
+                        <div class="setting-header">
+                            <span class="setting-label">Thai language / ภาษาไทย</span>
+                            <label class="switch" onclick="event.stopPropagation()">
+                                <input id="langToggle" type="checkbox" onclick="event.stopPropagation()">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="setting-title">Once activated, the entire interface will switch to Thai.<br><br>เมื่อเปิดแล้ว ภาษาจะถูกเปลี่ยนเป็นภาษาไทยทั้งหมด</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
   
-  <footer class="footer fade-slide-up">
-    <div class="footer-container">
-      <div class="footer-column">
-        <h3 data-en="About Us" data-th="เกี่ยวกับเรา">About Us</h3>
-        <p 
-          data-en="NEXORIA is an MMORPG that focuses on realism with a touch of fantasy. You can freely roam across the map without quests restricting your travel area."
-          data-th="NEXORIA คือเกมแนว MMORPG ที่เน้นสมจริงและแฟนตาซีเล็กน้อย คุณสามารถโลดแล่นไปทั่วแผนที่ได้โดยไม่มีเควสที่จำกัดพื้นที่ในการเดินทางของคุณ">
-          NEXORIA is an MMORPG that focuses on realism with a touch of fantasy. You can freely roam across the map without quests restricting your travel area.
-        </p>
-      </div>
+    <footer class="footer fade-slide-up">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3 data-en="About Us" data-th="เกี่ยวกับเรา">About Us</h3>
+                <p
+                    data-en="NEXORIA is an MMORPG that focuses on realism with a touch of fantasy. You can freely roam across the map without quests restricting your travel area."
+                    data-th="NEXORIA คือเกมแนว MMORPG ที่เน้นสมจริงและแฟนตาซีเล็กน้อย คุณสามารถโลดแล่นไปทั่วแผนที่ได้โดยไม่มีเควสที่จำกัดพื้นที่ในการเดินทางของคุณ">
+                    NEXORIA is an MMORPG that focuses on realism with a touch of fantasy. You can freely roam across the map without quests restricting your travel area.
+                </p>
+            </div>
 
-      <div class="footer-column">
-        <h3 data-en="Social" data-th="โซเซียล">Social</h3>
-        <ul>
-          <li><a href="https://tiktok.com/@phoomphat_phe" target="_blank">Tiktok</a></li>
-        </ul>
-      </div>
+            <div class="footer-column">
+                <h3 data-en="Social" data-th="โซเซียล">Social</h3>
+                <ul>
+                    <li><a href="https://tiktok.com/@phoomphat_phe" target="_blank">Tiktok</a></li>
+                </ul>
+            </div>
 
-      <div class="footer-bottom">
-        <img src="./img/NEXORIA_GOLD_LOGO.png" alt="NEXORIA Logo">
-        <p>© 2025 NEXORIA. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-  <div class="nx-toast-area" id="nx-toast-area" aria-live="polite" aria-atomic="true"></div>
+            <div class="footer-bottom">
+                <img src="./img/NEXORIA_GOLD_LOGO.png" alt="NEXORIA Logo">
+                <p>© 2025 NEXORIA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <div class="nx-toast-area" id="nx-toast-area" aria-live="polite" aria-atomic="true"></div>
 </body>
 <script>
-  document.addEventListener("keydown", function (e) {
-    if (
-      e.key === "F12" || 
-      (e.ctrlKey && e.shiftKey && e.key === "I") || 
-      (e.ctrlKey && e.key === "U")
-    ) {
-      e.preventDefault();
-      return false;
-    }
-  });
-
-  document.addEventListener("contextmenu", function (e) {
-    e.preventDefault();
-  });
-
-  fetch('/config.json')
-    .then(response => response.json())
-    .then(config => {
-      if (config.discord) {
-        const discordTop = document.getElementById("discordLinkTop");
-        const discordFooter = document.getElementById("discordLinkFooter");
-
-        if (discordTop) discordTop.href = config.discord;
-        if (discordFooter) discordFooter.href = config.discord;
-      }
-    })
-  .catch(err => console.error("Failed to load config.json:", err));
-
-  function toggleSetting(element, ev) {
-    if (ev) ev.stopPropagation();
-
-    const allFrames = document.querySelectorAll('.setting-frame');
-    allFrames.forEach(frame => {
-      if (frame !== element && frame.classList.contains('open')) {
-        const otherTitle = frame.querySelector('.setting-title');
-        otherTitle.style.maxHeight = "0";
-        otherTitle.style.opacity = 0;
-        otherTitle.style.paddingTop = 0;
-        otherTitle.style.paddingBottom = 0;
-        frame.classList.remove('open');
-      }
+    document.addEventListener("keydown", function (e) {
+        if (
+            e.key === "F12" || 
+            (e.ctrlKey && e.shiftKey && e.key === "I") || 
+            (e.ctrlKey && e.key === "U")
+        ) {
+            e.preventDefault();
+            return false;
+        }
     });
 
-    const title = element.querySelector('.setting-title');
-    const name = (element.querySelector('.setting-label')?.textContent || 'Setting').trim();
-
-    if (element.classList.contains('open')) {
-      title.style.maxHeight = "0";
-      title.style.opacity = 0;
-      title.style.paddingTop = 0;
-      title.style.paddingBottom = 0;
-      element.classList.remove('open');
-    } else {
-      title.style.maxHeight = title.scrollHeight + "px";
-      title.style.opacity = 1;
-      title.style.paddingTop = "0.5rem";
-      title.style.paddingBottom = "0.25rem";
-      element.classList.add('open');
-    }
-  }
-
-  (function(){
-    const lang = document.getElementById('langToggle');
-    if (!lang) return;
-
-    function toast(msg){
-      if (window.nxToast) window.nxToast(msg);
-    }
-    function getLabel(el){
-      return (el.closest('.setting-frame')?.querySelector('.setting-label')?.textContent || 'Setting').trim();
-    }
-
-    lang.addEventListener('change', (e)=>{
-      const name = getLabel(e.target);
-      toast(e.target.checked ? `ON : ${name}` 
-                            : `OFF : ${name}`);
+    document.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
     });
 
-    lang.addEventListener('click', ev => ev.stopPropagation());
-    const wrapper = lang.closest('.switch');
-    if (wrapper) wrapper.addEventListener('click', ev => ev.stopPropagation());
-  })();
+    fetch('/config.json')
+        .then(response => response.json())
+        .then(config => {
+            if (config.discord) {
+                const discordTop = document.getElementById("discordLinkTop");
+                const discordFooter = document.getElementById("discordLinkFooter");
 
-  function toggleMenu() {
-    const menu = document.getElementById("mobileMenu");
-    const hamburger = document.querySelector(".hamburger");
-    const isOpen = menu.classList.contains("show");
+                if (discordTop) discordTop.href = config.discord;
+                if (discordFooter) discordFooter.href = config.discord;
+            }
+        })
+        .catch(err => console.error("Failed to load config.json:", err));
 
-    if (isOpen) {
-      menu.style.maxHeight = "0px";
-      menu.style.padding = "0";
-      menu.classList.remove("show");
-      hamburger.classList.remove("active");
-    } else {
-      menu.classList.add("show");
-      menu.style.maxHeight = menu.scrollHeight + "px";
-      menu.style.padding = "3.5rem 0";
-      hamburger.classList.add("active");
-    }
-  }
+    function toggleSetting(element, ev) {
+        if (ev) ev.stopPropagation();
 
-  (() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        const allFrames = document.querySelectorAll('.setting-frame');
+        allFrames.forEach(frame => {
+            if (frame !== element && frame.classList.contains('open')) {
+                const otherTitle = frame.querySelector('.setting-title');
+                otherTitle.style.maxHeight = "0";
+                otherTitle.style.opacity = 0;
+                otherTitle.style.paddingTop = 0;
+                otherTitle.style.paddingBottom = 0;
+                frame.classList.remove('open');
+            }
+        });
 
-    function burst(x,y){
-      const count=10;
-      for(let i=0;i<count;i++){
-        const s=document.createElement('i');
-        s.className='nx-shard';
-        const ang=(i/count)*Math.PI*2+(Math.random()*0.5-0.25);
-        const dist=50+Math.random()*80;
-        const sz=4+Math.random()*3;
-        const rot=(Math.random()*360-180)+'deg';
-        const dur=(360+Math.random()*240)+'ms';
-        s.style.setProperty('--x', x+'px');
-        s.style.setProperty('--y', y+'px');
-        s.style.setProperty('--dx', Math.cos(ang)*dist+'px');
-        s.style.setProperty('--dy', Math.sin(ang)*dist+'px');
-        s.style.setProperty('--sz', sz+'px');
-        s.style.setProperty('--rot', rot);
-        s.style.setProperty('--dur', dur);
-        document.body.appendChild(s);
-        s.addEventListener('animationend', ()=>s.remove(), {once:true});
-      }
+        const title = element.querySelector('.setting-title');
+        const name = (element.querySelector('.setting-label')?.textContent || 'Setting').trim();
+
+        if (element.classList.contains('open')) {
+            title.style.maxHeight = "0";
+            title.style.opacity = 0;
+            title.style.paddingTop = 0;
+            title.style.paddingBottom = 0;
+            element.classList.remove('open');
+        } else {
+            title.style.maxHeight = title.scrollHeight + "px";
+            title.style.opacity = 1;
+            title.style.paddingTop = "0.5rem";
+            title.style.paddingBottom = "0.25rem";
+            element.classList.add('open');
+        }
     }
 
-    function isPrimaryTrigger(e){
-      if('pointerType' in e){
-        if(e.pointerType==='mouse') return e.button===0;
-        return e.isPrimary!==false;
-      }
-      if(e.type==='mousedown') return e.button===0;
-      if(e.type==='touchstart') return true;
-      return true;
+    (function(){
+        const lang = document.getElementById('langToggle');
+        if (!lang) return;
+
+        function toast(msg){
+            if (window.nxToast) window.nxToast(msg);
+        }
+        function getLabel(el){
+            return (el.closest('.setting-frame')?.querySelector('.setting-label')?.textContent || 'Setting').trim();
+        }
+
+        lang.addEventListener('change', (e)=>{
+            const name = getLabel(e.target);
+            toast(e.target.checked ? `ON : ${name}` 
+                                  : `OFF : ${name}`);
+        });
+
+        lang.addEventListener('click', ev => ev.stopPropagation());
+        const wrapper = lang.closest('.switch');
+        if (wrapper) wrapper.addEventListener('click', ev => ev.stopPropagation());
+    })();
+
+    function toggleMenu() {
+        const menu = document.getElementById("mobileMenu");
+        const hamburger = document.querySelector(".hamburger");
+        const isOpen = menu.classList.contains("show");
+
+        if (isOpen) {
+            menu.style.maxHeight = "0px";
+            menu.style.padding = "0";
+            menu.classList.remove("show");
+            hamburger.classList.remove("active");
+        } else {
+            menu.classList.add("show");
+            menu.style.maxHeight = menu.scrollHeight + "px";
+            menu.style.padding = "3.5rem 0";
+            hamburger.classList.add("active");
+        }
     }
 
-    function getXY(e){
-      if(e.touches && e.touches[0]) return {x:e.touches[0].clientX, y:e.touches[0].clientY};
-      return {x:e.clientX, y:e.clientY};
-    }
+    (() => {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-    function trigger(e){
-      if(!isPrimaryTrigger(e)) return;
-      const p=getXY(e);
-      if(!p) return;
-      burst(p.x,p.y);
-    }
+        function burst(x,y){
+            const count=10;
+            for(let i=0;i<count;i++){
+                const s=document.createElement('i');
+                s.className='nx-shard';
+                const ang=(i/count)*Math.PI*2+(Math.random()*0.5-0.25);
+                const dist=50+Math.random()*80;
+                const sz=4+Math.random()*3;
+                const rot=(Math.random()*360-180)+'deg';
+                const dur=(360+Math.random()*240)+'ms';
+                s.style.setProperty('--x', x+'px');
+                s.style.setProperty('--y', y+'px');
+                s.style.setProperty('--dx', Math.cos(ang)*dist+'px');
+                s.style.setProperty('--dy', Math.sin(ang)*dist+'px');
+                s.style.setProperty('--sz', sz+'px');
+                s.style.setProperty('--rot', rot);
+                s.style.setProperty('--dur', dur);
+                document.body.appendChild(s);
+                s.addEventListener('animationend', ()=>s.remove(), {once:true});
+            }
+        }
 
-    if('onpointerdown' in window){
-      window.addEventListener('pointerdown', trigger, {capture:true, passive:true});
-    }else{
-      window.addEventListener('mousedown', trigger, {capture:true, passive:true});
-      window.addEventListener('touchstart', trigger, {capture:true, passive:true});
-    }
-  })();
+        function isPrimaryTrigger(e){
+            if('pointerType' in e){
+                if(e.pointerType==='mouse') return e.button===0;
+                return e.isPrimary!==false;
+            }
+            if(e.type==='mousedown') return e.button===0;
+            if(e.type==='touchstart') return true;
+            return true;
+        }
 
-  (function () {
-    function showToast(message, timeout) {
-      const area = document.getElementById('nx-toast-area');
-      if (!area) return;
+        function getXY(e){
+            if(e.touches && e.touches[0]) return {x:e.touches[0].clientX, y:e.touches[0].clientY};
+            return {x:e.clientX, y:e.clientY};
+        }
 
-      const toast = document.createElement('div');
-      toast.className = 'nx-toast';
-      toast.setAttribute('role', 'alert');
+        function trigger(e){
+            if(!isPrimaryTrigger(e)) return;
+            const p=getXY(e);
+            if(!p) return;
+            burst(p.x,p.y);
+        }
 
-      const bar = document.createElement('span');
-      bar.className = 'nx-toast__bar';
+        if('onpointerdown' in window){
+            window.addEventListener('pointerdown', trigger, {capture:true, passive:true});
+        }else{
+            window.addEventListener('mousedown', trigger, {capture:true, passive:true});
+            window.addEventListener('touchstart', trigger, {capture:true, passive:true});
+        }
+    })();
 
-      const text = document.createElement('div');
-      text.className = 'nx-toast__text';
-      text.textContent = message;
+    (function () {
+        function showToast(message, timeout) {
+            const area = document.getElementById('nx-toast-area');
+            if (!area) return;
 
-      toast.appendChild(bar);
-      toast.appendChild(text);
-      area.appendChild(toast);
+            const toast = document.createElement('div');
+            toast.className = 'nx-toast';
+            toast.setAttribute('role', 'alert');
 
-      let hideTimer = setTimeout(close, timeout ?? 2400);
-      toast.addEventListener('mouseenter', () => { clearTimeout(hideTimer); });
-      toast.addEventListener('mouseleave', () => { hideTimer = setTimeout(close, 900); });
-      toast.addEventListener('click', close);
+            const bar = document.createElement('span');
+            bar.className = 'nx-toast__bar';
 
-      function close() {
-        toast.classList.add('nx-toast--closing');
-        toast.addEventListener('animationend', () => toast.remove(), { once: true });
-      }
-    }
+            const text = document.createElement('div');
+            text.className = 'nx-toast__text';
+            text.textContent = message;
 
-    window.nxToast = showToast;
+            toast.appendChild(bar);
+            toast.appendChild(text);
+            area.appendChild(toast);
 
-    document.addEventListener('click', function (e) {
-      const btn = e.target.closest('.nx-btn--ghost');
-      if (!btn) return;
-      e.preventDefault();
-      showToast('This button is locked');
-    }, { passive: false });
-  })();
+            let hideTimer = setTimeout(close, timeout ?? 2400);
+            toast.addEventListener('mouseenter', () => { clearTimeout(hideTimer); });
+            toast.addEventListener('mouseleave', () => { hideTimer = setTimeout(close, 900); });
+            toast.addEventListener('click', close);
+
+            function close() {
+                toast.classList.add('nx-toast--closing');
+                toast.addEventListener('animationend', () => toast.remove(), { once: true });
+            }
+        }
+
+        window.nxToast = showToast;
+
+        document.addEventListener('click', function (e) {
+            const btn = e.target.closest('.nx-btn--ghost');
+            if (!btn) return;
+            e.preventDefault();
+            showToast('This button is locked');
+        }, { passive: false });
+    })();
 </script>
 <script src="/js/settings.js"></script>
 </html>
