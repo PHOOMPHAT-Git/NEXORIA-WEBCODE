@@ -391,6 +391,54 @@ body[data-theme="Normal"] .nx-mini-banner[style*="PHEYA_afraid.png"] .nx-mini-ba
     z-index: 3;
 }
 
+:root[style*="--theme: 'Normal'"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::after,
+:root[data-theme="Normal"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::after,
+html[data-theme="Normal"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::after,
+body[data-theme="Normal"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::after {
+    z-index: 1
+}
+
+:root[style*="--theme: 'Normal'"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::before,
+:root[data-theme="Normal"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::before,
+html[data-theme="Normal"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::before,
+body[data-theme="Normal"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::before {
+    z-index: 2;
+    background-size: 75% auto;
+    background-position: 80% 25%;
+}
+
+:root[style*="--theme: 'Normal'"] .nx-mini-banner[style*="PHEYA_wake_up.png"] .nx-mini-banner__inner,
+:root[data-theme="Normal"] .nx-mini-banner[style*="PHEYA_wake_up.png"] .nx-mini-banner__inner,
+html[data-theme="Normal"] .nx-mini-banner[style*="PHEYA_wake_up.png"] .nx-mini-banner__inner,
+body[data-theme="Normal"] .nx-mini-banner[style*="PHEYA_wake_up.png"] .nx-mini-banner__inner {
+    position: relative;
+    z-index: 3;
+}
+
+:root[style*="--theme: 'Normal'"] .nx-mini-banner[style*="PHEYA_dozy.png"]::after,
+:root[data-theme="Normal"] .nx-mini-banner[style*="PHEYA_dozy.png"]::after,
+html[data-theme="Normal"] .nx-mini-banner[style*="PHEYA_dozy.png"]::after,
+body[data-theme="Normal"] .nx-mini-banner[style*="PHEYA_dozy.png"]::after {
+    z-index: 1
+}
+
+:root[style*="--theme: 'Normal'"] .nx-mini-banner[style*="PHEYA_dozy.png"]::before,
+:root[data-theme="Normal"] .nx-mini-banner[style*="PHEYA_dozy.png"]::before,
+html[data-theme="Normal"] .nx-mini-banner[style*="PHEYA_dozy.png"]::before,
+body[data-theme="Normal"] .nx-mini-banner[style*="PHEYA_dozy.png"]::before {
+    z-index: 2;
+    background-size: 75% auto;
+    background-position: 80% 25%;
+}
+
+:root[style*="--theme: 'Normal'"] .nx-mini-banner[style*="PHEYA_dozy.png"] .nx-mini-banner__inner,
+:root[data-theme="Normal"] .nx-mini-banner[style*="PHEYA_dozy.png"] .nx-mini-banner__inner,
+html[data-theme="Normal"] .nx-mini-banner[style*="PHEYA_dozy.png"] .nx-mini-banner__inner,
+body[data-theme="Normal"] .nx-mini-banner[style*="PHEYA_dozy.png"] .nx-mini-banner__inner {
+    position: relative;
+    z-index: 3;
+}
+
 :root[style*="--theme: 'Normal'"] .nx-banner__inner + .nx-banner__inner,
 :root[data-theme="Normal"] .nx-banner__inner + .nx-banner__inner,
 html[data-theme="Normal"] .nx-banner__inner + .nx-banner__inner,
@@ -1628,6 +1676,22 @@ body[data-theme="Normal"] .nx-banner--lotframe .nx-banner__inner + .nx-banner__i
     background-position: 150% 10%;
     }
 
+    :root[style*="--theme: 'Normal'"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::before,
+    :root[data-theme="Normal"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::before,
+    html[data-theme="Normal"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::before,
+    body[data-theme="Normal"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::before {
+    background-size: 75% auto;
+    background-position: 150% 10%;
+    }
+
+    :root[style*="--theme: 'Normal'"] .nx-mini-banner[style*="PHEYA_dozy.png"]::before,
+    :root[data-theme="Normal"] .nx-mini-banner[style*="PHEYA_dozy.png"]::before,
+    html[data-theme="Normal"] .nx-mini-banner[style*="PHEYA_dozy.png"]::before,
+    body[data-theme="Normal"] .nx-mini-banner[style*="PHEYA_dozy.png"]::before {
+    background-size: 75% auto;
+    background-position: 150% 10%;
+    }
+
     :root[style*="--theme: 'Normal'"] .nx-toast,
     :root[data-theme="Normal"] .nx-toast,
     html[data-theme="Normal"] .nx-toast,
@@ -2311,6 +2375,54 @@ body[data-theme="Christmas"] .nx-mini-banner[style*="PHEYA_afraid.png"]::before 
 :root[data-theme="Christmas"] .nx-mini-banner[style*="PHEYA_afraid.png"] .nx-mini-banner__inner,
 html[data-theme="Christmas"] .nx-mini-banner[style*="PHEYA_afraid.png"] .nx-mini-banner__inner,
 body[data-theme="Christmas"] .nx-mini-banner[style*="PHEYA_afraid.png"] .nx-mini-banner__inner {
+    position: relative;
+    z-index: 3;
+}
+
+:root[style*="--theme: 'Christmas'"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::after,
+:root[data-theme="Christmas"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::after,
+html[data-theme="Christmas"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::after,
+body[data-theme="Christmas"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::after {
+    z-index: 1
+}
+
+:root[style*="--theme: 'Christmas'"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::before,
+:root[data-theme="Christmas"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::before,
+html[data-theme="Christmas"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::before,
+body[data-theme="Christmas"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::before {
+    z-index: 2;
+    background-size: 75% auto;
+    background-position: 80% 25%;
+}
+
+:root[style*="--theme: 'Christmas'"] .nx-mini-banner[style*="PHEYA_wake_up.png"] .nx-mini-banner__inner,
+:root[data-theme="Christmas"] .nx-mini-banner[style*="PHEYA_wake_up.png"] .nx-mini-banner__inner,
+html[data-theme="Christmas"] .nx-mini-banner[style*="PHEYA_wake_up.png"] .nx-mini-banner__inner,
+body[data-theme="Christmas"] .nx-mini-banner[style*="PHEYA_wake_up.png"] .nx-mini-banner__inner {
+    position: relative;
+    z-index: 3;
+}
+
+:root[style*="--theme: 'Christmas'"] .nx-mini-banner[style*="PHEYA_dozy.png"]::after,
+:root[data-theme="Christmas"] .nx-mini-banner[style*="PHEYA_dozy.png"]::after,
+html[data-theme="Christmas"] .nx-mini-banner[style*="PHEYA_dozy.png"]::after,
+body[data-theme="Christmas"] .nx-mini-banner[style*="PHEYA_dozy.png"]::after {
+    z-index: 1
+}
+
+:root[style*="--theme: 'Christmas'"] .nx-mini-banner[style*="PHEYA_dozy.png"]::before,
+:root[data-theme="Christmas"] .nx-mini-banner[style*="PHEYA_dozy.png"]::before,
+html[data-theme="Christmas"] .nx-mini-banner[style*="PHEYA_dozy.png"]::before,
+body[data-theme="Christmas"] .nx-mini-banner[style*="PHEYA_dozy.png"]::before {
+    z-index: 2;
+    background-size: 75% auto;
+    background-position: 80% 25%;
+}
+
+:root[style*="--theme: 'Christmas'"] .nx-mini-banner[style*="PHEYA_dozy.png"] .nx-mini-banner__inner,
+:root[data-theme="Christmas"] .nx-mini-banner[style*="PHEYA_dozy.png"] .nx-mini-banner__inner,
+html[data-theme="Christmas"] .nx-mini-banner[style*="PHEYA_dozy.png"] .nx-mini-banner__inner,
+body[data-theme="Christmas"] .nx-mini-banner[style*="PHEYA_dozy.png"] .nx-mini-banner__inner {
     position: relative;
     z-index: 3;
 }
@@ -3508,6 +3620,22 @@ body[data-theme="Christmas"] .nx-banner--lotframe .nx-banner__inner + .nx-banner
     background-position: 150% 10%;
     }
 
+    :root[style*="--theme: 'Christmas'"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::before,
+    :root[data-theme="Christmas"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::before,
+    html[data-theme="Christmas"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::before,
+    body[data-theme="Christmas"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::before {
+    background-size: 75% auto;
+    background-position: 150% 10%;
+    }
+
+    :root[style*="--theme: 'Christmas'"] .nx-mini-banner[style*="PHEYA_dozy.png"]::before,
+    :root[data-theme="Christmas"] .nx-mini-banner[style*="PHEYA_dozy.png"]::before,
+    html[data-theme="Christmas"] .nx-mini-banner[style*="PHEYA_dozy.png"]::before,
+    body[data-theme="Christmas"] .nx-mini-banner[style*="PHEYA_dozy.png"]::before {
+    background-size: 75% auto;
+    background-position: 150% 10%;
+    }
+
     :root[style*="--theme: 'Christmas'"] .nx-toast,
     :root[data-theme="Christmas"] .nx-toast,
     html[data-theme="Christmas"] .nx-toast,
@@ -4574,6 +4702,54 @@ body[data-theme="NewYear"] .nx-mini-banner[style*="PHEYA_afraid.png"]::before {
 :root[data-theme="NewYear"] .nx-mini-banner[style*="PHEYA_afraid.png"] .nx-mini-banner__inner,
 html[data-theme="NewYear"] .nx-mini-banner[style*="PHEYA_afraid.png"] .nx-mini-banner__inner,
 body[data-theme="NewYear"] .nx-mini-banner[style*="PHEYA_afraid.png"] .nx-mini-banner__inner {
+    position: relative;
+    z-index: 3;
+}
+
+:root[style*="--theme: 'NewYear'"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::after,
+:root[data-theme="NewYear"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::after,
+html[data-theme="NewYear"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::after,
+body[data-theme="NewYear"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::after {
+    z-index: 1
+}
+
+:root[style*="--theme: 'NewYear'"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::before,
+:root[data-theme="NewYear"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::before,
+html[data-theme="NewYear"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::before,
+body[data-theme="NewYear"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::before {
+    z-index: 2;
+    background-size: 75% auto;
+    background-position: 80% 25%;
+}
+
+:root[style*="--theme: 'NewYear'"] .nx-mini-banner[style*="PHEYA_wake_up.png"] .nx-mini-banner__inner,
+:root[data-theme="NewYear"] .nx-mini-banner[style*="PHEYA_wake_up.png"] .nx-mini-banner__inner,
+html[data-theme="NewYear"] .nx-mini-banner[style*="PHEYA_wake_up.png"] .nx-mini-banner__inner,
+body[data-theme="NewYear"] .nx-mini-banner[style*="PHEYA_wake_up.png"] .nx-mini-banner__inner {
+    position: relative;
+    z-index: 3;
+}
+
+:root[style*="--theme: 'NewYear'"] .nx-mini-banner[style*="PHEYA_dozyPHEYA_dozy.png"]::after,
+:root[data-theme="NewYear"] .nx-mini-banner[style*="PHEYA_dozy.png"]::after,
+html[data-theme="NewYear"] .nx-mini-banner[style*="PHEYA_dozy.png"]::after,
+body[data-theme="NewYear"] .nx-mini-banner[style*="PHEYA_dozy.png"]::after {
+    z-index: 1
+}
+
+:root[style*="--theme: 'NewYear'"] .nx-mini-banner[style*="PHEYA_dozy.png"]::before,
+:root[data-theme="NewYear"] .nx-mini-banner[style*="PHEYA_dozy.png"]::before,
+html[data-theme="NewYear"] .nx-mini-banner[style*="PHEYA_dozy.png"]::before,
+body[data-theme="NewYear"] .nx-mini-banner[style*="PHEYA_dozy.png"]::before {
+    z-index: 2;
+    background-size: 75% auto;
+    background-position: 80% 25%;
+}
+
+:root[style*="--theme: 'NewYear'"] .nx-mini-banner[style*="PHEYA_dozy.png"] .nx-mini-banner__inner,
+:root[data-theme="NewYear"] .nx-mini-banner[style*="PHEYA_dozy.png"] .nx-mini-banner__inner,
+html[data-theme="NewYear"] .nx-mini-banner[style*="PHEYA_dozy.png"] .nx-mini-banner__inner,
+body[data-theme="NewYear"] .nx-mini-banner[style*="PHEYA_dozy.png"] .nx-mini-banner__inner {
     position: relative;
     z-index: 3;
 }
@@ -5770,6 +5946,22 @@ body[data-theme="NewYear"] .nx-banner--lotframe .nx-banner__inner + .nx-banner__
     background-position: 150% 10%;
     }
 
+    :root[style*="--theme: 'NewYear'"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::before,
+    :root[data-theme="NewYear"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::before,
+    html[data-theme="NewYear"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::before,
+    body[data-theme="NewYear"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::before {
+    background-size: 75% auto;
+    background-position: 150% 10%;
+    }
+
+    :root[style*="--theme: 'NewYear'"] .nx-mini-banner[style*="PHEYA_dozy.png"]::before,
+    :root[data-theme="NewYear"] .nx-mini-banner[style*="PHEYA_dozy.png"]::before,
+    html[data-theme="NewYear"] .nx-mini-banner[style*="PHEYA_dozy.png"]::before,
+    body[data-theme="NewYear"] .nx-mini-banner[style*="PHEYA_dozy.png"]::before {
+    background-size: 75% auto;
+    background-position: 150% 10%;
+    }
+
     :root[style*="--theme: 'NewYear'"] .nx-toast,
     :root[data-theme="NewYear"] .nx-toast,
     html[data-theme="NewYear"] .nx-toast,
@@ -6855,6 +7047,54 @@ body[data-theme="Halloween"] .nx-mini-banner[style*="PHEYA_afraid.png"]::before 
 :root[data-theme="Halloween"] .nx-mini-banner[style*="PHEYA_afraid.png"] .nx-mini-banner__inner,
 html[data-theme="Halloween"] .nx-mini-banner[style*="PHEYA_afraid.png"] .nx-mini-banner__inner,
 body[data-theme="Halloween"] .nx-mini-banner[style*="PHEYA_afraid.png"] .nx-mini-banner__inner {
+    position: relative;
+    z-index: 3;
+}
+
+:root[style*="--theme: 'Halloween'"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::after,
+:root[data-theme="Halloween"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::after,
+html[data-theme="Halloween"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::after,
+body[data-theme="Halloween"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::after {
+    z-index: 1
+}
+
+:root[style*="--theme: 'Halloween'"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::before,
+:root[data-theme="Halloween"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::before,
+html[data-theme="Halloween"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::before,
+body[data-theme="Halloween"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::before {
+    z-index: 2;
+    background-size: 75% auto;
+    background-position: 80% 25%;
+}
+
+:root[style*="--theme: 'Halloween'"] .nx-mini-banner[style*="PHEYA_wake_up.png"] .nx-mini-banner__inner,
+:root[data-theme="Halloween"] .nx-mini-banner[style*="PHEYA_wake_up.png"] .nx-mini-banner__inner,
+html[data-theme="Halloween"] .nx-mini-banner[style*="PHEYA_wake_up.png"] .nx-mini-banner__inner,
+body[data-theme="Halloween"] .nx-mini-banner[style*="PHEYA_wake_up.png"] .nx-mini-banner__inner {
+    position: relative;
+    z-index: 3;
+}
+
+:root[style*="--theme: 'Halloween'"] .nx-mini-banner[style*="PHEYA_dozy.png"]::after,
+:root[data-theme="Halloween"] .nx-mini-banner[style*="PHEYA_dozy.png"]::after,
+html[data-theme="Halloween"] .nx-mini-banner[style*="PHEYA_dozy.png"]::after,
+body[data-theme="Halloween"] .nx-mini-banner[style*="PHEYA_dozy.png"]::after {
+    z-index: 1
+}
+
+:root[style*="--theme: 'Halloween'"] .nx-mini-banner[style*="PHEYA_dozy.png"]::before,
+:root[data-theme="Halloween"] .nx-mini-banner[style*="PHEYA_dozy.png"]::before,
+html[data-theme="Halloween"] .nx-mini-banner[style*="PHEYA_dozy.png"]::before,
+body[data-theme="Halloween"] .nx-mini-banner[style*="PHEYA_dozy.png"]::before {
+    z-index: 2;
+    background-size: 75% auto;
+    background-position: 80% 25%;
+}
+
+:root[style*="--theme: 'Halloween'"] .nx-mini-banner[style*="PHEYA_dozy.png"] .nx-mini-banner__inner,
+:root[data-theme="Halloween"] .nx-mini-banner[style*="PHEYA_dozy.png"] .nx-mini-banner__inner,
+html[data-theme="Halloween"] .nx-mini-banner[style*="PHEYA_dozy.png"] .nx-mini-banner__inner,
+body[data-theme="Halloween"] .nx-mini-banner[style*="PHEYA_dozy.png"] .nx-mini-banner__inner {
     position: relative;
     z-index: 3;
 }
@@ -8052,6 +8292,22 @@ body[data-theme="Halloween"] .nx-banner--lotframe .nx-banner__inner + .nx-banner
     background-position: 150% 10%;
     }
 
+    :root[style*="--theme: 'Halloween'"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::before,
+    :root[data-theme="Halloween"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::before,
+    html[data-theme="Halloween"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::before,
+    body[data-theme="Halloween"] .nx-mini-banner[style*="PHEYA_wake_up.png"]::before {
+    background-size: 75% auto;
+    background-position: 150% 10%;
+    }
+
+    :root[style*="--theme: 'Halloween'"] .nx-mini-banner[style*="PHEYA_dozy.png"]::before,
+    :root[data-theme="Halloween"] .nx-mini-banner[style*="PHEYA_dozy.png"]::before,
+    html[data-theme="Halloween"] .nx-mini-banner[style*="PHEYA_dozy.png"]::before,
+    body[data-theme="Halloween"] .nx-mini-banner[style*="PHEYA_dozy.png"]::before {
+    background-size: 75% auto;
+    background-position: 150% 10%;
+    }
+
     :root[style*="--theme: 'Halloween'"] .nx-toast,
     :root[data-theme="Halloween"] .nx-toast,
     html[data-theme="Halloween"] .nx-toast,
@@ -8683,21 +8939,4 @@ body[data-theme="Halloween"] .footer-column a {
 html[data-theme="Halloween"] .footer-column a:hover,
 body[data-theme="Halloween"] .footer-column a:hover {
     color:#ffffff;
-}
-
-@media (max-width:768px) {
-    :root[style*="--theme: 'Halloween'"] .nx-banner,
-    :root[data-theme="Halloween"] .nx-banner,
-    html[data-theme="Halloween"] .nx-banner,
-    body[data-theme="Halloween"] .nx-banner {
-    background: linear-gradient(180deg, #1b1430, #140f22);
-    }
-
-    :root[style*="--theme: 'Halloween'"] .nav-center,
-    :root[data-theme="Halloween"] .nav-center,
-    html[data-theme="Halloween"] .nav-center,
-    body[data-theme="Halloween"] .nav-center {
-    background: linear-gradient(180deg, var(--hlw-purple-2), var(--hlw-purple));
-    border-bottom: 1px solid rgba(255,138,42,.18);
-    }
 }
