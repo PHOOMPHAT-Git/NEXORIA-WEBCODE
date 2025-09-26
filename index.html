@@ -81,7 +81,7 @@
         <div class="nx-banner__glow nx-banner__glow--left"></div>
         <div class="nx-banner__glow nx-banner__glow--right"></div>
 
-        <div class="nx-banner__inner" data-bg="/img/PHEYA_cold.png">
+        <div class="nx-banner__inner" data-bg="/img/PHEYA_confused.png">
             <div class="nx-banner__text">
                 <div class="nx-banner__eyebrow" data-en="Events" data-th="อีเว้นท์">Events</div>
                 <h2 class="nx-banner__title" data-en="Anoter world" data-th="อีกโลกหนึ่ง">Anoter world</h2>
@@ -106,14 +106,14 @@
             </div>
         </div>
 
-        <div class="nx-banner__inner" data-bg="/img/PHEYA_hungry.png">
+        <div class="nx-banner__inner" data-bg="/img/PHEYA_cold.png">
             <div class="nx-banner__text">
                 <div class="nx-banner__eyebrow" data-en="Events" data-th="อีเว้นท์">Events</div>
                 <h2 class="nx-banner__title" data-en="Duo Championship" data-th="ดูโอ แชมเปียนชิพ">Duo Championship</h2>
                 <p class="nx-banner__subtitle"
-                    data-en="Announce the best duo of the week."
-                    data-th="ประกาศชื่อคู่หูที่ดีที่สุดในสัปดาห์นั้นๆ">
-                    Announce the best duo of the week.
+                    data-en="Best duo of the week."
+                    data-th="คู่หูที่ดีที่สุดในสัปดาห์">
+                    Best duo of the week.
                 </p>
 
                 <div class="nx-banner__actions">
@@ -131,7 +131,7 @@
             </div>
         </div>
 
-        <div class="nx-banner__inner" data-bg="/img/PHEYA_eats_bread.png">
+        <div class="nx-banner__inner" data-bg="/img/PHEYA_dozy.png">
             <div class="nx-banner__text">
                 <div class="nx-banner__eyebrow" data-en="Events" data-th="อีเว้นท์">Events</div>
                 <h2 class="nx-banner__title" data-en="Capture Pheya's heart" data-th="เอาชนะใจเฟญ่า">Capture Pheya's heart</h2>
@@ -158,10 +158,10 @@
     </section>
 
     <section class="nx-banner-row fade-slide-up">
-        <article class="nx-mini-banner nx-mini-banner--stretch" style="--bg:url('/img/PHEYA_afraid.png')">
+        <article class="nx-mini-banner nx-mini-banner--stretch" style="--bg:url('/img/PHEYA_wake_up.png')">
             <div class="nx-mini-banner__inner">
-                <div class="nx-mini-banner__eyebrow" data-en="DEVLOG" data-th="บันทึกพัฒนา">DEVLOG</div>
-                <h3 class="nx-mini-banner__title" data-en="New Weapon Showcase" data-th="โชว์อาวุธใหม่">New Weapon Showcase</h3>
+                <div class="nx-mini-banner__eyebrow" data-en="Showcase" data-th="โชว์ตัวอย่าง">Showcase</div>
+                <h3 class="nx-mini-banner__title" data-en="New Weapon" data-th="โชว์อาวุธใหม่">New Weapon</h3>
                 <p class="nx-mini-banner__subtitle"
                     data-en="Sneak peek of the new weapon"
                     data-th="แอบส่องอาวุธใหม่">Sneak peek of the new weapon</p>
@@ -171,12 +171,12 @@
 
         <article class="nx-mini-banner nx-mini-banner--stretch" style="--bg:url('/img/PHEYA_hands_on_hips.png')">
             <div class="nx-mini-banner__inner">
-                <div class="nx-mini-banner__eyebrow" data-en="COMMUNITY" data-th="ชุมชน">COMMUNITY</div>
+                <div class="nx-mini-banner__eyebrow" data-en="Community" data-th="ชุมชน">Community</div>
                 <h3 class="nx-mini-banner__title" data-en="Join Our Discord Server" data-th="เข้าร่วมดิสคอร์ดเซิร์ฟเวอร์">Join Our Discord Server</h3>
                 <p class="nx-mini-banner__subtitle"
                     data-en="Chat with players, get updates"
                     data-th="พูดคุยกับผู้เล่น รับอัปเดต">Chat with players, get updates</p>
-                <a id="discordLinkBanner" href="#" target="_blank" class="nx-btn nx-btn--ghost">Join</a>
+                <a id="discordLinkBanner" href="#" target="_blank" class="nx-btn nx-btn">Join</a>
             </div>
         </article>
     </section>
@@ -624,6 +624,8 @@
             }
         }
 
+        window.showToast = showToast;
+
         document.addEventListener('click', function (e) {
             const btn = e.target.closest('.nx-btn--ghost');
             if (!btn) return;
@@ -649,6 +651,68 @@
         }
     }
     updateExchangeRate();
+</script>
+<script>
+    (() => {
+        function currentLang(){
+            const l=(document.documentElement.getAttribute('lang')||'en').toLowerCase();
+            return l.startsWith('th')?'th':'en';
+        }
+
+        const I={
+            choose_image:{en:'Choose Image',th:'เลือกรูปภาพ'},
+            file_selected:{en:'File selected: {name}',th:'เลือกไฟล์: {name}'},
+            no_file:{en:'No file selected',th:'ไม่ได้เลือกไฟล์'},
+            need_input:{en:'Please type a message or choose an image',th:'กรุณาพิมพ์ข้อความหรือเลือกรูปภาพ'},
+            sent_text:{en:'Sent: {text}',th:'ส่งข้อความ: {text}'},
+            uploading:{en:'Uploading: {name}',th:'อัปโหลด: {name}'},
+            error:{en:'Something went wrong',th:'เกิดข้อผิดพลาดในการส่งข้อมูล'}
+        };
+
+        function t(key, vars){
+            const lang=currentLang();
+            let s=(I[key]&&I[key][lang])||key;
+            if(vars) for(const k in vars){ s=s.replace(new RegExp('\\{'+k+'\\}','g'), String(vars[k])); }
+            return s;
+        }
+
+        const form=document.getElementById('miniForm');
+        const fileInput=document.getElementById('miniFile');
+        const fileLabel=document.querySelector('label.nx-file-label');
+        const textInput=form?.querySelector('input[name="message"]');
+
+        if(fileLabel) fileLabel.textContent=t('choose_image');
+        if(textInput) textInput.placeholder=currentLang()==='th'?'พิมพ์ข้อความ...':'Type a message...';
+
+        if(fileInput&&fileLabel){
+            fileInput.addEventListener('change',()=>{
+                const f=fileInput.files[0];
+                fileLabel.textContent=f?f.name:t('choose_image');
+                window.showToast(f?t('file_selected',{name:f.name}):t('no_file'));
+            });
+        }
+
+        if(form){
+            form.addEventListener('submit',async e=>{
+                e.preventDefault();
+                const msg=(form.message?.value||'').trim();
+                const file=form.image?.files?.[0]||null;
+                if(!msg && !file){ window.showToast(t('need_input')); return; }
+                try{
+                    const fd=new FormData();
+                    if(msg) fd.append('message',msg);
+                    if(file) fd.append('image',file);
+                    window.showToast(file?t('uploading',{name:file.name}):t('sent_text',{text:msg}));
+                    form.reset();
+                    if(fileLabel) fileLabel.textContent=t('choose_image');
+                    if(textInput) textInput.placeholder=currentLang()==='th'?'พิมพ์ข้อความ...':'Type a message...';
+                }catch(err){
+                    window.showToast(t('error'));
+                    console.error(err);
+                }
+            });
+        }
+    })();
 </script>
 <script src="/js/firework.js"></script>
 <script src="/js/lotframeSlider.js"></script>
