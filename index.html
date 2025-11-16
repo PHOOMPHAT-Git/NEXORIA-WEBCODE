@@ -184,11 +184,16 @@
     <section class="nx-banner-row fade-slide-up">
         <article class="nx-mini-banner nx-mini-banner--stretch" style="--bg:url('/img/PHEYA_wake_up.png')">
             <div class="nx-mini-banner__inner">
-                <div class="nx-mini-banner__eyebrow" data-en="Showcase" data-th="โชว์ตัวอย่าง">Showcase</div>
-                <h3 class="nx-mini-banner__title" data-en="New Weapon" data-th="โชว์อาวุธใหม่">New Weapon</h3>
+                <div class="nx-mini-banner__eyebrow" data-en="Notes" data-th="โน้ต">Notes</div>
+
+                <h3 class="nx-mini-banner__title"
+                    data-en="Talents"
+                    data-th="ความสามารถ">Talents</h3>
+
                 <p class="nx-mini-banner__subtitle"
-                    data-en="Sneak peek of the new weapon"
-                    data-th="แอบส่องอาวุธใหม่">Sneak peek of the new weapon</p>
+                data-en="View the talents currently have"
+                data-th="ดูความสามารถที่มีอยู่ในตอนนี้">View the talents currently have</p>
+
                 <a href="/devlog" class="nx-btn nx-btn--ghost">Read</a>
             </div>
         </article>
@@ -232,16 +237,6 @@
     <div class="nx-toast-area" id="nx-toast-area" aria-live="polite" aria-atomic="true"></div>
 </body>
 <script>
-    document.addEventListener("keydown", function (e) {
-        if (
-            e.key === "F12" ||
-            (e.ctrlKey && e.shiftKey && e.key === "I") ||
-            (e.ctrlKey && e.key === "U")
-        ) {
-            e.preventDefault();
-            return false;
-        }
-    });
 
     document.addEventListener("contextmenu", function (e) {
         e.preventDefault();
